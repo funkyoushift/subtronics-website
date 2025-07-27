@@ -188,10 +188,10 @@
       <label>Message<br /><textarea name="message" required></textarea></label>
 
       <button type="submit">Send Message</button>
-      <p style="margin-top:1rem;">
-        Want to prepay for diagnostics? <br/>
-        <a href="https://buy.stripe.com/test_4gwg0x0dkaTx4iQ3cc" target="_blank">Click here to pay $40 via Stripe</a>
-      </p>
+      <label>Diagnostics Payment (required if selected above)<br />
+  <input type="checkbox" name="paid_diagnostics" value="yes" required onclick="return false;" checked>
+  <a href="https://buy.stripe.com/test_4gwg0x0dkaTx4iQ3cc" target="_blank">Click here to pay $40 via Stripe</a>
+</label>
     </form>
   </section>
 
