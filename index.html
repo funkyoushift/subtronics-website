@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="https://subtronicsllc.pages.dev/logo.png" type="image/png" />
-<meta charset="UTF-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Subtronics LLC - Custom PC Builds and Computer Repair in Flushing, MI" />
+
+  <link rel="icon" href="https://subtronicsllc.pages.dev/logo.png" type="image/png" />
 
   <!-- SEO META TAGS -->
   <meta name="robots" content="index, follow" />
@@ -27,6 +28,9 @@
 
   <title>Subtronics LLC | Flushing, MI</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -34,14 +38,31 @@
       background-color: #f8f8f8;
       color: #333;
     }
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #000;
+      padding: 1rem;
+      text-align: center;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
     header {
       background-color: #111;
       color: white;
-      padding: 1rem;
+      padding: 2rem 1rem 1rem;
       text-align: center;
     }
     header img {
-      max-width: 200px;
+      max-width: 180px;
       height: auto;
       display: block;
       margin: 0 auto 1rem auto;
@@ -51,8 +72,10 @@
       max-width: 800px;
       margin: auto;
     }
+    .services { background: #fff; }
+    .reviews { background: #f0f4f8; }
+    .contact { background: #ffffff; }
     .services, .contact, .reviews {
-      background: white;
       padding: 1.5rem;
       border-radius: 8px;
       margin-bottom: 2rem;
@@ -60,6 +83,7 @@
     }
     h2 {
       color: #222;
+      margin-top: 0;
     }
     ul {
       padding-left: 1.2rem;
@@ -74,7 +98,7 @@
       color: #0066cc;
       text-decoration: none;
     }
-    form input, form textarea {
+    form input, form select, form textarea {
       width: 100%;
       padding: 0.5rem;
       margin-top: 0.25rem;
@@ -83,12 +107,16 @@
       border-radius: 4px;
     }
     form button {
-      padding: 0.5rem 1rem;
-      background: #111;
+      padding: 0.75rem 1.5rem;
+      background: #0066cc;
       color: white;
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      font-size: 1rem;
+    }
+    form button:hover {
+      background: #004a99;
     }
     blockquote {
       font-style: italic;
@@ -99,13 +127,19 @@
   </style>
 </head>
 <body>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <header>
     <img src="https://subtronicsllc.pages.dev/logo.png" alt="Subtronics LLC Logo">
     <h1>Subtronics LLC</h1>
     <p>Custom PC Builds & Computer Repair | Flushing, MI</p>
   </header>
 
-  <section class="services">
+  <section class="services" id="services">
     <h2>Our Services</h2>
     <ul>
       <li><strong>Custom PC Builds:</strong> From $150 – Gaming, business, or home setups built to your specs.</li>
@@ -116,7 +150,7 @@
     </ul>
   </section>
 
-  <section class="reviews">
+  <section class="reviews" id="reviews">
     <h2>What Our Clients Say</h2>
     <blockquote>
       “Subtronics built me a killer gaming PC. It runs smooth and looks amazing. Super friendly service!”<br />
@@ -128,19 +162,36 @@
     </blockquote>
   </section>
 
-  <section class="contact">
+  <section class="contact" id="contact">
     <h2>Contact Us</h2>
     <p><strong>Phone:</strong> <a href="tel:8102802222">810-280-2222</a></p>
     <p><strong>Service Area:</strong> Flushing, MI and surrounding cities</p>
-    <p><strong>Email:</strong> subtronicsllc@gmail.com (optional)</p>
+    <p><strong>Email:</strong> subtronicsllc@gmail.com</p>
     <p><strong>Google Maps:</strong> <a href="https://maps.app.goo.gl/zJdfYd4oror2wF3E6" target="_blank">View Listing</a></p>
 
     <h3>Send Us a Message</h3>
     <form action="https://formspree.io/f/mldlneaa" method="POST">
       <label>Your Name<br /><input type="text" name="name" required /></label>
       <label>Your Email<br /><input type="email" name="_replyto" required /></label>
+      <label>Select a Service<br />
+        <select name="service" required>
+          <option value="">-- Please choose an option --</option>
+          <option value="custom_pc">Custom PC Build</option>
+          <option value="diagnostics">PC Diagnostics ($40)</option>
+          <option value="upgrades">PC Upgrades</option>
+          <option value="virus_removal">Virus Removal</option>
+          <option value="install">Installation & Setup</option>
+        </select>
+      </label>
+      <label>Preferred Contact Date<br /><input type="date" name="preferred_date" /></label>
+      <label>Preferred Time<br /><input type="time" name="preferred_time" /></label>
       <label>Message<br /><textarea name="message" required></textarea></label>
+
       <button type="submit">Send Message</button>
+      <p style="margin-top:1rem;">
+        Want to prepay for diagnostics? <br/>
+        <a href="https://buy.stripe.com/test_4gwg0x0dkaTx4iQ3cc" target="_blank">Click here to pay $40 via Stripe</a>
+      </p>
     </form>
   </section>
 
