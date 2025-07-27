@@ -4,6 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Subtronics LLC - Custom PC Builds and Computer Repair in Flushing, MI" />
+
+  <!-- SEO META TAGS -->
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="computer repair Flushing MI, custom PC builds, virus removal, Subtronics LLC, gaming PC Flushing Michigan" />
+  <meta name="author" content="Subtronics LLC" />
+  <meta property="og:title" content="Subtronics LLC | Custom PC Builds & Repair in Flushing, MI" />
+  <meta property="og:description" content="Affordable computer repair and custom-built PCs in Flushing, MI. Available 24/7. Call today for diagnostics, upgrades, or full PC builds." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://subtronicsllc.com" />
+  <meta property="og:image" content="https://subtronicsllc.com/your-pc-photo.jpg" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FY5NRVFLF4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FY5NRVFLF4');
+  </script>
+
   <title>Subtronics LLC | Flushing, MI</title>
   <style>
     body {
@@ -24,7 +44,7 @@
       max-width: 800px;
       margin: auto;
     }
-    .services, .contact {
+    .services, .contact, .reviews {
       background: white;
       padding: 1.5rem;
       border-radius: 8px;
@@ -47,6 +67,28 @@
       color: #0066cc;
       text-decoration: none;
     }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      padding: 0.5rem 1rem;
+      background: #111;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    blockquote {
+      font-style: italic;
+      border-left: 4px solid #ccc;
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -66,12 +108,32 @@
     </ul>
   </section>
 
+  <section class="reviews">
+    <h2>What Our Clients Say</h2>
+    <blockquote>
+      “Subtronics built me a killer gaming PC. It runs smooth and looks amazing. Super friendly service!”<br />
+      — Mike R., Flushing, MI
+    </blockquote>
+    <blockquote>
+      “Had a virus issue. They fixed it same day and even tuned up my system. Highly recommended.”<br />
+      — Sarah T., Clio, MI
+    </blockquote>
+  </section>
+
   <section class="contact">
     <h2>Contact Us</h2>
     <p><strong>Phone:</strong> <a href="tel:8102802222">810-280-2222</a></p>
     <p><strong>Service Area:</strong> Flushing, MI and surrounding cities</p>
     <p><strong>Email:</strong> subtronicsllc@gmail.com (optional)</p>
     <p><strong>Google Maps:</strong> <a href="https://maps.app.goo.gl/zJdfYd4oror2wF3E6" target="_blank">View Listing</a></p>
+
+    <h3>Send Us a Message</h3>
+    <form action="https://formspree.io/f/mldlneaa" method="POST">
+      <label>Your Name<br /><input type="text" name="name" required /></label>
+      <label>Your Email<br /><input type="email" name="_replyto" required /></label>
+      <label>Message<br /><textarea name="message" required></textarea></label>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <footer>
