@@ -102,3 +102,25 @@
 .service-card h3 {
   margin-top: 0;
 }
+
+.brand-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.brand-bar img {
+  height: 32px;
+  max-width: 100px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+.brand-bar img:hover {
+  filter: none;
+  opacity: 1;
+}
