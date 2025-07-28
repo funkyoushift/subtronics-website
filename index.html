@@ -37,6 +37,32 @@
   <header>
     <img src="https://subtronicsllc.com/logo.png" alt="Subtronics LLC Logo">
 
+<div class="dark-mode-toggle">
+  <label class="switch">
+    <input type="checkbox" id="darkToggle">
+    <span class="slider round"></span>
+  </label>
+  <span style="margin-left: 0.5rem;">Dark Mode</span>
+</div>
+<script>
+  const toggle = document.getElementById('darkToggle');
+  const userPref = localStorage.getItem('theme');
+  if (userPref === 'dark') {
+    document.documentElement.classList.add('dark');
+    toggle.checked = true;
+  }
+  toggle.addEventListener('change', () => {
+    if (toggle.checked) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  });
+</script>
+
+
 <div class="brand-bar">
   <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Intel-logo.svg" alt="Intel" />
   <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/AMD_Logo.svg" alt="AMD" />
