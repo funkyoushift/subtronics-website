@@ -94,67 +94,45 @@
       <p><strong>Google Maps:</strong> <a href="https://maps.app.goo.gl/zJdfYd4oror2wF3E6" target="_blank">View Listing</a></p>
 
       <h3>Send Us a Message</h3>
-      <form action="https://formspree.io/f/mldlneaa" method="POST" onsubmit="return validateAndRedirect();">
-        <label for="name">Your Name</label><input id="name" type="text" name="name" required />
-        <label for="email">Your Email</label><input id="email" type="email" name="_replyto" required />
-        <label>Select a Service<br />
-          <select name="service" id="service-select" aria-label="Select a Service" required>
-            <option value="">-- Please choose an option --</option>
-            <option value="custom_pc">Custom PC Build</option>
-            <option value="diagnostics">PC Diagnostics ($40)</option>
-            <option value="upgrades">PC Upgrades</option>
-            <option value="virus_removal">Virus Removal</option>
-            <option value="install">Installation & Setup</option>
-          </select>
-        </label>
-        <div id="payment-section" style="display:none;">
-          <label>Diagnostics Payment Required<br />
-            <a href="https://buy.stripe.com/aFacN520Ga6Xg8Z5D71Nu00" target="_blank">Click here to pay $40 via Stripe</a>
-          </label>
-          <label>
-            Confirm Payment<br />
-            <input type="checkbox" name="paid_diagnostics" id="paid-checkbox" required>
-            I have completed payment for diagnostics
-          </label>
-        </div>
-        <label for="preferred_date">Preferred Contact Date</label><input id="preferred_date" type="date" name="preferred_date" />
-        <label for="preferred_time">Preferred Time</label><input id="preferred_time" type="time" name="preferred_time" />
-        <label for="message">Message</label><textarea id="message" name="message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-      <script>
-        function handleDiagnosticsPayment() {
-          const service = document.getElementById('service-select').value;
-          const paymentSection = document.getElementById('payment-section');
-          const paidCheckbox = document.getElementById('paid-checkbox');
-          if (service === 'diagnostics') {
-            if (!paidCheckbox.checked) {
-              alert('Please complete and confirm your diagnostics payment before submitting.');
-              paymentSection.style.display = 'block';
-              return false;
-            }
-          }
-          return true;
-        }
+      
+<form action="https://formspree.io/f/mldlneaa" method="POST" onsubmit="return redirectAfterSubmit();">
+  <label for="name">Your Name</label>
+  <input id="name" type="text" name="name" required />
 
-        function validateAndRedirect() {
-          if (!handleDiagnosticsPayment()) return false;
-          setTimeout(function () {
-            window.location.href = 'thank_you.html';
-          }, 100);
-          return true;
-        }
+  <label for="email">Your Email</label>
+  <input id="email" type="email" name="email" required />
 
-        document.getElementById('service-select').addEventListener('change', function() {
-          const paymentSection = document.getElementById('payment-section');
-          if (this.value === 'diagnostics') {
-            paymentSection.style.display = 'block';
-          } else {
-            paymentSection.style.display = 'none';
-            document.getElementById('paid-checkbox').checked = false;
-          }
-        });
-      </script>
+  <label for="service">Select a Service</label>
+  <select name="service" id="service" required>
+    <option value="">-- Please choose an option --</option>
+    <option value="custom_pc">Custom PC Build</option>
+    <option value="diagnostics">PC Diagnostics ($40)</option>
+    <option value="upgrades">PC Upgrades</option>
+    <option value="virus_removal">Virus Removal</option>
+    <option value="install">Installation & Setup</option>
+  </select>
+
+  <label for="preferred_date">Preferred Contact Date</label>
+  <input id="preferred_date" type="date" name="preferred_date" />
+
+  <label for="preferred_time">Preferred Time</label>
+  <input id="preferred_time" type="time" name="preferred_time" />
+
+  <label for="message">Message</label>
+  <textarea id="message" name="message" required></textarea>
+
+  <button type="submit">Send Message</button>
+</form>
+
+<script>
+  function redirectAfterSubmit() {
+    setTimeout(function () {
+      window.location.href = 'thank_you.html';
+    }, 500);
+    return true;
+  }
+</script>
+
     </section>
   </main>
 
