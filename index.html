@@ -14,18 +14,14 @@
   <meta property="og:image" content="https://subtronicsllc.com/logo.png" />
   <link rel="icon" href="https://subtronicsllc.com/logo.png" type="image/png" />
   <title>Subtronics LLC | Flushing, MI</title>
-  
-  <link rel="stylesheet" href="style.css">
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FY5NRVFLF4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-FY5NRVFLF4');
-</script>
-
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FY5NRVFLF4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FY5NRVFLF4');
+  </script>
 </head>
 <body>
   <nav role="navigation">
@@ -36,100 +32,90 @@
 
   <header>
     <img src="https://subtronicsllc.com/logo.png" alt="Subtronics LLC Logo">
+    <div class="dark-mode-toggle">
+      <label class="switch">
+        <input type="checkbox" id="darkToggle">
+        <span class="slider round"></span>
+      </label>
+      <span style="margin-left: 0.5rem;">Dark Mode</span>
+    </div>
+    <script>
+      const toggle = document.getElementById('darkToggle');
+      const userPref = localStorage.getItem('theme');
+      if (userPref === 'dark') {
+        document.documentElement.classList.add('dark');
+        toggle.checked = true;
+      }
+      toggle.addEventListener('change', () => {
+        if (toggle.checked) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    </script>
 
-<div class="dark-mode-toggle">
-  <label class="switch">
-    <input type="checkbox" id="darkToggle">
-    <span class="slider round"></span>
-  </label>
-  <span style="margin-left: 0.5rem;">Dark Mode</span>
-</div>
-<script>
-  const toggle = document.getElementById('darkToggle');
-  const userPref = localStorage.getItem('theme');
-  if (userPref === 'dark') {
-    document.documentElement.classList.add('dark');
-    toggle.checked = true;
-  }
-  toggle.addEventListener('change', () => {
-    if (toggle.checked) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  });
-</script>
-
-
-<div class="brand-bar">
-  <a href="https://www.intel.com/" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Intel_logo_2020.svg/200px-Intel_logo_2020.svg.png" alt="Intel" loading="lazy" /></a>
-  <a href="https://www.amd.com/" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/AMD_Logo.svg/200px-AMD_Logo.svg.png" alt="AMD" loading="lazy" /></a>
-  <a href="https://www.nvidia.com/" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/21/Nvidia_logo.svg/1920px-Nvidia_logo.svg.png" alt="NVIDIA" loading="lazy" /></a>
-  <a href="https://www.microsoft.com/" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" loading="lazy" /></a>
-  <a href="https://www.samsung.com/" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Samsung" loading="lazy" /></a>
-  <a href="https://www.corsair.com/" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Corsair_logo.svg/2560px-Corsair_logo.svg.png" alt="Corsair" loading="lazy" /></a>
-  <a href="https://www.asus.com/" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/ASUS_Logo.svg/320px-ASUS_Logo.svg.png" alt="ASUS" loading="lazy" /></a>
-  <a href="https://www.msi.com/" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/MSI_Logo_2019.svg/2560px-MSI_Logo_2019.svg.png" alt="MSI" loading="lazy" /></a>
-  <a href="https://www.gigabyte.com/" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Gigabyte_Technology_logo.svg/320px-Gigabyte_Technology_logo.svg.png" alt="Gigabyte" loading="lazy" /></a>
-  <a href="https://www.westerndigital.com/" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Western_Digital_logo.svg/320px-Western_Digital_logo.svg.png" alt="Western Digital" loading="lazy" /></a>
-  <a href="https://www.seagate.com/" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Seagate_Technology_logo.svg/320px-Seagate_Technology_logo.svg.png" alt="Seagate" loading="lazy" /></a>
-  <a href="https://www.crucial.com/" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Crucial_Technology_logo.svg/320px-Crucial_Technology_logo.svg.png" alt="Crucial" loading="lazy" /></a>
-  <a href="https://store.steampowered.com/" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/320px-Steam_icon_logo.svg.png" alt="Steam" loading="lazy" /></a>
-</div>
-
+    <div class="brand-bar">
+      <a href="https://www.intel.com/" target="_blank"><img src="brand-logos/intel.png" alt="Intel" loading="lazy"></a>
+      <a href="https://www.amd.com/" target="_blank"><img src="brand-logos/amd.png" alt="AMD" loading="lazy"></a>
+      <a href="https://www.nvidia.com/" target="_blank"><img src="brand-logos/nvidia.png" alt="NVIDIA" loading="lazy"></a>
+      <a href="https://www.microsoft.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" loading="lazy"></a>
+      <a href="https://www.samsung.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Samsung" loading="lazy"></a>
+      <a href="https://www.corsair.com/" target="_blank"><img src="brand-logos/corsair.png" alt="Corsair" loading="lazy"></a>
+      <a href="https://www.asus.com/" target="_blank"><img src="brand-logos/asus.png" alt="ASUS" loading="lazy"></a>
+      <a href="https://www.msi.com/" target="_blank"><img src="brand-logos/msi.png" alt="MSI" loading="lazy"></a>
+      <a href="https://www.gigabyte.com/" target="_blank"><img src="brand-logos/gigabyte.png" alt="Gigabyte" loading="lazy"></a>
+      <a href="https://www.westerndigital.com/" target="_blank"><img src="brand-logos/western-digital.png" alt="Western Digital" loading="lazy"></a>
+      <a href="https://www.seagate.com/" target="_blank"><img src="brand-logos/seagate.png" alt="Seagate" loading="lazy"></a>
+      <a href="https://www.crucial.com/" target="_blank"><img src="brand-logos/crucial.png" alt="Crucial" loading="lazy"></a>
+      <a href="https://store.steampowered.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" alt="Steam" loading="lazy"></a>
+    </div>
     <h1>Subtronics LLC</h1>
     <p>Custom PC Builds & Computer Repair | Flushing, MI</p>
   </header>
 
   <main>
-    
+    <section id="services" class="services">
+      <h2>Our Services</h2>
+      <div class="service-grid">
+        <div class="service-card">
+          <h3>💻 Custom PC Builds</h3>
+          <p>From $150 – Tailored PC builds for gaming, streaming, business, and home use. Built to your specs or designed collaboratively.</p>
+        </div>
+        <div class="service-card">
+          <h3>🔍 PC Diagnostics</h3>
+          <p>$40 – Full diagnostic service to identify system issues. Fee applied toward any completed repair.</p>
+        </div>
+        <div class="service-card">
+          <h3>⚙️ Upgrades</h3>
+          <p>From $25 – RAM, storage, PSU, GPU/CPU upgrades. Improve speed, performance, and multitasking ability.</p>
+        </div>
+        <div class="service-card">
+          <h3>🛡️ Virus Removal</h3>
+          <p>From $40 – Malware, spyware, and virus removal. Remote or mobile service available.</p>
+        </div>
+        <div class="service-card">
+          <h3>⚡ Installation & Setup</h3>
+          <p>OS install, updates, cable management, and network configuration. On-site service in Flushing and nearby areas.</p>
+        </div>
+      </div>
+    </section>
 
-<section class="services" id="services">
-  <h2>Our Services</h2>
-  <div class="service-grid">
-    <div class="service-card">
-      <h3>🖥️ Custom PC Builds</h3>
-      <p>From $150 – Tailored PC builds for gaming, streaming, business, and home use. Built to your specs or designed collaboratively. Expert consultation, quality parts, and clean builds every time.</p>
-    </div>
-    <div class="service-card">
-      <h3>🔍 PC Diagnostics</h3>
-      <p>$40 – Full diagnostic service to identify system issues. Fee applied toward any completed repair. Get fast answers and solutions.</p>
-    </div>
-    <div class="service-card">
-      <h3>⚙️ Upgrades</h3>
-      <p>From $25 – RAM, storage, power supply, GPU/CPU upgrades. Improve speed, performance, and multitasking ability. SSD/HDD/PSU installation included.</p>
-    </div>
-    <div class="service-card">
-      <h3>🛡️ Virus Removal</h3>
-      <p>From $40 – Malware, spyware, and virus removal to restore system performance and protect your data. Fast, secure, and remote or mobile service available.</p>
-    </div>
-    <div class="service-card">
-      <h3>⚡ Installation & Setup</h3>
-      <p>Full PC setup including OS install, updates, cable management, and network configuration. On-site service in Flushing and surrounding areas.</p>
-    </div>
-  </div>
-</section>
+    <section id="reviews" class="reviews">
+      <h2>What Our Clients Say</h2>
+      <div class="sk-ww-google-reviews" data-embed-id="25582329"></div>
+      <script defer src="https://widgets.sociablekit.com/google-reviews/widget.js"></script>
+    </section>
 
+    <section id="about" class="about">
+      <h2>About Subtronics LLC</h2>
+      <p>Hi, I'm Martin, the owner and technician behind Subtronics LLC. I bring years of experience building, repairing, and optimizing PCs of all kinds. Whether you're a gamer, a business owner, or just need fast, reliable service — I'm here to help.</p>
+      <img src="https://via.placeholder.com/300x200.png?text=Technician+Photo" alt="Martin - Subtronics Technician" style="max-width:100%; border-radius:8px; margin-top:1rem;">
+    </section>
 
-
-    
-<section class="reviews" id="reviews">
-  <h2>What Our Clients Say</h2>
-  <div class="sk-ww-google-reviews" data-embed-id="25582329"></div>
-</section>
-<script defer src="https://widgets.sociablekit.com/google-reviews/widget.js"></script>
-
-
-    
-<section class="about" id="about">
-  <h2>About Subtronics LLC</h2>
-  <p>Hi, I'm Martin, the owner and technician behind Subtronics LLC. I bring years of hands-on experience building, repairing, and optimizing PCs of all kinds. Whether you're a gamer, a business owner, or someone who just wants a smooth computer experience — I'm here to help with expert care and fast service.</p>
-  <img src="https://via.placeholder.com/300x200.png?text=Technician+Photo" alt="Martin - Subtronics Technician" style="max-width:100%; border-radius:8px; margin-top:1rem;" />
-</section>
-
-<section class="contact" id="contact">
+    <section id="contact" class="contact">
       <h2>Contact Us</h2>
       <p><strong>Phone:</strong> <a href="tel:8102802222">810-280-2222</a></p>
       <p><strong>Service Area:</strong> Flushing, MI and surrounding cities</p>
@@ -137,45 +123,42 @@
       <p><strong>Google Maps:</strong> <a href="https://maps.app.goo.gl/zJdfYd4oror2wF3E6" target="_blank">View Listing</a></p>
 
       <h3>Send Us a Message</h3>
-      
-<form action="https://formspree.io/f/mldlneaa" method="POST" onsubmit="return redirectAfterSubmit();">
-  <label for="name">Your Name</label>
-  <input id="name" type="text" name="name" required />
+      <form action="https://formspree.io/f/mldlneaa" method="POST" onsubmit="return redirectAfterSubmit();">
+        <label for="name">Your Name</label>
+        <input id="name" type="text" name="name" required />
 
-  <label for="email">Your Email</label>
-  <input id="email" type="email" name="email" required />
+        <label for="email">Your Email</label>
+        <input id="email" type="email" name="email" required />
 
-  <label for="service">Select a Service</label>
-  <select name="service" id="service" required>
-    <option value="">-- Please choose an option --</option>
-    <option value="custom_pc">Custom PC Build</option>
-    <option value="diagnostics">PC Diagnostics ($40)</option>
-    <option value="upgrades">PC Upgrades</option>
-    <option value="virus_removal">Virus Removal</option>
-    <option value="install">Installation & Setup</option>
-  </select>
+        <label for="service">Select a Service</label>
+        <select name="service" id="service" required>
+          <option value="">-- Please choose an option --</option>
+          <option value="custom_pc">Custom PC Build</option>
+          <option value="diagnostics">PC Diagnostics ($40)</option>
+          <option value="upgrades">PC Upgrades</option>
+          <option value="virus_removal">Virus Removal</option>
+          <option value="install">Installation & Setup</option>
+        </select>
 
-  <label for="preferred_date">Preferred Contact Date</label>
-  <input id="preferred_date" type="date" name="preferred_date" />
+        <label for="preferred_date">Preferred Contact Date</label>
+        <input id="preferred_date" type="date" name="preferred_date" />
 
-  <label for="preferred_time">Preferred Time</label>
-  <input id="preferred_time" type="time" name="preferred_time" />
+        <label for="preferred_time">Preferred Time</label>
+        <input id="preferred_time" type="time" name="preferred_time" />
 
-  <label for="message">Message</label>
-  <textarea id="message" name="message" required></textarea>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
 
-  <button type="submit">Send Message</button>
-</form>
-
-<script>
-  function redirectAfterSubmit() {
-    setTimeout(function () {
-      window.location.href = 'thank_you.html';
-    }, 500);
-    return true;
-  }
-</script>
-
+        <button type="submit">Send Message</button>
+      </form>
+      <script>
+        function redirectAfterSubmit() {
+          setTimeout(() => {
+            window.location.href = 'thank_you.html';
+          }, 500);
+          return true;
+        }
+      </script>
     </section>
   </main>
 
