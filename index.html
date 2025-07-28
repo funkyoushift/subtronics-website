@@ -14,93 +14,11 @@
   <meta property="og:image" content="https://subtronicsllc.com/logo.png" />
   <link rel="icon" href="https://subtronicsllc.com/logo.png" type="image/png" />
   <title>Subtronics LLC | Flushing, MI</title>
-  <style>
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8f8f8;
-      color: #333;
-    }
-    nav {
-      position: sticky;
-      top: 0;
-      background-color: #000;
-      padding: 1rem;
-      text-align: center;
-      z-index: 1000;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover { text-decoration: underline; }
-    header {
-      background-color: #111;
-      color: white;
-      padding: 2rem 1rem 1rem;
-      text-align: center;
-    }
-    header img {
-      max-width: 180px;
-      height: auto;
-      display: block;
-      margin: 0 auto 1rem;
-    }
-    section {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    .services, .reviews, .contact {
-      padding: 1.5rem;
-      border-radius: 8px;
-      margin-bottom: 2rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .services { background: #fff; }
-    .reviews { background: #f0f4f8; }
-    .contact { background: #ffffff; }
-    h2 { color: #222; margin-top: 0; }
-    ul { padding-left: 1.2rem; }
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-    a { color: #0066cc; text-decoration: none; }
-    form input, form select, form textarea {
-      width: 100%;
-      padding: 0.5rem;
-      margin-top: 0.25rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    form button {
-      padding: 0.75rem 1.5rem;
-      background: #0066cc;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-    form button:hover { background: #004a99; }
-    blockquote {
-      font-style: italic;
-      border-left: 4px solid #ccc;
-      padding-left: 1rem;
-      margin-bottom: 1rem;
-    }
-  </style>
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
+  <nav role="navigation">
     <a href="#services">Services</a>
     <a href="#reviews">Reviews</a>
     <a href="#contact">Contact</a>
@@ -113,28 +31,26 @@
   </header>
 
   <main>
-    <section class="services" id="services">
-      <h2>Our Services</h2>
-      <ul>
-        <li><strong>Custom PC Builds:</strong> From $150 – Gaming, business, or home setups built to your specs.</li>
-        <li><strong>PC Diagnostics:</strong> $40 – Troubleshooting and issue resolution, applied toward repair.</li>
-        <li><strong>Upgrades:</strong> From $25 – RAM, SSD, PSU, and GPU/CPU upgrades for better performance.</li>
-        <li><strong>Virus Removal:</strong> From $40 – Malware removal and system cleanup.</li>
-        <li><strong>Installation & Setup:</strong> OS installs, driver setup, and networking.</li>
-      </ul>
-    </section>
+    
+<section class="services" id="services">
+  <h2>Our Services</h2>
+  <ul>
+    <li><strong>Custom PC Builds:</strong> From $150 – Tailored PC builds for gaming, streaming, business, and home use. Built to your specs or designed collaboratively. Expert consultation, quality parts, and clean builds every time.</li>
+    <li><strong>PC Diagnostics:</strong> $40 – Full diagnostic service to identify system issues. Fee applied toward any completed repair. Get fast answers and solutions.</li>
+    <li><strong>Upgrades:</strong> From $25 – RAM, storage, power supply, GPU/CPU upgrades. Improve speed, performance, and multitasking ability. SSD/HDD/PSU installation included.</li>
+    <li><strong>Virus Removal:</strong> From $40 – Malware, spyware, and virus removal to restore system performance and protect your data. Fast, secure, and remote or mobile service available.</li>
+    <li><strong>Installation & Setup:</strong> Full PC setup including OS install, updates, cable management, and network configuration. On-site service in Flushing and surrounding areas.</li>
+  </ul>
+</section>
 
-    <section class="reviews" id="reviews">
-      <h2>What Our Clients Say</h2>
-      <blockquote>
-        “Subtronics built me a killer gaming PC. It runs smooth and looks amazing. Super friendly service!”<br />
-        — Mike R., Flushing, MI
-      </blockquote>
-      <blockquote>
-        “Had a virus issue. They fixed it same day and even tuned up my system. Highly recommended.”<br />
-        — Sarah T., Clio, MI
-      </blockquote>
-    </section>
+
+    
+<section class="reviews" id="reviews">
+  <h2>What Our Clients Say</h2>
+  <div class="sk-ww-google-reviews" data-embed-id="25582329"></div>
+</section>
+<script defer src="https://widgets.sociablekit.com/google-reviews/widget.js"></script>
+
 
     <section class="contact" id="contact">
       <h2>Contact Us</h2>
@@ -145,10 +61,10 @@
 
       <h3>Send Us a Message</h3>
       <form action="https://formspree.io/f/mldlneaa" method="POST" onsubmit="return validateAndRedirect();">
-        <label>Your Name<br /><input type="text" name="name" required /></label>
-        <label>Your Email<br /><input type="email" name="_replyto" required /></label>
+        <label for="name">Your Name</label><input id="name" type="text" name="name" required />
+        <label for="email">Your Email</label><input id="email" type="email" name="_replyto" required />
         <label>Select a Service<br />
-          <select name="service" id="service-select" required>
+          <select name="service" id="service-select" aria-label="Select a Service" required>
             <option value="">-- Please choose an option --</option>
             <option value="custom_pc">Custom PC Build</option>
             <option value="diagnostics">PC Diagnostics ($40)</option>
@@ -167,9 +83,9 @@
             I have completed payment for diagnostics
           </label>
         </div>
-        <label>Preferred Contact Date<br /><input type="date" name="preferred_date" /></label>
-        <label>Preferred Time<br /><input type="time" name="preferred_time" /></label>
-        <label>Message<br /><textarea name="message" required></textarea></label>
+        <label for="preferred_date">Preferred Contact Date</label><input id="preferred_date" type="date" name="preferred_date" />
+        <label for="preferred_time">Preferred Time</label><input id="preferred_time" type="time" name="preferred_time" />
+        <label for="message">Message</label><textarea id="message" name="message" required></textarea>
         <button type="submit">Send Message</button>
       </form>
       <script>

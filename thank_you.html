@@ -96,24 +96,5 @@
   <div id="spinner" class="loading-spinner"></div>
   <div id="loading-text" class="loading-message">Loading reviews...</div>
 
-  <!-- Google Reviews Widget from SociableKit -->
-  <div class="widget-container" id="reviews-widget" style="display:none;">
-    <div class="sk-ww-google-reviews" data-embed-id="25582329"></div>
-  </div>
-
-  <script>
-    // When widget iframe loads, hide spinner and show widget
-    document.addEventListener("DOMContentLoaded", function () {
-      const checkLoaded = setInterval(() => {
-        const widgetFrame = document.querySelector(".sk-ww-google-reviews iframe");
-        if (widgetFrame) {
-          clearInterval(checkLoaded);
-          document.getElementById("spinner").style.display = "none";
-          document.getElementById("loading-text").style.display = "none";
-          document.getElementById("reviews-widget").style.display = "block";
-        }
-      }, 500);
-    });
-  </script>
-</body>
+  </body>
 </html>
