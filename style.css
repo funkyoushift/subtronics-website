@@ -124,3 +124,15 @@
   filter: none;
   opacity: 1;
 }
+
+@media (max-width: 600px) {
+  .brand-bar {
+    gap: 0.75rem;
+    padding: 1rem 0.5rem;
+    flex-wrap: wrap;
+  }
+  .brand-bar img {
+    height: 24px;
+    max-width: 80px;
+  }
+}
