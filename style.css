@@ -43,8 +43,15 @@ header {
 }
 
 header img {
-  max-width: 200px;
+  max-width: 300px; /* or try 350px if needed */
+  width: 100%;
   height: auto;
+  margin: 0 auto;
+  display: block;
+}
+header img {
+  ...
+  margin-bottom: 1.5rem;
 }
 
 h1, h2, h3 {
