@@ -227,5 +227,33 @@
   <footer>
     <p>&copy; 2025 Subtronics LLC. All rights reserved.</p>
   </footer>
+
+<script>
+function handleDiagnosticsPayment() {
+  const service = document.getElementById('service-select').value;
+  const paymentSection = document.getElementById('payment-section');
+  const paidCheckbox = document.getElementById('paid-checkbox');
+
+  if (service === 'diagnostics') {
+    if (!paidCheckbox.checked) {
+      alert('Please complete and confirm your diagnostics payment before submitting.');
+      paymentSection.style.display = 'block';
+      return false;
+    }
+  }
+  return true;
+}
+
+function combinedSubmitHandler() {
+  const valid = handleDiagnosticsPayment();
+  if (valid) {
+    setTimeout(function() {
+      window.location.href = 'thank-you.html';
+    }, 100);
+  }
+  return valid;
+}
+</script>
+
 </body>
 </html>
