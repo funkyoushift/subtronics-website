@@ -149,76 +149,107 @@
 
       <h3>Send Us a Message</h3>
       
-<form id="contact-form">
-  <label for="name">Your Name</label>
-  <input id="name" type="text" name="name" required />
+<form 
+  action="https://formspree.io/f/mldlneaa" 
+  method="POST" 
+  onsubmit="return combinedSubmitHandler();"
+>
+  <label>Your Name<br />
+    <input type="text" name="name" required />
+  </label>
 
-  <label for="email">Your Email</label>
-  <input id="email" type="email" name="email" required />
+  <label>Your Email<br />
+    <input type="email" name="_replyto" required />
+  </label>
 
-  <label for="service">Select a Service</label>
-  <select name="service" id="service" required>
-    <option value="">-- Please choose an option --</option>
-    <option value="custom_pc">Custom PC Build</option>
-    <option value="diagnostics">PC Diagnostics ($40)</option>
-    <option value="upgrades">PC Upgrades</option>
-    <option value="virus_removal">Virus Removal</option>
-    <option value="install">Installation & Setup</option>
-  </select>
+  <label>Select a Service<br />
+    <select name="service" id="service-select" required>
+      <option value="">-- Please choose an option --</option>
+      <option value="custom_pc">Custom PC Build</option>
+      <option value="diagnostics">PC Diagnostics ($40)</option>
+      <option value="upgrades">PC Upgrades</option>
+      <option value="virus_removal">Virus Removal</option>
+      <option value="install">Installation & Setup</option>
+    </select>
+  </label>
 
-  <label for="preferred_date">Preferred Contact Date</label>
-  <input id="preferred_date" type="date" name="preferred_date" />
-
-  <label for="preferred_time">Preferred Time</label>
-  <input id="preferred_time" type="time" name="preferred_time" />
-
-  <label for="message">Message</label>
-  <textarea id="message" name="message" required></textarea>
-
-  <button type="submit">Send Message</button>
-
-  <div id="spinner" class="spinner-container">
-    <div class="loading-spinner"></div>
+  <div id="payment-section" style="display: none;">
+    <label>Diagnostics Payment Required<br />
+      <a 
+        href="https://buy.stripe.com/aFacN520Ga6Xg8Z5D71Nu00" 
+        target="_blank"
+      >
+        Click here to pay $40 via Stripe
+      </a>
+    </label>
+    <label>
+      Confirm Payment<br />
+      <input 
+        type="checkbox" 
+        name="paid_diagnostics" 
+        id="paid-checkbox" 
+        required
+      >
+      I have completed payment for diagnostics
+    </label>
   </div>
 
-  <p id="form-status" style="margin-top:1rem; font-weight:bold;"></p>
+  <label>Preferred Contact Date<br />
+    <input type="date" name="preferred_date" />
+  </label>
+
+  <label>Preferred Time<br />
+    <input type="time" name="preferred_time" />
+  </label>
+
+  <label>Message<br />
+    <textarea name="message" required></textarea>
+  </label>
+
+  <button type="submit">Send Message</button>
 </form>
 
 <script>
-  document.getElementById('contact-form').addEventListener('submit', async function (e) {
-    e.preventDefault();
+function handleDiagnosticsPayment() {
+  const service = document.getElementById('service-select').value;
+  const paidCheckbox = document.getElementById('paid-checkbox');
 
-    const form = e.target;
-    const status = document.getElementById('form-status');
-    const spinner = document.getElementById('spinner');
-    const data = new FormData(form);
+  // If diagnostics selected but not paid
+  if (service === 'diagnostics') {
+    if (!paidCheckbox.checked) {
+      alert('Please complete and confirm your diagnostics payment before submitting.');
+      return false;
+    }
+  }
 
-    Array.from(form.elements).forEach(el => el.disabled = true);
-    form.classList.add('form-disabled');
-    status.textContent = "";
-    spinner.classList.add("show");
+  return true;
+}
 
-    try {
-      const response = await fetch("https://formspree.io/f/mldlneaa", {
-        method: "POST",
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
+function combinedSubmitHandler() {
+  const valid = handleDiagnosticsPayment();
+  if (valid) {
+    setTimeout(() => {
+      window.location.href = 'thank_you.html';
+    }, 100); // Delay to let Formspree submit
+  }
+  return valid;
+}
 
-      if (response.ok) {
-        window.location.href = "thank_you.html";
-      } else {
-        const result = await response.json();
-        status.textContent = result.errors?.map(e => e.message).join(", ") || "Oops! There was a problem.";
-      }
-    } catch (error) {
-      status.textContent = "Network error. Please try again later.";
-    } finally {
-      spinner.classList.remove("show");
-      form.classList.remove('form-disabled');
-      Array.from(form.elements).forEach(el => el.disabled = false);
+// Show/hide payment section based on dropdown
+document.addEventListener('DOMContentLoaded', () => {
+  const serviceSelect = document.getElementById('service-select');
+  const paymentSection = document.getElementById('payment-section');
+  const paidCheckbox = document.getElementById('paid-checkbox');
+
+  serviceSelect.addEventListener('change', () => {
+    if (serviceSelect.value === 'diagnostics') {
+      paymentSection.style.display = 'block';
+    } else {
+      paymentSection.style.display = 'none';
+      paidCheckbox.checked = false;
     }
   });
+});
 </script>
 
     </section>
