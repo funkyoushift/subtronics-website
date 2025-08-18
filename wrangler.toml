@@ -1,0 +1,7 @@
+name = "subtronics"          # must match the Worker name in Cloudflare
+main = "worker/index.mjs"    # entry file path
+compatibility_date = "2024-06-20"
+
+# Optional vars; we’ll add secrets in the dashboard later
+[vars]
+BUILDS_JSON_URL = "https://subtronicsllc.com/assets/js/builds.json"
