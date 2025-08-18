@@ -53,7 +53,7 @@ function platformOf(cpu){
 async function startOrder(bundleSku, state){
   try{
     const resp = await fetch(WORKER_CREATE_URL, {
-      method: 'POST',
+      method: 'POST', mode: 'cors',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ bundleSku, selections: state })
     });

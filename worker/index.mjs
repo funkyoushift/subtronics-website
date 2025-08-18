@@ -1,35 +1,24 @@
 // worker/index.mjs
 
+const corsHeaders = (origin) => ({
+  "content-type": "application/json",
+  "access-control-allow-origin": origin || "*",
+  "vary": "Origin",
+  "access-control-allow-headers": "Content-Type, content-type",
+  "access-control-allow-methods": "POST,OPTIONS",
+  "access-control-max-age": "86400"
+});
+
 const json = (obj, status = 200, origin = "*") =>
-  new Response(JSON.stringify(obj), {
-    status,
-    headers: {
-      "content-type": "application/json",
-      "access-control-allow-origin": origin,
-      "access-control-allow-headers": "content-type",
-      "access-control-allow-methods": "POST,OPTIONS",
-      "access-control-max-age": "86400",
-      "vary": "Origin"
-    },
-  });
+  new Response(JSON.stringify(obj), { status, headers: corsHeaders(origin) });
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const origin = request.headers.get("Origin") || "*";
 
-    // Allow preflight from any origin (or tighten to a whitelist if you want)
     if (request.method === "OPTIONS") {
-      return new Response(null, {
-        status: 204,
-        headers: {
-          "access-control-allow-origin": origin,
-          "access-control-allow-headers": "content-type",
-          "access-control-allow-methods": "POST,OPTIONS",
-          "access-control-max-age": "86400",
-          "vary": "Origin"
-        },
-      });
+      return new Response(null, { status: 204, headers: corsHeaders(origin) });
     }
 
     if (url.pathname === "/health") {
@@ -40,7 +29,6 @@ export default {
       return json({ error: "Use POST /create" }, 404, origin);
     }
 
-    // --- Parse request
     let body;
     try { body = await request.json(); }
     catch { return json({ error: "Invalid JSON" }, 400, origin); }
@@ -50,7 +38,6 @@ export default {
     const selections = body.selections || {};
     const qty = Number(body.qty || 1);
 
-    // --- Load builds.json
     const res = await fetch(env.BUILDS_JSON_URL, { cf: { cacheTtl: 60 } });
     if (!res.ok) return json({ error: "builds.json not reachable" }, 502, origin);
     const data = await res.json();
@@ -58,7 +45,6 @@ export default {
     const build = (data.builds || []).find(b => String(b.sku) === bundleSku);
     if (!build) return json({ error: "Unknown bundle SKU" }, 400, origin);
 
-    // --- Pricing (mirrors your front-end)
     const money = (n) => Math.round(n * 100) / 100;
     const pt = data.price_tables || {};
     const s = {
@@ -87,7 +73,6 @@ export default {
     const margin = Number(data.global?.profit_margin_percent || 0);
     const total = money(cost * (1 + margin / 100));
 
-    // --- Draft order
     const lineItem = {
       title: `Custom PC Build — ${build.name}`,
       quantity: qty,
