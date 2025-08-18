@@ -79,11 +79,11 @@
   },
   "builds": [
     {
-      "sku": "MC-AMD-9700X-B650-32G",
-      "name": "AMD Ryzen 7 9700X Bundle",
+      "sku": "AMD-RYZEN-7-9800X3D-ASUS-B650E-E",
+      "name": "AMD Ryzen\u2122 7 9800X3D ASUS B650E-E TUF Gaming WiFi G.Skill Flare X5 Series 32GB DDR5 3 - in - 1 Combo",
       "bundle_price": 429.99,
-      "cpu": "Ryzen 7 9700X",
-      "motherboard": "B650",
+      "cpu": "AMD Ryzen\u2122 7 9800X3D ASUS B650E-E TUF Gaming WiFi G.Skill Flare X5 Series 32GB DDR5 3 - in - 1 Combo",
+      "motherboard": "AM5/1700 board",
       "ram_base_gb": 32,
       "case_fixed": "ATX Mid Tower",
       "cooling_default": "Air",
@@ -93,46 +93,527 @@
       }
     },
     {
-      "sku": "MC-AMD-7600X3D-B650-32G",
-      "name": "AMD Ryzen 5 7600X3D Bundle",
-      "bundle_price": 419.99,
-      "cpu": "Ryzen 5 7600X3D",
-      "motherboard": "B650",
-      "ram_base_gb": 32,
-      "case_fixed": "ATX Mid Tower",
-      "cooling_default": "Air",
-      "m2_slots": 2,
-      "storage_base": {
-        "ssd_tb": 1
-      }
-    },
-    {
-      "sku": "MC-AMD-9900X-X870E-32G",
-      "name": "AMD Ryzen 9 9900X Bundle",
-      "bundle_price": 599.99,
-      "cpu": "Ryzen 9 9900X",
+      "sku": "MSI-X870E-P-PRO-WIFI",
+      "name": "MSI X870E-P Pro WiFi",
+      "bundle_price": 429.99,
+      "cpu": "MSI X870E-P Pro WiFi",
       "motherboard": "X870E",
       "ram_base_gb": 32,
       "case_fixed": "ATX Mid Tower",
       "cooling_default": "Air",
-      "m2_slots": 3,
+      "m2_slots": 2,
       "storage_base": {
         "ssd_tb": 1
       }
     },
     {
-      "sku": "MC-INTEL-14900K-Z790-32G",
-      "name": "Intel Core i9-14900K Bundle",
-      "bundle_price": 499.99,
-      "cpu": "Core i9-14900K",
+      "sku": "ASUS-X870E-E-ROG-STRIX-GAMING-WI",
+      "name": "ASUS X870E-E ROG Strix Gaming WiFi",
+      "bundle_price": 429.99,
+      "cpu": "ASUS X870E-E ROG Strix Gaming WiFi",
+      "motherboard": "X870E",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "AMD-RYZEN-5-7600X3D-4-1GHZ-ASUS-",
+      "name": "AMD Ryzen\u2122 5 7600X3D 4.1GHz ASUS B650E-E TUF Gaming WiFi G.Skill Flare X5 Series 32GB DDR5 3 - in - 1 Combo",
+      "bundle_price": 299.99,
+      "cpu": "AMD Ryzen\u2122 5 7600X3D 4.1GHz ASUS B650E-E TUF Gaming WiFi G.Skill Flare X5 Series 32GB DDR5 3 - in - 1 Combo",
+      "motherboard": "AM5/1700 board",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "AMD-RYZEN-5-7600X3D-4-1GHZ-ASUS-",
+      "name": "AMD Ryzen\u2122 5 7600X3D 4.1GHz ASUS B650-A ROG Strix Gaming WiFi G.Skill Flare X5 Series 32GB DDR5 3 - in 1 Combo",
+      "bundle_price": 299.99,
+      "cpu": "AMD Ryzen\u2122 5 7600X3D 4.1GHz ASUS B650-A ROG Strix Gaming WiFi G.Skill Flare X5 Series 32GB DDR5 3 - in 1 Combo",
+      "motherboard": "B650",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "AMD-RYZEN-7-7800X3D-4-2GHZ-ASUS-",
+      "name": "AMD Ryzen\u2122 7 7800X3D 4.2GHz ASUS B650E-E TUF Gaming WiFi G.Skill Flare X5 Series 32GB DDR5 3 - in - 1 Combo",
+      "bundle_price": 359.99,
+      "cpu": "AMD Ryzen\u2122 7 7800X3D 4.2GHz ASUS B650E-E TUF Gaming WiFi G.Skill Flare X5 Series 32GB DDR5 3 - in - 1 Combo",
+      "motherboard": "AM5/1700 board",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "AMD-RYZEN-7-7800X3D-4-2GHZ-ASUS-",
+      "name": "AMD Ryzen\u2122 7 7800X3D 4.2GHz ASUS B650-A ROG Strix Gaming WiFi G.Skill Flare X5 Series 32GB DDR5 3 - in 1 Combo",
+      "bundle_price": 359.99,
+      "cpu": "AMD Ryzen\u2122 7 7800X3D 4.2GHz ASUS B650-A ROG Strix Gaming WiFi G.Skill Flare X5 Series 32GB DDR5 3 - in 1 Combo",
+      "motherboard": "B650",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "AMD-RYZEN-9-9950X3D-4-30GHZ-MSI-",
+      "name": "AMD Ryzen\u2122 9 9950X3D 4.30GHz MSI X870E-P PRO WIFI AMD AM5 ATX G.Skill Flare X5 Series 32GB DDR5 3 - in - 1 Combo",
+      "bundle_price": 669.99,
+      "cpu": "AMD Ryzen\u2122 9 9950X3D 4.30GHz MSI X870E-P PRO WIFI AMD AM5 ATX G.Skill Flare X5 Series 32GB DDR5 3 - in - 1 Combo",
+      "motherboard": "X870E",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "AMD-RYZEN-9-9950X3D-4-30GHZ-ASUS",
+      "name": "AMD Ryzen\u2122 9 9950X3D 4.30GHz ASUS X870E-E ROG Strix Gaming WiFi G.Skill Flare X5 Series 32GB DDR5 3 - in 1 Combo",
+      "bundle_price": 669.99,
+      "cpu": "AMD Ryzen\u2122 9 9950X3D 4.30GHz ASUS X870E-E ROG Strix Gaming WiFi G.Skill Flare X5 Series 32GB DDR5 3 - in 1 Combo",
+      "motherboard": "X870E",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "AMD-RYZEN-7-7700X-4-5GHZ-GIGABYT",
+      "name": "AMD Ryzen\u2122 7 7700X 4.5GHz Gigabyte B650 Gaming X AX v2 G.Skill Flare X5 Series 32GB DDR5 3 - in - 1 Combo",
+      "bundle_price": 229.99,
+      "cpu": "AMD Ryzen\u2122 7 7700X 4.5GHz Gigabyte B650 Gaming X AX v2 G.Skill Flare X5 Series 32GB DDR5 3 - in - 1 Combo",
+      "motherboard": "B650",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "AMD-RYZEN-7-7700X-4-5GHZ-ASUS-B8",
+      "name": "AMD Ryzen\u2122 7 7700X 4.5GHz ASUS B850-PLUS TUF Gaming Wifi G.Skill Flare X5 Series 32GB DDR5 3 - in 1 Combo",
+      "bundle_price": 229.99,
+      "cpu": "AMD Ryzen\u2122 7 7700X 4.5GHz ASUS B850-PLUS TUF Gaming Wifi G.Skill Flare X5 Series 32GB DDR5 3 - in 1 Combo",
+      "motherboard": "B850",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "AMD-RYZEN-7-9700X-3-80GHZ-GIGABY",
+      "name": "AMD Ryzen\u2122 7 9700X 3.80GHz Gigabyte B650 Gaming X AX v2 G.Skill Flare X5 Series 32GB DDR5 3 - in - 1 Combo",
+      "bundle_price": 289.99,
+      "cpu": "AMD Ryzen\u2122 7 9700X 3.80GHz Gigabyte B650 Gaming X AX v2 G.Skill Flare X5 Series 32GB DDR5 3 - in - 1 Combo",
+      "motherboard": "B650",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "AMD-RYZEN-7-9700X-3-80GHZ-GIGABY",
+      "name": "AMD Ryzen\u2122 7 9700X 3.80GHz Gigabyte B650 Aorus Elite AX Ice G.Skill Flare X5 Series 32GB DDR5 3 - in 1 Combo",
+      "bundle_price": 289.99,
+      "cpu": "AMD Ryzen\u2122 7 9700X 3.80GHz Gigabyte B650 Aorus Elite AX Ice G.Skill Flare X5 Series 32GB DDR5 3 - in 1 Combo",
+      "motherboard": "B650",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "AMD-RYZEN-9-9900X-4-40GHZ-MSI-MS",
+      "name": "AMD Ryzen\u2122 9 9900X 4.40GHz MSI MSI X870E-P Pro WiFi DDR5 G.Skill Flare X5 32GB DDR5 3 - in - 1 Combo",
+      "bundle_price": 359.99,
+      "cpu": "AMD Ryzen\u2122 9 9900X 4.40GHz MSI MSI X870E-P Pro WiFi DDR5 G.Skill Flare X5 32GB DDR5 3 - in - 1 Combo",
+      "motherboard": "X870E",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "AMD-RYZEN-9-9900X-4-40GHZ-MSI-X8",
+      "name": "AMD Ryzen\u2122 9 9900X 4.40GHz MSI X870E MAG Tomahawk WiFi G.Skill Flare X5 32GB DDR5 3 - in - 1 Combo",
+      "bundle_price": 359.99,
+      "cpu": "AMD Ryzen\u2122 9 9900X 4.40GHz MSI X870E MAG Tomahawk WiFi G.Skill Flare X5 32GB DDR5 3 - in - 1 Combo",
+      "motherboard": "X870E",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "AMD-RYZEN-9-9950X-4-30GHZ-MSI-X8",
+      "name": "AMD Ryzen\u2122 9 9950X 4.30GHz MSI X870E-P Pro WiFi G.Skill Flare X5 32GB DDR5 3 - in - 1 Combo",
+      "bundle_price": 519.99,
+      "cpu": "AMD Ryzen\u2122 9 9950X 4.30GHz MSI X870E-P Pro WiFi G.Skill Flare X5 32GB DDR5 3 - in - 1 Combo",
+      "motherboard": "X870E",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "AMD-RYZEN-9-9950X-4-30GHZ-GIGABY",
+      "name": "AMD Ryzen\u2122 9 9950X 4.30GHz Gigabyte X870E Aorus Elite WiFi7 G.Skill Flare X5 32GB DDR5 3 - in - 1 Combo",
+      "bundle_price": 519.99,
+      "cpu": "AMD Ryzen\u2122 9 9950X 4.30GHz Gigabyte X870E Aorus Elite WiFi7 G.Skill Flare X5 32GB DDR5 3 - in - 1 Combo",
+      "motherboard": "X870E",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "AMD-RYZEN-5-9600X-3-90GHZ-ASUS-B",
+      "name": "AMD Ryzen\u2122 5 9600X 3.90GHz ASUS B650M-A Prime AX II G.Skill Flare X5 Series 16GB DDR5 3 - in - 1 Combo",
+      "bundle_price": 179.99,
+      "cpu": "AMD Ryzen\u2122 5 9600X 3.90GHz ASUS B650M-A Prime AX II G.Skill Flare X5 Series 16GB DDR5 3 - in - 1 Combo",
+      "motherboard": "AM5/1700 board",
+      "ram_base_gb": 16,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "AMD-RYZEN-5-9600X-3-90GHZ-ASUS-B",
+      "name": "AMD Ryzen\u2122 5 9600X 3.90GHz ASUS B650M-PLUS TUF Gaming WiFi G.Skill Flare X5 Series 16GB DDR5 3 - in 1 Combo",
+      "bundle_price": 179.99,
+      "cpu": "AMD Ryzen\u2122 5 9600X 3.90GHz ASUS B650M-PLUS TUF Gaming WiFi G.Skill Flare X5 Series 16GB DDR5 3 - in 1 Combo",
+      "motherboard": "AM5/1700 board",
+      "ram_base_gb": 16,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "AMD-RYZEN-5-7600X-4-7GHZ-ASUS-B6",
+      "name": "AMD Ryzen\u2122 5 7600X 4.7GHz ASUS B650M-A Prime AX II G.Skill 16GB DDR5 3 - in - 1 Combo",
+      "bundle_price": 159.99,
+      "cpu": "AMD Ryzen\u2122 5 7600X 4.7GHz ASUS B650M-A Prime AX II G.Skill 16GB DDR5 3 - in - 1 Combo",
+      "motherboard": "AM5/1700 board",
+      "ram_base_gb": 16,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "AMD-RYZEN-5-7600X-4-7GHZ-ASUS-B6",
+      "name": "AMD Ryzen\u2122 5 7600X 4.7GHz ASUS B650M-PLUS TUF Gaming WiFi AMD AM5 microATX G.Skill 16GB DDR5 3 - in - 1 Combo",
+      "bundle_price": 159.99,
+      "cpu": "AMD Ryzen\u2122 5 7600X 4.7GHz ASUS B650M-PLUS TUF Gaming WiFi AMD AM5 microATX G.Skill 16GB DDR5 3 - in - 1 Combo",
+      "motherboard": "AM5/1700 board",
+      "ram_base_gb": 16,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "AMD-THREADRIPPER-7960X-GIGABYTE-",
+      "name": "AMD Threadripper 7960X Gigabyte TRX50 Aero D sTR5 Kingston Fury Renegade Pro 128GB Quad Channel DDR5 3 - in - 1 Combo",
+      "bundle_price": 1299.99,
+      "cpu": "AMD Threadripper 7960X Gigabyte TRX50 Aero D sTR5 Kingston Fury Renegade Pro 128GB Quad Channel DDR5 3 - in - 1 Combo",
+      "motherboard": "AM5/1700 board",
+      "ram_base_gb": 128,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "AMD-THREADRIPPER-7970X-ASUS-TRX5",
+      "name": "AMD Threadripper 7970X ASUS TRX50 Sage Pro WiFi sTR5 Kingston Fury Renegade Pro 128GB Quad Channel DDR5 3 - in - 1 Combo",
+      "bundle_price": 2249.99,
+      "cpu": "AMD Threadripper 7970X ASUS TRX50 Sage Pro WiFi sTR5 Kingston Fury Renegade Pro 128GB Quad Channel DDR5 3 - in - 1 Combo",
+      "motherboard": "AM5/1700 board",
+      "ram_base_gb": 128,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "ADD-SKU-999999-TO-WISHLIST",
+      "name": "Add SKU:999999 to wishlist",
+      "bundle_price": 719.97,
+      "cpu": "Add SKU:999999 to wishlist",
+      "motherboard": "AM5/1700 board",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "INTEL-CORE-ULTRA-7-265KF-ASUS-Z8",
+      "name": "Intel\u00ae Core\u2122 Ultra 7 265KF ASUS Z890 AYW Gaming WiFi W 32GB DDR5 3-in-1 Combo",
+      "bundle_price": 249.99,
+      "cpu": "Intel\u00ae Core\u2122 Ultra 7 265KF ASUS Z890 AYW Gaming WiFi W 32GB DDR5 3-in-1 Combo",
+      "motherboard": "Z890",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "INTEL-CORE-ULTRA-7-265KF-MSI-Z89",
+      "name": "Intel\u00ae Core\u2122 Ultra 7 265KF MSI Z890-A PRO WiFi 1851 32GB DDR5 3-in-1 Combo",
+      "bundle_price": 249.99,
+      "cpu": "Intel\u00ae Core\u2122 Ultra 7 265KF MSI Z890-A PRO WiFi 1851 32GB DDR5 3-in-1 Combo",
+      "motherboard": "Z890",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "INTEL-CORE-ULTRA-7-265K-ASUS-Z89",
+      "name": "Intel\u00ae Core\u2122 Ultra 7 265K ASUS Z890 AYW Gaming WiFi W 32GB DDR5 3-in-1 Combo",
+      "bundle_price": 259.99,
+      "cpu": "Intel\u00ae Core\u2122 Ultra 7 265K ASUS Z890 AYW Gaming WiFi W 32GB DDR5 3-in-1 Combo",
+      "motherboard": "Z890",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "INTEL-CORE-ULTRA-7-265K-MSI-Z890",
+      "name": "Intel\u00ae Core\u2122 Ultra 7 265K MSI Z890-A PRO WiFi 32GB DDR5 3-in-1 Combo",
+      "bundle_price": 259.99,
+      "cpu": "Intel\u00ae Core\u2122 Ultra 7 265K MSI Z890-A PRO WiFi 32GB DDR5 3-in-1 Combo",
+      "motherboard": "Z890",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "INTEL-CORE-ULTRA-9-285K-GIGABYTE",
+      "name": "Intel\u00ae Core\u2122 Ultra 9 285K Gigabyte Z890 Gaming X WiFi7 32GB DDR5 3-in-1 Combo",
+      "bundle_price": 529.99,
+      "cpu": "Intel\u00ae Core\u2122 Ultra 9 285K Gigabyte Z890 Gaming X WiFi7 32GB DDR5 3-in-1 Combo",
+      "motherboard": "Z890",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "INTEL-CORE-ULTRA-9-285K-MSI-Z890",
+      "name": "Intel\u00ae Core\u2122 Ultra 9 285K MSI Z890 MAG Tomahawk WiFi 32GB DDR5 3-in-1 Combo",
+      "bundle_price": 529.99,
+      "cpu": "Intel\u00ae Core\u2122 Ultra 9 285K MSI Z890 MAG Tomahawk WiFi 32GB DDR5 3-in-1 Combo",
+      "motherboard": "Z890",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "INTEL-CORE-I9-14900K-3-2GHZ-ASUS",
+      "name": "Intel \u00ae Core\u2122 i9-14900K 3.2GHz ASUS Z790 Prime Gaming WIFI7 32GB DDR5 3-in-1 Combo",
+      "bundle_price": 399.99,
+      "cpu": "Intel \u00ae Core\u2122 i9-14900K 3.2GHz ASUS Z790 Prime Gaming WIFI7 32GB DDR5 3-in-1 Combo",
       "motherboard": "Z790",
       "ram_base_gb": 32,
       "case_fixed": "ATX Mid Tower",
       "cooling_default": "Air",
-      "m2_slots": 3,
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "INTEL-CORE-I9-14900K-3-2GHZ-ASUS",
+      "name": "Intel \u00ae Core\u2122 i9-14900K 3.2GHz ASUS Z790-Plus TUF Gaming WiFi 32GB DDR5 3-in-1 Combo",
+      "bundle_price": 399.99,
+      "cpu": "Intel \u00ae Core\u2122 i9-14900K 3.2GHz ASUS Z790-Plus TUF Gaming WiFi 32GB DDR5 3-in-1 Combo",
+      "motherboard": "Z790",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "INTEL-CORE-I7-14700K-3-4GHZ-ASUS",
+      "name": "Intel \u00ae Core\u2122 i7-14700K 3.4GHz ASUS Z790 Gaming WiFi7 MB 32GB DDR5 3-in-1 Combo",
+      "bundle_price": 299.99,
+      "cpu": "Intel \u00ae Core\u2122 i7-14700K 3.4GHz ASUS Z790 Gaming WiFi7 MB 32GB DDR5 3-in-1 Combo",
+      "motherboard": "Z790",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "INTEL-CORE-I7-14700K-3-4GHZ-ASUS",
+      "name": "Intel \u00ae Core\u2122 i7-14700K 3.4GHz ASUS Z790-Plus TUF Gaming WiFi 32GB DDR5 3-in-1 Combo",
+      "bundle_price": 299.99,
+      "cpu": "Intel \u00ae Core\u2122 i7-14700K 3.4GHz ASUS Z790-Plus TUF Gaming WiFi 32GB DDR5 3-in-1 Combo",
+      "motherboard": "Z790",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "INTEL-CORE-I9-12900K-3-2GHZ-ASUS",
+      "name": "Intel \u00ae Core\u2122 i9-12900K 3.2GHz ASUS Z790 Gaming WiFi MB 32GB DDR5 3-in-1 Combo",
+      "bundle_price": 269.99,
+      "cpu": "Intel \u00ae Core\u2122 i9-12900K 3.2GHz ASUS Z790 Gaming WiFi MB 32GB DDR5 3-in-1 Combo",
+      "motherboard": "Z790",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "INTEL-CORE-I9-12900K-3-2GHZ-ASUS",
+      "name": "Intel \u00ae Core\u2122 i9-12900K 3.2GHz ASUS Z790-Plus TUF Gaming WiFi D5 32GB DDR5 3-in-1 Combo",
+      "bundle_price": 269.99,
+      "cpu": "Intel \u00ae Core\u2122 i9-12900K 3.2GHz ASUS Z790-Plus TUF Gaming WiFi D5 32GB DDR5 3-in-1 Combo",
+      "motherboard": "Z790",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "INTEL-CORE-I7-12700K-3-6GHZ-MSI-",
+      "name": "Intel \u00ae Core\u2122 i7-12700K 3.6GHz MSI Z790-P Pro WiFi DDR4 16GB DDR4 3-in-1 Combo",
+      "bundle_price": 199.99,
+      "cpu": "Intel \u00ae Core\u2122 i7-12700K 3.6GHz MSI Z790-P Pro WiFi DDR4 16GB DDR4 3-in-1 Combo",
+      "motherboard": "Z790",
+      "ram_base_gb": 16,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "ADD-SKU-999999-TO-WISHLIST",
+      "name": "Add SKU:999999 to wishlist",
+      "bundle_price": 569.97,
+      "cpu": "Add SKU:999999 to wishlist",
+      "motherboard": "AM5/1700 board",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
       "storage_base": {
         "ssd_tb": 1
       }
     }
-  ]
+  ],
+  "meta": {
+    "source": "Micro Center bundle pages",
+    "updated_at": "2025-08-18T21:17:45Z",
+    "bundle_count": 38
+  }
 }
