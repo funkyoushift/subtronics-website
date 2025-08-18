@@ -225,3 +225,16 @@ Estimated Total (pre-tax): ${money(computeTotal(data,b,s))}`;
   toggleCompare.addEventListener('click', ()=> drawer.classList.toggle('active'));
   render();
 })();
+
+const WORKER_CREATE_URL = 'https://subtronics-api.screename53.workers.dev/create';
+async function startOrder(bundleSku, state){
+  const resp = await fetch(WORKER_CREATE_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ bundleSku, selections: state })
+  });
+  const data = await resp.json();
+  if(!data?.invoiceUrl){ alert('Order creation failed.'); console.log(data); return; }
+  window.location = data.invoiceUrl;
+}
+
