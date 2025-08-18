@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Store | Subtronics LLC</title>
+  <meta name="description" content="Preconfigured Micro Center bundles with configurable upgrades and live pricing."/>
+  <link rel="icon" href="assets/img/logo.ico"/>
+  <link rel="stylesheet" href="assets/css/site.css"/>
+  <style>
+    /* Store-specific polish */
+    .store-header {display:flex; justify-content:space-between; align-items:center; gap:1rem; margin:1rem 0}
+    .store-controls {display:flex; gap:.6rem; flex-wrap:wrap}
+    .store-controls select, .store-controls input {background:#0c111a; border:1px solid var(--border); color:var(--text); border-radius:10px; padding:.5rem .6rem}
+    .build-card {display:flex; flex-direction:column; gap:.6rem}
+    .build-meta {font-size:.9rem; color:var(--muted)}
+    .customize {margin-top:.4rem}
+    details.custom {border:1px solid var(--border); border-radius:12px; background:var(--card); padding:.4rem .8rem}
+    details.custom summary {cursor:pointer; font-weight:700; padding:.4rem 0}
+    .opt-grid {display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.6rem}
+    .opt-grid .form-field {display:flex; flex-direction:column; gap:.25rem}
+    .pricebar {position:sticky; bottom:0; background:rgba(10,12,16,.9); backdrop-filter:blur(6px); border-top:1px solid var(--border); padding:.6rem; display:flex; justify-content:space-between; align-items:center; z-index:20}
+    .btn-secondary {background:transparent; border:1px solid var(--border); color:var(--text); padding:.7rem 1rem; border-radius:10px; text-decoration:none; font-weight:700}
+    .compare-drawer {position:fixed; right:1rem; bottom:4.5rem; background:var(--card); border:1px solid var(--border); border-radius:12px; padding:.8rem; width:min(360px, 95vw); display:none; box-shadow:var(--shadow)}
+    .compare-drawer.active {display:block}
+    .badge-sff {display:inline-block; font-size:.75rem; padding:.15rem .5rem; border-radius:999px; border:1px solid var(--border); background:#18202c; margin-left:.4rem}
+    .actions {display:flex; gap:.5rem; flex-wrap:wrap}
+    .muted {color:var(--muted)}
+    @media (max-width:900px){ .opt-grid{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/img/logo.png" alt="Subtronics LLC" class="brand-logo">
+      <strong>Subtronics LLC</strong>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="store.html">Store</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="store-header">
+    <h1>Shop Pre-Configured Builds</h1>
+    <div class="store-controls">
+      <select id="filter-platform" aria-label="Filter by platform">
+        <option value="all">All Platforms</option>
+        <option value="AMD">AMD (AM5)</option>
+        <option value="Intel">Intel (LGA1700/1851)</option>
+      </select>
+      <select id="sort-by" aria-label="Sort builds">
+        <option value="name">Sort: Name</option>
+        <option value="price">Sort: Base Price</option>
+      </select>
+    </div>
+  </div>
+
+  <p class="notice">
+    Base builds are locked to current <strong>Micro Center CPU + Motherboard + base RAM bundles</strong>. 
+    Cases are fixed per build. Customize <strong>RAM</strong>, <strong>GPU tier</strong>, <strong>HDDs</strong> (up to 16TB/drive; max 8 drives),
+    <strong>extra NVMe</strong> up to <em>each board’s M.2 slots</em>, <strong>Cooling</strong> (Air / AIO / AIO+LCD) and <strong>RGB</strong>.
+  </p>
+
+  <div id="builds" class="grid grid-3"></div>
+</main>
+
+<div class="pricebar">
+  <div><span class="muted">Select a build and open “Customize” to see live pricing.</span></div>
+  <div class="actions">
+    <a class="btn-secondary" href="contact.html">Start Order</a>
+    <button class="btn-secondary" id="toggle-compare">Compare (0)</button>
+  </div>
+</div>
+
+<div class="compare-drawer" id="compare-drawer">
+  <strong>Compare</strong>
+  <div id="compare-list" class="muted" style="margin-top:.5rem"></div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2025 Subtronics LLC</p>
+  </div>
+</footer>
+
+<script src="assets/js/store.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

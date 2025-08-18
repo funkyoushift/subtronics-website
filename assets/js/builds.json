@@ -1,0 +1,138 @@
+{
+  "global": {
+    "profit_margin_percent": 15,
+    "max_hdd_drives": 8,
+    "default_m2_slots": 2
+  },
+  "price_tables": {
+    "gpu_tiers": [
+      {
+        "tier": "RTX 5060",
+        "cost": 300
+      },
+      {
+        "tier": "RTX 5060 Ti",
+        "cost": 330
+      },
+      {
+        "tier": "RTX 5070",
+        "cost": 550
+      },
+      {
+        "tier": "RTX 5070 Ti",
+        "cost": 800
+      },
+      {
+        "tier": "RTX 5080",
+        "cost": 1100
+      },
+      {
+        "tier": "RX 6600",
+        "cost": 219
+      },
+      {
+        "tier": "RX 7800 XT",
+        "cost": 450
+      },
+      {
+        "tier": "RX 7900 XT",
+        "cost": 600
+      },
+      {
+        "tier": "RX 7900 XTX",
+        "cost": 800
+      }
+    ],
+    "hdd": [
+      {
+        "capacity_tb": 2,
+        "cost": 49
+      },
+      {
+        "capacity_tb": 4,
+        "cost": 79
+      },
+      {
+        "capacity_tb": 8,
+        "cost": 139
+      },
+      {
+        "capacity_tb": 16,
+        "cost": 269
+      }
+    ],
+    "nvme": [
+      {
+        "capacity_tb": 2,
+        "cost": 95
+      },
+      {
+        "capacity_tb": 4,
+        "cost": 199
+      },
+      {
+        "capacity_tb": 8,
+        "cost": 499
+      }
+    ],
+    "ram_per_32gb_increment": 75
+  },
+  "builds": [
+    {
+      "sku": "MC-AMD-9700X-B650-32G",
+      "name": "AMD Ryzen 7 9700X Bundle",
+      "bundle_price": 429.99,
+      "cpu": "Ryzen 7 9700X",
+      "motherboard": "B650",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "MC-AMD-7600X3D-B650-32G",
+      "name": "AMD Ryzen 5 7600X3D Bundle",
+      "bundle_price": 419.99,
+      "cpu": "Ryzen 5 7600X3D",
+      "motherboard": "B650",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 2,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "MC-AMD-9900X-X870E-32G",
+      "name": "AMD Ryzen 9 9900X Bundle",
+      "bundle_price": 599.99,
+      "cpu": "Ryzen 9 9900X",
+      "motherboard": "X870E",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 3,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    },
+    {
+      "sku": "MC-INTEL-14900K-Z790-32G",
+      "name": "Intel Core i9-14900K Bundle",
+      "bundle_price": 499.99,
+      "cpu": "Core i9-14900K",
+      "motherboard": "Z790",
+      "ram_base_gb": 32,
+      "case_fixed": "ATX Mid Tower",
+      "cooling_default": "Air",
+      "m2_slots": 3,
+      "storage_base": {
+        "ssd_tb": 1
+      }
+    }
+  ]
+}
