@@ -1,4 +1,8 @@
-async function loadData(){ const r = await fetch('assets/js/builds.json'); return await r.json(); }
+async function loadData(){ 
+  const r = await fetch('/assets/js/builds.json'); // note the leading /
+  return await r.json();
+}
+
 const money = n => '$' + n.toFixed(2);
 
 function computeTotal(data, build, s){
@@ -115,7 +119,7 @@ function buildCard(data, b){
       <div class="actions">
         <button class="btn-secondary js-specs">Spec Sheet</button>
         <button class="btn-secondary js-compare">Add to Compare</button>
-        <a class="btn" href="contact.html">Start Order</a>
+        <a class="btn" href="/contact.html">Start Order</a>
       </div>
 
       <div class="notice js-price" style="margin-top:.6rem"></div>
