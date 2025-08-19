@@ -3,7 +3,9 @@
    - Worker must parse JSON from request.text()
 */
 
-const WORKER_CREATE_URL = 'https://subtronics-api.screename53.workers.dev/create'; // confirm subdomain
+const WORKER_CREATE_URL =
+  'https://subtronics-api.screename53.workers.dev/create';
+// confirm subdomain
 
 async function loadData(){
   const r = await fetch('/assets/js/builds.json', {cache: 'no-store'});
@@ -33,28 +35,27 @@ function computeTotal(data, build, s){
 function platformOf(cpu){ return /Ryzen|AMD/i.test(cpu) ? 'AMD' : 'Intel'; }
 
 async function startOrder(bundleSku, state){
-  try{
+  try {
     const resp = await fetch(WORKER_CREATE_URL, {
       method: 'POST',
-      // simple request: no preflight
+      // text/plain avoids an OPTIONS preflight
       headers: { 'Content-Type': 'text/plain' },
       body: JSON.stringify({ bundleSku, selections: state })
     });
-    const text = await resp.text();
-    let data;
-    try { data = JSON.parse(text); } catch { data = {raw:text}; }
-    if(!resp.ok){
-      alert('Server error creating order. See console.');
-      console.error('Worker non-200:', resp.status, data);
+    if (!resp.ok) {
+      const text = await resp.text();
+      alert('Server error creating order. See console for details.');
+      console.error('Worker non-200:', resp.status, text);
       return;
     }
-    if(!data?.invoiceUrl){
-      alert('Order creation failed. See console.');
+    const data = await resp.json();
+    if (!data?.invoiceUrl) {
+      alert('Order creation failed. See console for details.');
       console.error('Worker response:', data);
       return;
     }
     window.location = data.invoiceUrl;
-  }catch(err){
+  } catch (err) {
     alert('Network error while creating order.');
     console.error(err);
   }
