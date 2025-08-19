@@ -1,14 +1,12 @@
-/* assets/js/store.js
-   Subtronics Store — Micro Center bundle configurator + Shopify handoff via Cloudflare Worker
-   Paste this over your existing file.
+/* assets/js/store.js  (patched to avoid CORS preflight)
+   - Uses Content-Type: text/plain for Worker POST (simple request, no OPTIONS)
+   - Worker must parse JSON from request.text()
 */
 
-// ====== CONFIG ======
-const WORKER_CREATE_URL = 'https://subtronics-api.screename53.workers.dev/create'; // <-- confirm subdomain is correct
+const WORKER_CREATE_URL = 'https://subtronics-api.screename53.workers.dev/create'; // confirm subdomain
 
-// ====== HELPERS ======
 async function loadData(){
-  const r = await fetch('/assets/js/builds.json'); // root-absolute so it works from /store
+  const r = await fetch('/assets/js/builds.json', {cache: 'no-store'});
   if(!r.ok) throw new Error('Failed to load builds.json');
   return await r.json();
 }
@@ -17,70 +15,54 @@ const money = n => '$' + Number(n || 0).toFixed(2);
 
 function computeTotal(data, build, s){
   let cost = Number(build.bundle_price || 0);
-
-  // RAM upgrade (in 32GB steps above base)
+  const pt = data.price_tables || {};
   const ramInc = Math.max(0, (Number(s.ram_gb) - Number(build.ram_base_gb)) / 32);
-  cost += ramInc * Number(data.price_tables.ram_per_32gb_increment || 0);
-
-  // GPU tier
-  const gpu = (data.price_tables.gpu_tiers || []).find(g=>g.tier===s.gpu_tier);
+  cost += ramInc * Number(pt.ram_per_32gb_increment || 0);
+  const gpu = (pt.gpu_tiers || []).find(g=>g.tier===s.gpu_tier);
   if(gpu) cost += Number(gpu.cost || 0);
-
-  // HDDs
-  const hddRow = (data.price_tables.hdd || []).find(h=>Number(h.capacity_tb)===Number(s.hdd_capacity_tb));
+  const hddRow = (pt.hdd || []).find(h=>Number(h.capacity_tb)===Number(s.hdd_capacity_tb));
   if(hddRow) cost += Number(hddRow.cost || 0) * Number(s.hdd_count || 0);
-
-  // Extra NVMe per M.2 slot
-  const nvRow = (data.price_tables.nvme || []).find(n=>Number(n.capacity_tb)===Number(s.nvme_capacity_tb));
+  const nvRow = (pt.nvme || []).find(n=>Number(n.capacity_tb)===Number(s.nvme_capacity_tb));
   if(nvRow) cost += Number(nvRow.cost || 0) * Number(s.nvme_slots_used || 0);
-
-  // Cooling
   if(s.cooling==='AIO240') cost += 95;
   if(s.cooling==='AIO360_LCD') cost += 290;
-
-  // RGB
   if(s.rgb==='RGB') cost += 45;
-
-  // Margin
-  const margin = Number(data.global.profit_margin_percent || 0);
-  return cost * (1 + margin/100);
+  return cost * (1 + Number((data.global||{}).profit_margin_percent || 0)/100);
 }
 
-function platformOf(cpu){
-  return /Ryzen|AMD/i.test(cpu) ? 'AMD' : 'Intel';
-}
+function platformOf(cpu){ return /Ryzen|AMD/i.test(cpu) ? 'AMD' : 'Intel'; }
 
 async function startOrder(bundleSku, state){
   try{
     const resp = await fetch(WORKER_CREATE_URL, {
-      method: 'POST', mode: 'cors',
-      headers: { 'Content-Type': 'application/json' },
+      method: 'POST',
+      // simple request: no preflight
+      headers: { 'Content-Type': 'text/plain' },
       body: JSON.stringify({ bundleSku, selections: state })
     });
-    if (!resp.ok) {
-      const text = await resp.text();
-      alert('Server error creating order. See console for details.');
-      console.error('Worker non-200:', resp.status, text);
+    const text = await resp.text();
+    let data;
+    try { data = JSON.parse(text); } catch { data = {raw:text}; }
+    if(!resp.ok){
+      alert('Server error creating order. See console.');
+      console.error('Worker non-200:', resp.status, data);
       return;
     }
-    const data = await resp.json();
     if(!data?.invoiceUrl){
-      alert('Order creation failed. See console for details.');
+      alert('Order creation failed. See console.');
       console.error('Worker response:', data);
       return;
     }
-    window.location = data.invoiceUrl; // redirect to Shopify invoice/checkout
+    window.location = data.invoiceUrl;
   }catch(err){
     alert('Network error while creating order.');
     console.error(err);
   }
 }
 
-// ====== UI BUILDERS ======
 function buildCard(data, b){
   const c = document.createElement('div');
   c.className = 'card build-card';
-
   const sffBadge = (b.case_fixed && /ITX|SFF|Small/i.test(b.case_fixed)) ? '<span class="badge-sff">SFF</span>' : '';
 
   c.innerHTML = `
@@ -103,39 +85,33 @@ function buildCard(data, b){
           </select>
           <span class="muted">Upgrades priced per +32GB</span>
         </div>
-
         <div class="form-field">
           <label>GPU Tier</label>
           <select name="gpu_tier">
             ${(data.price_tables.gpu_tiers || []).map(g=>`<option value="${g.tier}">${g.tier} (+${money(g.cost)})</option>`).join('')}
           </select>
         </div>
-
         <div class="form-field">
           <label>HDD Capacity (per drive)</label>
           <select name="hdd_capacity_tb">
             ${(data.price_tables.hdd || []).map(h=>`<option value="${h.capacity_tb}">${h.capacity_tb} TB (+${money(h.cost)}/drive)</option>`).join('')}
           </select>
         </div>
-
         <div class="form-field">
-          <label>HDD Drives (max ${data.global.max_hdd_drives})</label>
-          <input type="number" name="hdd_count" min="0" max="${data.global.max_hdd_drives}" value="0"/>
+          <label>HDD Drives (max ${(data.global||{}).max_hdd_drives})</label>
+          <input type="number" name="hdd_count" min="0" max="${(data.global||{}).max_hdd_drives}" value="0"/>
         </div>
-
         <div class="form-field">
           <label>Extra NVMe Capacity (per slot)</label>
           <select name="nvme_capacity_tb">
             ${(data.price_tables.nvme || []).map(h=>`<option value="${h.capacity_tb}">${h.capacity_tb} TB (+${money(h.cost)}/slot)</option>`).join('')}
           </select>
         </div>
-
         <div class="form-field">
           <label>Use NVMe Slots</label>
           <input type="number" name="nvme_slots_used" min="0" max="${b.m2_slots}" value="0"/>
           <span class="muted">Up to ${b.m2_slots} slots</span>
         </div>
-
         <div class="form-field">
           <label>Cooling</label>
           <select name="cooling">
@@ -144,7 +120,6 @@ function buildCard(data, b){
             <option value="AIO360_LCD">AIO 360mm w/ LCD (+$290)</option>
           </select>
         </div>
-
         <div class="form-field">
           <label>RGB</label>
           <select name="rgb">
@@ -164,7 +139,6 @@ function buildCard(data, b){
     </details>
   `;
 
-  // Initial state
   const state = {
     ram_gb: Number(b.ram_base_gb),
     gpu_tier: (data.price_tables.gpu_tiers || [])[0]?.tier || '',
@@ -185,55 +159,43 @@ function buildCard(data, b){
       state[name] = el.type==='number' ? Number(el.value) : el.value;
     });
     const total = computeTotal(data,b,state);
-    priceEl.innerHTML = `Estimated total (before tax/shipping): <strong>${money(total)}</strong> &nbsp; <span class="badge">Margin ${Number(data.global.profit_margin_percent || 0)}%</span>`;
+    priceEl.innerHTML = `Estimated total (before tax/shipping): <strong>${money(total)}</strong> &nbsp; <span class="badge">Margin ${Number((data.global||{}).profit_margin_percent || 0)}%</span>`;
   };
-
   inputs.forEach(el=>el.addEventListener('input', update));
   update();
 
-  // Start Order → Worker → Shopify Draft Order
   const orderBtn = c.querySelector('.actions .btn');
   orderBtn.addEventListener('click', (e)=>{
-    e.preventDefault(); // keep /contact.html as a fallback if JS fails
+    e.preventDefault();
     update();
     startOrder(String(b.sku), state);
   });
 
-  // Compare + Spec Sheet
   c.querySelector('.js-compare').addEventListener('click', ()=> addToCompare(b, state, data));
   c.querySelector('.js-specs').addEventListener('click', ()=> showSpecs(b, state, data));
 
-  // Tag platform for filtering
   c.dataset.platform = platformOf(b.cpu);
   c.dataset.basePrice = String(b.bundle_price ?? 0);
 
   return c;
 }
 
-// ====== COMPARE / SPECS ======
 const compare = [];
-
 function addToCompare(b, s, data){
   if(compare.find(x=>x.sku===b.sku)) return renderCompare();
   compare.push({sku:b.sku, name:b.name, cpu:b.cpu, board:b.motherboard, price: computeTotal(data,b,s)});
   renderCompare();
 }
-
 function renderCompare(){
   const drawer = document.getElementById('compare-drawer');
   const list = document.getElementById('compare-list');
   if(!drawer || !list) return;
-  if(compare.length===0){
-    drawer.classList.remove('active');
-    list.textContent = 'Nothing to compare yet.';
-    return;
-  }
+  if(compare.length===0){ drawer.classList.remove('active'); list.textContent = 'Nothing to compare yet.'; return; }
   drawer.classList.add('active');
   list.innerHTML = compare.map(x=>`${x.name}<br><span class="muted">${x.cpu} • ${x.board}</span><br><strong>${money(x.price)}</strong>`).join('<hr style="border:0;border-top:1px solid var(--border);margin:.5rem 0"/>');
   const tgl = document.getElementById('toggle-compare');
   if(tgl) tgl.textContent = `Compare (${compare.length})`;
 }
-
 function showSpecs(b, s, data){
   const specs = `
 CPU: ${b.cpu}
@@ -255,12 +217,9 @@ Estimated Total (pre-tax): ${money(computeTotal(data,b,s))}`;
   alert(specs);
 }
 
-// ====== BOOTSTRAP ======
 (async function(){
   try{
     const data = await loadData();
-
-    // Optional: show last sync time if you added <span id="last-sync"></span> in store.html
     const last = document.getElementById('last-sync');
     if (last && data.meta?.updated_at) {
       const d = new Date(data.meta.updated_at);
@@ -277,14 +236,11 @@ Estimated Total (pre-tax): ${money(computeTotal(data,b,s))}`;
       if(!mount) return;
       mount.innerHTML = '';
       let builds = (data.builds || []).slice();
-      // filter
       if(filter && filter.value!=='all'){
         builds = builds.filter(b => platformOf(b.cpu)===filter.value);
       }
-      // sort
       if(sortBy && sortBy.value==='price'){ builds.sort((a,b)=> (Number(a.bundle_price||0))-(Number(b.bundle_price||0))); }
       else { builds.sort((a,b)=> String(a.name).localeCompare(String(b.name))); }
-
       builds.forEach(b => mount.appendChild(buildCard(data,b)));
     }
 
@@ -298,8 +254,6 @@ Estimated Total (pre-tax): ${money(computeTotal(data,b,s))}`;
   }catch(err){
     console.error('Store init failed:', err);
     const mount = document.getElementById('builds');
-    if(mount){
-      mount.innerHTML = `<div class="notice">There was an error loading the store. Please refresh the page.</div>`;
-    }
+    if(mount){ mount.innerHTML = `<div class="notice">There was an error loading the store. Please refresh the page.</div>`; }
   }
 })();
