@@ -35,27 +35,27 @@ function computeTotal(data, build, s){
 function platformOf(cpu){ return /Ryzen|AMD/i.test(cpu) ? 'AMD' : 'Intel'; }
 
 async function startOrder(bundleSku, state){
-  try {
+  try{
     const resp = await fetch(WORKER_CREATE_URL, {
       method: 'POST',
-      // text/plain avoids an OPTIONS preflight
-      headers: { 'Content-Type': 'text/plain' },
+      headers: { 'Content-Type': 'text/plain' }, // keep simple CORS
       body: JSON.stringify({ bundleSku, selections: state })
     });
-    if (!resp.ok) {
-      const text = await resp.text();
-      alert('Server error creating order. See console for details.');
-      console.error('Worker non-200:', resp.status, text);
-      return;
-    }
     const data = await resp.json();
-    if (!data?.invoiceUrl) {
-      alert('Order creation failed. See console for details.');
-      console.error('Worker response:', data);
+
+    if (resp.ok && data?.invoiceUrl) {
+      window.location = data.invoiceUrl;
       return;
     }
-    window.location = data.invoiceUrl;
-  } catch (err) {
+    if (resp.ok && data?.adminUrl) {
+      alert('Draft created. Opening Shopify to send the invoice…');
+      window.open(data.adminUrl, '_blank');
+      return;
+    }
+
+    alert(`Order creation failed: ${data?.error || 'Unknown error'}`);
+    console.error('Worker non-200:', resp.status, data);
+  }catch(err){
     alert('Network error while creating order.');
     console.error(err);
   }
