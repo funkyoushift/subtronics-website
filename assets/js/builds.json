@@ -81,7 +81,7 @@
     {
       "sku": "AMD-RYZEN-7-9800X3D-ASUS-B650E-E",
       "name": "AMD Ryzen\u2122 7 9800X3D ASUS B650E-E TUF Gaming WiFi G.Skill Flare X5 Series 32GB DDR5 3 - in - 1 Combo",
-      "bundle_price": 429.99,
+      "bundle_price": 449.99,
       "cpu": "AMD Ryzen\u2122 7 9800X3D ASUS B650E-E TUF Gaming WiFi G.Skill Flare X5 Series 32GB DDR5 3 - in - 1 Combo",
       "motherboard": "AM5/1700 board",
       "ram_base_gb": 32,
@@ -95,7 +95,7 @@
     {
       "sku": "MSI-X870E-P-PRO-WIFI",
       "name": "MSI X870E-P Pro WiFi",
-      "bundle_price": 429.99,
+      "bundle_price": 449.99,
       "cpu": "MSI X870E-P Pro WiFi",
       "motherboard": "X870E",
       "ram_base_gb": 32,
@@ -109,7 +109,7 @@
     {
       "sku": "ASUS-X870E-E-ROG-STRIX-GAMING-WI",
       "name": "ASUS X870E-E ROG Strix Gaming WiFi",
-      "bundle_price": 429.99,
+      "bundle_price": 449.99,
       "cpu": "ASUS X870E-E ROG Strix Gaming WiFi",
       "motherboard": "X870E",
       "ram_base_gb": 32,
@@ -417,7 +417,7 @@
     {
       "sku": "ADD-SKU-999999-TO-WISHLIST",
       "name": "Add SKU:999999 to wishlist",
-      "bundle_price": 719.97,
+      "bundle_price": 739.97,
       "cpu": "Add SKU:999999 to wishlist",
       "motherboard": "AM5/1700 board",
       "ram_base_gb": 32,
@@ -627,7 +627,7 @@
   ],
   "meta": {
     "source": "Micro Center bundle pages",
-    "updated_at": "2025-08-22T13:39:02Z",
+    "updated_at": "2025-08-23T13:33:22Z",
     "bundle_count": 39
   }
 }
