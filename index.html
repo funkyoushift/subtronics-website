@@ -1,31 +1,106 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Subtronics LLC | Custom PC Builds & Repair</title><meta name="description" content="Subtronics LLC - Custom PC Builds & Computer Repair in Flushing, MI">
-<link rel="icon" href="/assets/img/logo.ico"><link rel="stylesheet" href="/assets/css/site.css"></head><body>
-<header class="site-header"><div class="container header-inner">
-<a class="brand" href="/index.html"><img src="/assets/img/logo.png" alt="Subtronics LLC"><strong>Subtronics LLC</strong></a>
-<nav class="nav">
-  <a href="/index.html">Home</a>
-  <a href="/services.html">Services</a>
-  <a href="/store.html">Store</a>
-  <a href="/about.html">About</a>
-  <a href="/contact.html">Contact</a>
-</nav>
-</div></header>
-<main class="container">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subtronics LLC - Custom PC Builds | Computer Repair Flushing, MI</title>
+    <meta name="description" content="Custom PC builds, computer repair, and hardware upgrades in Flushing, MI. Fast diagnostics and honest pricing for gaming, streaming, school, or business.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div>
+                    <h1>Subtronics LLC</h1>
+                    <p class="tagline">Custom PC Builds & Computer Repair</p>
+                </div>
+                <div class="contact-info">
+                    <p><strong>Flushing, Michigan</strong></p>
+                    <p><a href="mailto:contact@subtronicsllc.com">contact@subtronicsllc.com</a></p>
+                    <p>Mon-Fri: 9AM-6PM | Sat: 10AM-4PM</p>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<section class="grid grid-2">
-  <div>
-    <h1>Computer Repair & Custom PC Builds</h1>
-    <p>Fast diagnostics and honest pricing in Flushing, MI. Gaming, streaming, school, or business—I've got you.</p>
-    <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin:.8rem 0;">
-      <a class="btn" href="/store.html">Shop Pre-Configured PCs</a>
-      <a class="btn" href="/contact.html">Get a Quote</a>
-    </div>
-    <div class="notice"><strong>Call:</strong> 810-280-2222 • <strong>Email:</strong> martin@subtronicsllc.com</div>
-  </div>
-  <div class="card"><img src="/martin.jpg" alt="Martin" style="width:100%;border-radius:12px"></div>
-</section>
-</main><footer><div class="container"><p>&copy; 2025 Subtronics LLC</p></div></footer>
-<script defer src="/assets/js/site.js"></script></body></html>
-<meta name='impact-site-verification' value='91eca5b0-3e59-4b51-97a7-05f4032052d2'>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#builder">PC Builder</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Fast Diagnostics, Honest Pricing</h2>
+            <p>Gaming, streaming, school, or business—we've got you covered</p>
+            <a href="#builder" class="btn">Build Your Custom PC</a>
+        </div>
+    </section>
+
+    <section class="section" id="builder">
+        <div class="container">
+            <h2 class="section-title">Custom PC Builder</h2>
+            <div id="builderApp" class="builder-container">
+                <div class="loading">Loading PC configurations...</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="services" style="background: var(--light);">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>🖥️ Custom PC Builds</h3>
+                    <p>Tailored gaming and workstation builds to meet your exact needs and budget</p>
+                </div>
+                <div class="service-card">
+                    <h3>🔧 Computer Repair</h3>
+                    <p>Fast diagnostics and repairs for all desktop and laptop issues</p>
+                </div>
+                <div class="service-card">
+                    <h3>⚡ Hardware Upgrades</h3>
+                    <p>Boost your system's performance with the latest components</p>
+                </div>
+                <div class="service-card">
+                    <h3>🔍 Diagnostics</h3>
+                    <p>Comprehensive testing to identify and solve technical problems</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>Subtronics LLC</h3>
+                    <p>Your trusted local computer experts in Flushing, MI</p>
+                </div>
+                <div>
+                    <h3>Contact</h3>
+                    <p>Email: <a href="mailto:contact@subtronicsllc.com">contact@subtronicsllc.com</a></p>
+                    <p>Flushing, Michigan</p>
+                </div>
+                <div>
+                    <h3>Hours</h3>
+                    <p>Monday - Friday: 9AM - 6PM</p>
+                    <p>Saturday: 10AM - 4PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #444;">
+                <p>&copy; 2025 Subtronics LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
