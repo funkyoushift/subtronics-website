@@ -1,97 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subtronics LLC - Custom PC Builds | Computer Repair Flushing, MI</title>
-    <meta name="description" content="Custom PC builds, computer repair, and hardware upgrades in Flushing, MI. Fast diagnostics and honest pricing for gaming, streaming, school, or business.">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subtronics LLC - Custom PC Builds | Computer Repair Flushing, MI</title>
+  <meta
+    name="description"
+    content="Custom PC builds, computer repair, and hardware upgrades in Flushing, MI. Fast diagnostics and honest pricing for gaming, streaming, school, or business."
+  />
+  <link rel="icon" href="/assets/img/logo.ico" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div>
-                    <h1>Subtronics LLC</h1>
-                    <p class="tagline">Custom PC Builds & Computer Repair</p>
-                </div>
-                <div class="contact-info">
-                    <p><strong>Flushing, Michigan</strong></p>
-                    <p><a href="/cdn-cgi/l/email-protection#86e5e9e8f2e7e5f2c6f5f3e4f2f4e9e8efe5f5eaeae5a8e5e9eb"><span class="__cf_email__" data-cfemail="6f0c00011b0e0c1b2f1c1a0d1b1d0001060c1c03030c410c0002">[email&#160;protected]</span></a></p>
-                    <p>Mon-Fri: 9AM-6PM | Sat: 10AM-4PM</p>
-                </div>
-            </div>
-        </div>
-    </header>
+  <!-- Shared header/nav (matches store/contact) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/index.html">
+        <img src="/assets/img/logo.png" alt="Subtronics LLC" class="brand-logo" />
+        <strong>Subtronics LLC</strong>
+      </a>
+      <nav class="nav">
+        <a href="/index.html">Home</a>
+        <a href="/services.html">Services</a>
+        <a href="/store.html">Store</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#builder">PC Builder</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero-home">
+      <div class="hero-text">
+        <div class="pill">Flushing, Michigan • Locally owned</div>
+        <h1>Custom PCs & Computer Repair without the BS.</h1>
+        <p class="hero-sub">
+          Gaming, streaming, school, or business – get a PC that’s actually built right,
+          with honest pricing and local support.
+        </p>
 
-    <section class="hero" id="home">
-        <div class="container">
-            <h2>Fast Diagnostics, Honest Pricing</h2>
-            <p>Gaming, streaming, school, or business—we've got you covered</p>
-            <a href="#builder" class="btn">Build Your Custom PC</a>
+        <div class="hero-actions">
+          <a href="/store.html" class="btn">Shop Preconfigured Builds</a>
+          <a href="/contact.html" class="btn-secondary">Get a Free Quote</a>
         </div>
+
+        <div class="hero-kpis">
+          <div>
+            <strong>Fast diagnostics</strong>
+            <span>Most issues diagnosed within 1–2 business days.</span>
+          </div>
+          <div>
+            <strong>Honest pricing</strong>
+            <span>No mystery charges. You see the parts & labor.</span>
+          </div>
+          <div>
+            <strong>Local support</strong>
+            <span>Talk to the person who actually built your PC.</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-card card">
+        <h2>What we do</h2>
+        <ul class="hero-list">
+          <li>🎮 Custom gaming & streaming PC builds</li>
+          <li>🖥️ Desktop & laptop repair</li>
+          <li>⚡ Hardware upgrades & optimization</li>
+          <li>🔍 Diagnostics & troubleshooting</li>
+        </ul>
+        <p class="muted small">
+          Start with a preconfigured Micro Center bundle in the Store, or tell us your
+          budget and we’ll spec a build for you.
+        </p>
+      </aside>
     </section>
 
-    <section class="section" id="builder">
-        <div class="container">
-            <h2 class="section-title">Custom PC Builder</h2>
-            <div id="builderApp" class="builder-container">
-                <div class="loading">Loading PC configurations...</div>
-            </div>
-        </div>
+    <!-- POPULAR BUILDS PREVIEW -->
+    <section class="section">
+      <header class="section-header">
+        <h2>Popular Starting Points</h2>
+        <p class="muted">
+          These are typical builds most customers land on. Every system is customized
+          for your games, apps, and budget.
+        </p>
+      </header>
+
+      <div class="grid grid-3">
+        <article class="card build-teaser">
+          <h3>Starter 1080p</h3>
+          <p class="muted">Great for eSports and lighter AAA titles.</p>
+          <ul>
+            <li>Ryzen 5 / Core i5 class CPU</li>
+            <li>RTX 4060 / RX 7600 class GPU</li>
+            <li>16GB RAM • 1TB NVMe SSD</li>
+          </ul>
+          <p class="price-range">Typical: <strong>$850–$1,050</strong></p>
+          <a href="/store.html" class="btn-small">View in Store</a>
+        </article>
+
+        <article class="card build-teaser">
+          <h3>Sweet Spot 1440p</h3>
+          <p class="muted">Best balance of price and performance.</p>
+          <ul>
+            <li>Ryzen 7 / Core i7 class CPU</li>
+            <li>RTX 4070 / RX 7800 XT class GPU</li>
+            <li>32GB RAM • 1–2TB NVMe SSD</li>
+          </ul>
+          <p class="price-range">Typical: <strong>$1,500–$2,000</strong></p>
+          <a href="/store.html" class="btn-small">View in Store</a>
+        </article>
+
+        <article class="card build-teaser">
+          <h3>Creator / 4K Rig</h3>
+          <p class="muted">High-refresh 1440p, 4K, and heavy workloads.</p>
+          <ul>
+            <li>Ryzen 9 / Core i9 class CPU</li>
+            <li>RTX 4080+ / RX 7900 XTX class GPU</li>
+            <li>64GB RAM • 2TB+ NVMe</li>
+          </ul>
+          <p class="price-range">Typical: <strong>$2,300+</strong></p>
+          <a href="/store.html" class="btn-small">View in Store</a>
+        </article>
+      </div>
+
+      <p class="muted small">
+        All pricing depends on current Micro Center bundle and component availability.
+        Final quotes are confirmed with you before any parts are ordered.
+      </p>
     </section>
 
-    <section class="section" id="services" style="background: var(--light);">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>🖥️ Custom PC Builds</h3>
-                    <p>Tailored gaming and workstation builds to meet your exact needs and budget</p>
-                </div>
-                <div class="service-card">
-                    <h3>🔧 Computer Repair</h3>
-                    <p>Fast diagnostics and repairs for all desktop and laptop issues</p>
-                </div>
-                <div class="service-card">
-                    <h3>⚡ Hardware Upgrades</h3>
-                    <p>Boost your system's performance with the latest components</p>
-                </div>
-                <div class="service-card">
-                    <h3>🔍 Diagnostics</h3>
-                    <p>Comprehensive testing to identify and solve technical problems</p>
-                </div>
-            </div>
-        </div>
+    <!-- SERVICES SUMMARY -->
+    <section class="section">
+      <header class="section-header">
+        <h2>Services</h2>
+      </header>
+
+      <div class="grid grid-3">
+        <article class="card">
+          <h3>Custom PC Builds</h3>
+          <p class="muted">
+            Fully built systems using brand-name parts, tuned for your games or workload.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Repairs & Diagnostics</h3>
+          <p class="muted">
+            Blue screens, no-boot, slow systems, and weird issues tracked down and fixed.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Upgrades & Optimization</h3>
+          <p class="muted">
+            RAM, storage, GPU, thermal clean-ups, and performance tuning for existing PCs.
+          </p>
+        </article>
+      </div>
+
+      <div class="section-cta">
+        <a href="/services.html" class="btn-secondary">View full service list</a>
+        <a href="/contact.html" class="btn">Book diagnostics or build consult</a>
+      </div>
     </section>
 
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div>
-                    <h3>Subtronics LLC</h3>
-                    <p>Your trusted local computer experts in Flushing, MI</p>
-                </div>
-                <div>
-                    <h3>Contact</h3>
-                    <p>Email: <a href="/cdn-cgi/l/email-protection#0d6e6263796c6e794d7e786f797f6263646e7e61616e236e6260"><span class="__cf_email__" data-cfemail="6e0d01001a0f0d1a2e1d1b0c1a1c0100070d1d02020d400d0103">[email&#160;protected]</span></a></p>
-                    <p>Flushing, Michigan</p>
-                </div>
-                <div>
-                    <h3>Hours</h3>
-                    <p>Monday - Friday: 9AM - 6PM</p>
-                    <p>Saturday: 10AM - 4PM</p>
-                    <p>Sunday: Closed</p>
-                </div>
-        
+    <!-- BRANDS / TRUST -->
+    <section class="section">
+      <header class="section-header">
+        <h2>Parts we trust</h2>
+        <p class="muted">We build with the same brands we’d use in our own rigs.</p>
+      </header>
+
+      <div class="brand-row">
+        <img src="/assets/brands/amd.png" alt="AMD" />
+        <img src="/assets/brands/intel.png" alt="Intel" />
+        <img src="/assets/brands/nvidia.png" alt="NVIDIA" />
+        <img src="/assets/brands/asus.png" alt="ASUS" />
+        <img src="/assets/brands/msi.png" alt="MSI" />
+        <img src="/assets/brands/gigabyte.png" alt="Gigabyte" />
+        <img src="/assets/brands/corsair.png" alt="Corsair" />
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Subtronics LLC • Flushing, Michigan • Custom PCs & Computer Repair</p>
+    </div>
+  </footer>
+
+  <script defer src="/assets/js/site.js"></script>
+</body>
+</html>
