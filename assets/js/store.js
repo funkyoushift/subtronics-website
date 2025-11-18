@@ -15,7 +15,7 @@ async function loadData() {
 
 const money = (n) => '$' + Number(n || 0).toFixed(2);
 
-// Compute total price given selections
+// Compute total price given selections (platform + RAM/GPU/storage/etc)
 function computeTotal(data, build, s) {
   let cost = Number(build.bundle_price || 0);
   const pt = data.price_tables || {};
@@ -40,6 +40,7 @@ function computeTotal(data, build, s) {
   if (nvRow)
     cost += Number(nvRow.cost || 0) * Number(s.nvme_slots_used || 0);
 
+  // Cooling / RGB (still simple for now)
   if (s.cooling === 'AIO240') cost += 95;
   if (s.cooling === 'AIO360_LCD') cost += 290;
   if (s.rgb === 'RGB') cost += 45;
@@ -61,6 +62,39 @@ function tierOfPrice(price) {
   if (p < 350) return { key: 'mid', label: 'Mid-range' };
   if (p < 600) return { key: 'high', label: 'High-end' };
   return { key: 'extreme', label: 'Extreme / Workstation' };
+}
+
+// Map tier -> friendly "level" and use-case copy
+function levelMetaFor(build) {
+  const t = tierOfPrice(build.bundle_price);
+  const key = t.key;
+
+  if (key === 'budget') {
+    return {
+      label: 'Level 1 • Starter Gaming',
+      use: '1080p esports and lighter games like Fortnite, Valorant, Minecraft, Roblox.',
+      res: 'Great 1080p performance'
+    };
+  }
+  if (key === 'mid') {
+    return {
+      label: 'Level 2 • Performance',
+      use: '1440p high settings in most modern titles; strong 1080p competitive.',
+      res: '1080p ultra / 1440p high'
+    };
+  }
+  if (key === 'high') {
+    return {
+      label: 'Level 3 • Enthusiast',
+      use: 'High-refresh 1440p or entry-level 4K plus light creator work.',
+      res: '1440p ultra / entry 4K'
+    };
+  }
+  return {
+    label: 'Level 4 • Creator / Extreme',
+    use: '4K gaming, heavy content creation, streaming, multi-monitor.',
+    res: '1440p & 4K, creator-focused'
+  };
 }
 
 // Call Cloudflare Worker to create order/invoice
@@ -91,7 +125,7 @@ async function startOrder(bundleSku, state) {
   }
 }
 
-// Build a single card node
+// Build a single card node (level/use-case first, specs in details)
 function buildCard(data, b) {
   const c = document.createElement('div');
   c.className = 'card build-card';
@@ -102,30 +136,36 @@ function buildCard(data, b) {
       : '';
 
   const tier = tierOfPrice(b.bundle_price);
-  const tierBadge = tier
-    ? `<span class="badge-tier badge-tier-${tier.key}">${tier.label}</span>`
-    : '';
+  const level = levelMetaFor(b);
+
+  const estBase = Number(b.bundle_price || 0);
+  const levelLabel = level.label;
+  const levelUse = level.use;
+  const levelRes = level.res;
 
   c.innerHTML = `
     <div class="build-header">
       <div class="build-name-row">
-        <h3>${b.name}</h3>
+        <h3>${levelLabel}</h3>
         ${sffBadge}
       </div>
       <div class="build-meta">
-        ${tierBadge ? tierBadge + ' • ' : ''}
-        CPU: <strong>${b.cpu}</strong> • Board: <strong>${b.motherboard}</strong> • Base RAM: <strong>${b.ram_base_gb}GB</strong><br/>
-        Case: <strong>${b.case_fixed}</strong> • M.2 Slots: <strong>${b.m2_slots}</strong> • Base Storage: <strong>${
-    (b.storage_base?.ssd_tb ?? 1) + 'TB NVMe'
-  }</strong><br/>
-        Bundle price (CPU + board + base RAM): <strong>${money(
-          b.bundle_price
-        )}</strong>
+        <span class="badge-tier badge-tier-${tier.key}">
+          ${tier.label}
+        </span>
+        <span class="muted"> • ${levelRes}</span>
       </div>
+      <p class="muted" style="margin-top:.35rem;">
+        ${levelUse}
+      </p>
+      <p class="build-base-price">
+        Starting around <strong>${money(estBase)}</strong>
+        <span class="muted">(before GPU, storage, and options)</span>
+      </p>
     </div>
 
     <details class="custom">
-      <summary>Customize this build</summary>
+      <summary>Customize & view full specs</summary>
       <div class="opt-grid">
         <div class="form-field">
           <label>RAM</label>
@@ -222,8 +262,12 @@ function buildCard(data, b) {
       </div>
 
       <div class="actions">
-        <button class="btn-secondary js-specs" type="button">Spec sheet</button>
-        <button class="btn-secondary js-compare" type="button">Add to compare</button>
+        <button class="btn-secondary js-specs" type="button">
+          View detailed specs
+        </button>
+        <button class="btn-secondary js-compare" type="button">
+          Add to compare
+        </button>
         <a class="btn" href="/contact.html">Start order</a>
       </div>
 
@@ -329,7 +373,10 @@ function renderCompare() {
   if (tgl) tgl.textContent = `Compare (${compare.length})`;
 }
 
+// Show specs in modal instead of alert
 function showSpecs(b, s, data) {
+  const total = computeTotal(data, b, s);
+
   const specs = `
 CPU: ${b.cpu}
 Motherboard: ${b.motherboard}
@@ -346,9 +393,19 @@ Selected:
 - Cooling: ${s.cooling}
 - RGB: ${s.rgb}
 
-Estimated total (pre-tax): ${money(computeTotal(data, b, s))}
+Estimated total (pre-tax): ${money(total)}
 `;
-  alert(specs);
+
+  const modal = document.getElementById('spec-modal');
+  const content = document.getElementById('spec-modal-content');
+  const title = document.getElementById('spec-modal-title');
+  if (!modal || !content || !title) {
+    alert(specs);
+    return;
+  }
+  title.textContent = b.name;
+  content.textContent = specs.trim();
+  modal.classList.remove('hidden');
 }
 
 // Init
@@ -421,6 +478,19 @@ Estimated total (pre-tax): ${money(computeTotal(data, b, s))}
         drawer.classList.toggle('active')
       );
     }
+
+    // Close modal on X or background click
+    document.addEventListener('click', (e) => {
+      const modal = document.getElementById('spec-modal');
+      if (!modal || modal.classList.contains('hidden')) return;
+
+      if (
+        e.target.id === 'spec-modal-close' ||
+        e.target === modal
+      ) {
+        modal.classList.add('hidden');
+      }
+    });
 
     render();
   } catch (err) {

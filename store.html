@@ -289,6 +289,42 @@
       margin-bottom: 0.4rem;
     }
 
+    /* Specs modal */
+    .spec-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 50;
+    }
+    .spec-modal.hidden {
+      display: none;
+    }
+    .spec-modal-inner {
+      max-width: 640px;
+      width: 95vw;
+      max-height: 80vh;
+      overflow: auto;
+      position: relative;
+    }
+    .spec-modal-close {
+      position: absolute;
+      top: 0.4rem;
+      right: 0.6rem;
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    .spec-modal-content {
+      white-space: pre-wrap;
+      margin-top: 0.75rem;
+      font-size: 0.85rem;
+    }
+
     @media (max-width: 900px) {
       .store-hero {
         grid-template-columns: 1fr;
@@ -306,7 +342,8 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="/index.html">
-      <img src="/assets/img/logo.png" alt="Subtronics LLC" class="brand-logo" />
+      <!-- logo path fixed: use martin.jpg which exists in /assets/img -->
+      <img src="/assets/img/martin.jpg" alt="Subtronics LLC" class="brand-logo" />
       <strong>Subtronics LLC</strong>
     </a>
     <nav class="nav">
@@ -442,6 +479,17 @@
   <strong>Compare builds</strong>
   <div id="compare-list" class="muted" style="margin-top:.5rem">
     Nothing to compare yet.
+  </div>
+</div>
+
+<!-- Specs modal -->
+<div id="spec-modal" class="spec-modal hidden">
+  <div class="spec-modal-inner card">
+    <button id="spec-modal-close" type="button" class="spec-modal-close">
+      ×
+    </button>
+    <h2 id="spec-modal-title">Build specs</h2>
+    <pre id="spec-modal-content" class="spec-modal-content"></pre>
   </div>
 </div>
 
