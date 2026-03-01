@@ -1,3 +1,3 @@
-name = "subtronics-api"
+name = "subtronics"
 main = "worker/index.mjs"
 compatibility_date = "2024-06-20"
