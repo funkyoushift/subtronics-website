@@ -362,3 +362,13 @@ footer{border-top:1px solid var(--border);color:var(--muted);background:#0c1015}
 
 /* === Location pages === */
 .page.location .lede{ max-width: 75ch; }
+
+
+/* === Review CTA + small SEO blocks === */
+.mono{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+.seo-county ul.columns a{ text-decoration: none; }
+.seo-county ul.columns a:hover{ text-decoration: underline; }
+
+
+/* === Topic pages (problem + city) === */
+.page.topic .lede{ max-width: 78ch; }
