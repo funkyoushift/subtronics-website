@@ -1,8 +1,27 @@
 
-:root{--bg:#0f1217;--card:#151922;--text:#e7edf5;--muted:#b8c2cf;--primary:#2e90ff;--border:#283246}
+:root{
+  --bg:#0b0f14;
+  --card:#111826;
+  --text:#f1f5ff;
+  --muted:#b9c6dd;
+  --primary:#22c55e;
+  --primary2:#0ea5e9;
+  --border:#243244;
+  --shadow:rgba(0,0,0,.35);
+}
+:root[data-theme="light"]{
+  --bg:#f7f8fb;
+  --card:#ffffff;
+  --text:#0b1020;
+  --muted:#4b5563;
+  --primary:#2563eb;
+  --primary2:#22c55e;
+  --border:#d1d5db;
+  --shadow:rgba(0,0,0,.10);
+}
 *{box-sizing:border-box} body{margin:0;font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial;background:var(--bg);color:var(--text)}
 .container{max-width:1100px;margin:0 auto;padding:1.5rem}
-.site-header{position:sticky;top:0;background:rgba(10,12,16,.8);backdrop-filter:blur(6px);border-bottom:1px solid var(--border);z-index:10}
+.site-header{position:sticky;top:0;background:color-mix(in srgb, var(--bg) 70%, transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--border);z-index:10}
 .header-inner{display:flex;justify-content:space-between;align-items:center}
 .brand{display:flex;gap:.6rem;align-items:center;text-decoration:none;color:var(--text)}
 .brand img{height:40px}
@@ -194,3 +213,152 @@ footer{border-top:1px solid var(--border);color:var(--muted);background:#0c1015}
   }
 }
 
+
+
+/* --- Subtronics simple SEO redesign additions --- */
+.card-link{display:block;text-decoration:none;color:inherit}
+.card-link:hover{transform:translateY(-1px)}
+.card-icon{color:var(--primary);margin-bottom:.5rem}
+.card-body h3{margin:.25rem 0}
+.card-body p{margin:.25rem 0 0;color:var(--muted)}
+.card-cta{display:inline-block;margin-top:.5rem;color:var(--primary);font-weight:700}
+.small-note{color:var(--muted);font-size:.95rem;margin-top:.5rem}
+
+
+/* Theme toggle */
+.theme-toggle{
+  display:inline-flex;
+  align-items:center;
+  gap:.4rem;
+  padding:.45rem .65rem;
+  border:1px solid var(--border);
+  border-radius:.75rem;
+  background:color-mix(in srgb, var(--card) 80%, transparent);
+  color:var(--text);
+  cursor:pointer;
+}
+.theme-toggle:hover{filter:brightness(1.05)}
+.header-cta{
+  margin-left:.6rem;
+  display:inline-flex;
+  align-items:center;
+  padding:.5rem .75rem;
+  border-radius:.75rem;
+  border:1px solid var(--border);
+  background:linear-gradient(135deg,var(--primary),var(--primary2));
+  color:#06101a;
+  font-weight:800;
+}
+.header-cta:hover{filter:brightness(1.05); text-decoration:none}
+.brand-logo{width:34px;height:34px}
+
+
+/* === v3 homepage hero improvements (readability + conversion) === */
+.hero--v3 .kicker{
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-weight:700;
+  opacity:.85;
+  margin:0 0 .5rem;
+}
+.hero--v3 .hero__cta{
+  display:flex;
+  gap:.75rem;
+  flex-wrap:wrap;
+  margin:1rem 0 .75rem;
+}
+.trust-list{
+  margin:.75rem 0 0;
+  padding-left:1.1rem;
+}
+.trust-list li{ margin:.35rem 0; }
+.service-chips{
+  display:flex;
+  gap:.5rem;
+  flex-wrap:wrap;
+  margin:1rem 0 .25rem;
+}
+.chip{
+  display:inline-flex;
+  align-items:center;
+  padding:.45rem .75rem;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background:var(--card);
+  color:var(--text);
+  text-decoration:none;
+  font-weight:600;
+}
+.chip:hover{ transform:translateY(-1px); }
+.note{ margin-top:.75rem; }
+.btn-secondary{
+  background:transparent;
+  border:1px solid var(--border);
+}
+.btn-secondary:hover{
+  background:var(--card);
+}
+
+
+/* === Service Area page polish (human-first, SEO tucked away) === */
+.page-head .lede{ max-width: 70ch; }
+.callout{
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  padding:1rem;
+  border:1px solid var(--border);
+  border-radius:16px;
+  background:var(--card);
+  margin:1rem 0 0;
+}
+.section{ margin: 2rem 0; }
+.columns{
+  columns: 2;
+  column-gap: 2rem;
+}
+@media (max-width: 700px){
+  .columns{ columns: 1; }
+}
+.details{
+  border:1px solid var(--border);
+  border-radius:14px;
+  background:var(--card);
+  padding:.75rem 1rem;
+  margin:.75rem 0;
+}
+.details > summary{
+  cursor:pointer;
+  font-weight:700;
+}
+.details-body{ padding-top:.75rem; }
+.service-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.service-card{
+  display:block;
+  padding:1rem;
+  border:1px solid var(--border);
+  border-radius:16px;
+  background:var(--card);
+  text-decoration:none;
+  color:var(--text);
+}
+.service-card:hover{ transform: translateY(-1px); }
+.service-card p{ margin: .35rem 0 0; }
+
+
+/* === Human-first content blocks === */
+.bullets{ padding-left:1.1rem; }
+.bullets li{ margin:.4rem 0; }
+.steps{ padding-left:1.25rem; }
+.steps li{ margin:.5rem 0; }
+.form-wrap{ margin-top: 1rem; }
+
+
+/* === Location pages === */
+.page.location .lede{ max-width: 75ch; }
