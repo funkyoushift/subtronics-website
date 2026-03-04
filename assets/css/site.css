@@ -372,3 +372,34 @@ footer{border-top:1px solid var(--border);color:var(--muted);background:#0c1015}
 
 /* === Topic pages (problem + city) === */
 .page.topic .lede{ max-width: 78ch; }
+
+
+/* === Trusted brand logos === */
+.trust-logos h2{ margin-bottom: .25rem; }
+.logo-strip{
+  list-style:none;
+  padding:0;
+  margin: .75rem 0 0;
+  display:flex;
+  flex-wrap:wrap;
+  gap: .75rem 1rem;
+  align-items:center;
+}
+.logo-strip li{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:.5rem .75rem;
+  border:1px solid var(--border);
+  border-radius:14px;
+  background:var(--card);
+}
+.logo-strip img{
+  height: 28px;
+  width: auto;
+  max-width: 140px;
+  opacity: .92;
+}
+@media (max-width: 520px){
+  .logo-strip img{ height: 24px; max-width: 120px; }
+}
