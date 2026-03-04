@@ -350,3 +350,15 @@ footer{border-top:1px solid var(--border);color:var(--muted);background:#0c1015}
 }
 .service-card:hover{ transform: translateY(-1px); }
 .service-card p{ margin: .35rem 0 0; }
+
+
+/* === Human-first content blocks === */
+.bullets{ padding-left:1.1rem; }
+.bullets li{ margin:.4rem 0; }
+.steps{ padding-left:1.25rem; }
+.steps li{ margin:.5rem 0; }
+.form-wrap{ margin-top: 1rem; }
+
+
+/* === Location pages === */
+.page.location .lede{ max-width: 75ch; }

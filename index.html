@@ -8,30 +8,76 @@
   <link rel="canonical" href="https://subtronicsllc.com/index.html" />
   <link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg" />
   <link rel="stylesheet" href="/assets/css/site.css" />
-  <script type="application/ld+json">
+  
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ComputerRepair",
-  "name": "Subtronics LLC",
-  "url": "https://subtronicsllc.com/",
-  "telephone": "+1-810-280-2222",
-  "email": "Martin@subtronicsllc.com",
-  "openingHours": "Mo-Su 00:00-23:59",
-  "areaServed": [
-    "Genesee County, MI",
-    "Flushing, MI",
-    "Flint, MI",
-    "Burton, MI",
-    "Grand Blanc, MI",
-    "Swartz Creek, MI",
-    "Davison, MI",
-    "Clio, MI",
-    "Mount Morris, MI",
-    "Montrose, MI",
-    "Linden, MI"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://subtronicsllc.com/#website",
+      "url": "https://subtronicsllc.com/",
+      "name": "Subtronics LLC",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "ComputerRepair",
+      "@id": "https://subtronicsllc.com/#business",
+      "name": "Subtronics LLC",
+      "url": "https://subtronicsllc.com/",
+      "telephone": "+1-810-280-2222",
+      "email": "Martin@subtronicsllc.com",
+      "openingHours": "Mo-Su 00:00-23:59",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Flushing",
+        "addressRegion": "MI",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        "Genesee County, MI",
+        "Greater Flint, MI",
+        "Flushing, MI",
+        "Flint, MI",
+        "Grand Blanc, MI",
+        "Burton, MI",
+        "Davison, MI",
+        "Swartz Creek, MI",
+        "Clio, MI",
+        "Mount Morris, MI",
+        "Montrose, MI",
+        "Linden, MI",
+        "Fenton, MI"
+      ],
+      "serviceType": [
+        "Computer Repair",
+        "PC Diagnostics",
+        "Laptop Repair",
+        "Hardware Upgrades",
+        "Custom PC Builds",
+        "In-Home Computer Repair",
+        "Business IT Support"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Martin Wenn"
+      },
+      "sameAs": [
+        "https://www.facebook.com/SubTronicsLLC/"
+      ]
+      /* Optional (recommended): add your Google Business Profile URL here as another sameAs value. */
+      /* Optional (recommended): add aggregateRating from Google reviews once you confirm the numbers. */
+    }
   ]
 }
 </script>
+<!--
+Optional upgrade:
+Add aggregateRating under the ComputerRepair object once you confirm your Google rating + review count, like:
+"aggregateRating": {"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"37"}
+-->
+
 </head>
 <body>
 <header class="site-header">
