@@ -298,3 +298,55 @@ footer{border-top:1px solid var(--border);color:var(--muted);background:#0c1015}
 .btn-secondary:hover{
   background:var(--card);
 }
+
+
+/* === Service Area page polish (human-first, SEO tucked away) === */
+.page-head .lede{ max-width: 70ch; }
+.callout{
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  padding:1rem;
+  border:1px solid var(--border);
+  border-radius:16px;
+  background:var(--card);
+  margin:1rem 0 0;
+}
+.section{ margin: 2rem 0; }
+.columns{
+  columns: 2;
+  column-gap: 2rem;
+}
+@media (max-width: 700px){
+  .columns{ columns: 1; }
+}
+.details{
+  border:1px solid var(--border);
+  border-radius:14px;
+  background:var(--card);
+  padding:.75rem 1rem;
+  margin:.75rem 0;
+}
+.details > summary{
+  cursor:pointer;
+  font-weight:700;
+}
+.details-body{ padding-top:.75rem; }
+.service-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.service-card{
+  display:block;
+  padding:1rem;
+  border:1px solid var(--border);
+  border-radius:16px;
+  background:var(--card);
+  text-decoration:none;
+  color:var(--text);
+}
+.service-card:hover{ transform: translateY(-1px); }
+.service-card p{ margin: .35rem 0 0; }
