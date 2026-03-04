@@ -1,8 +1,27 @@
 
-:root{--bg:#0f1217;--card:#151922;--text:#e7edf5;--muted:#b8c2cf;--primary:#2e90ff;--border:#283246}
+:root{
+  --bg:#0b0f14;
+  --card:#111826;
+  --text:#f1f5ff;
+  --muted:#b9c6dd;
+  --primary:#22c55e;
+  --primary2:#0ea5e9;
+  --border:#243244;
+  --shadow:rgba(0,0,0,.35);
+}
+:root[data-theme="light"]{
+  --bg:#f7f8fb;
+  --card:#ffffff;
+  --text:#0b1020;
+  --muted:#4b5563;
+  --primary:#2563eb;
+  --primary2:#22c55e;
+  --border:#d1d5db;
+  --shadow:rgba(0,0,0,.10);
+}
 *{box-sizing:border-box} body{margin:0;font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial;background:var(--bg);color:var(--text)}
 .container{max-width:1100px;margin:0 auto;padding:1.5rem}
-.site-header{position:sticky;top:0;background:rgba(10,12,16,.8);backdrop-filter:blur(6px);border-bottom:1px solid var(--border);z-index:10}
+.site-header{position:sticky;top:0;background:color-mix(in srgb, var(--bg) 70%, transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--border);z-index:10}
 .header-inner{display:flex;justify-content:space-between;align-items:center}
 .brand{display:flex;gap:.6rem;align-items:center;text-decoration:none;color:var(--text)}
 .brand img{height:40px}
@@ -204,3 +223,31 @@ footer{border-top:1px solid var(--border);color:var(--muted);background:#0c1015}
 .card-body p{margin:.25rem 0 0;color:var(--muted)}
 .card-cta{display:inline-block;margin-top:.5rem;color:var(--primary);font-weight:700}
 .small-note{color:var(--muted);font-size:.95rem;margin-top:.5rem}
+
+
+/* Theme toggle */
+.theme-toggle{
+  display:inline-flex;
+  align-items:center;
+  gap:.4rem;
+  padding:.45rem .65rem;
+  border:1px solid var(--border);
+  border-radius:.75rem;
+  background:color-mix(in srgb, var(--card) 80%, transparent);
+  color:var(--text);
+  cursor:pointer;
+}
+.theme-toggle:hover{filter:brightness(1.05)}
+.header-cta{
+  margin-left:.6rem;
+  display:inline-flex;
+  align-items:center;
+  padding:.5rem .75rem;
+  border-radius:.75rem;
+  border:1px solid var(--border);
+  background:linear-gradient(135deg,var(--primary),var(--primary2));
+  color:#06101a;
+  font-weight:800;
+}
+.header-cta:hover{filter:brightness(1.05); text-decoration:none}
+.brand-logo{width:34px;height:34px}
