@@ -194,3 +194,13 @@ footer{border-top:1px solid var(--border);color:var(--muted);background:#0c1015}
   }
 }
 
+
+
+/* --- Subtronics simple SEO redesign additions --- */
+.card-link{display:block;text-decoration:none;color:inherit}
+.card-link:hover{transform:translateY(-1px)}
+.card-icon{color:var(--primary);margin-bottom:.5rem}
+.card-body h3{margin:.25rem 0}
+.card-body p{margin:.25rem 0 0;color:var(--muted)}
+.card-cta{display:inline-block;margin-top:.5rem;color:var(--primary);font-weight:700}
+.small-note{color:var(--muted);font-size:.95rem;margin-top:.5rem}
