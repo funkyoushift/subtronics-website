@@ -1,5 +1,5 @@
 
-:root{
+:root, :root[data-theme="dark"]{
   --bg:#0b0f14;
   --card:#111826;
   --text:#f1f5ff;
@@ -8,7 +8,21 @@
   --primary2:#0ea5e9;
   --border:#243244;
   --shadow:rgba(0,0,0,.35);
+
+  --link:#60a5fa;
 }
+:root[data-theme="light"]{
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#475569;
+  --primary:#16a34a;
+  --primary2:#0284c7;
+  --border:#cbd5e1;
+  --shadow:rgba(2,6,23,.12);
+  --link:#0b63d1;
+}
+
 :root[data-theme="light"]{
   --bg:#f7f8fb;
   --card:#ffffff;
@@ -33,7 +47,10 @@
 .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .btn{display:inline-block;background:linear-gradient(90deg,#2e90ff,#7aa7ff);color:#fff;border:none;padding:.8rem 1rem;border-radius:10px;text-decoration:none;font-weight:700}
 .notice{padding:.8rem;border:1px dashed var(--border);border-radius:12px;color:var(--muted);background:#0b1018}
-footer{border-top:1px solid var(--border);color:var(--muted);background:#0c1015}
+footer{border-top:1px solid var(--border);color:var(--muted);background:var(--bg)}
+footer a{color:var(--text)}
+footer a:visited{color:var(--text)}
+footer a:hover{color:var(--link)}
 @media(max-width:900px){.grid-2,.grid-3{grid-template-columns:1fr}}
 /* Home page layout */
 
