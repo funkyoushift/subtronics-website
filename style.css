@@ -487,6 +487,33 @@ footer a:hover {
 .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
+/* Service cards (used on Services + Service Area pages) */
+.service-grid{
+    display:grid;
+    gap:1rem;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    margin-top:1rem;
+}
+.service-card{
+    display:block;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:0.9rem;
+    padding:1.25rem;
+    box-shadow:var(--shadow);
+    text-decoration:none;
+    color:var(--text);
+    transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.service-card::before{ content:none !important; display:none !important; }
+.service-card:hover{
+    transform:translateY(-2px);
+    border-color:rgba(37,99,235,.35);
+}
+.service-card h3{ margin:0 0 .35rem 0; font-size:1.05rem; }
+.service-card p{ margin:.15rem 0 0 0; color:var(--muted); }
+.service-card .small{ color:var(--muted); }
+
 .card {
     background: var(--surface);
     border: 1px solid var(--border);
