@@ -38,6 +38,8 @@ body {
 }
 
 a { color: var(--primary); }
+/* Prevent default visited purple/blue on dark backgrounds */
+a:visited { color: var(--primary); }
 /* Prevent browser default visited purple on dark backgrounds */
 a:visited { color: var(--primary); }
 a:hover { color: var(--primary-dark); }
@@ -359,9 +361,13 @@ footer a:hover {
 
 /* --- Shared site header + brand logo sizing (added for TechCare pages) --- */
 .site-header {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-    color: #fff;
-    padding: 0.75rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in srgb, var(--bg) 82%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    padding: 0.65rem 0;
 }
 .header-inner {
     display: flex;
@@ -374,7 +380,7 @@ footer a:hover {
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
-    color: #fff;
+    color: var(--text);
     text-decoration: none;
 }
 .brand-logo {
@@ -389,20 +395,35 @@ footer a:hover {
     gap: 1rem;
 }
 .nav a {
-    color: #fff;
+    color: var(--text);
     text-decoration: none;
     font-weight: 600;
-    opacity: 0.95;
+    opacity: 0.9;
 }
 .nav a:hover { opacity: 1; text-decoration: underline; }
 .theme-toggle {
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.22);
-    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: color-mix(in srgb, var(--surface) 85%, transparent);
+    border: 1px solid var(--border);
+    color: var(--text);
     padding: 0.4rem 0.6rem;
     border-radius: 999px;
     cursor: pointer;
 }
+
+.header-cta{
+    margin-left: 0.25rem;
+    padding: 0.55rem 0.85rem;
+    border-radius: 0.8rem;
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+    color: #fff;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: var(--shadow);
+}
+.header-cta:hover{ filter: brightness(1.03); }
 
 /* --- Page layout + components (used by TechCare, Support, Policy pages) --- */
 .page {
@@ -417,9 +438,10 @@ footer a:hover {
     gap: 0.5rem;
     padding: 0.35rem 0.65rem;
     border-radius: 999px;
-    background: rgba(255,255,255,0.14);
-    border: 1px solid rgba(255,255,255,0.18);
-    color: #fff;
+    /* Light-mode friendly defaults */
+    background: rgba(37, 99, 235, 0.10);
+    border: 1px solid rgba(37, 99, 235, 0.18);
+    color: var(--text);
 }
 .lede {
     font-size: 1.1rem;
@@ -484,7 +506,7 @@ footer a:hover {
 
 /* Dark mode tweaks for elements that were hard-coded as white */
 html[data-theme="dark"] nav a { color: #e5e7eb; }
-html[data-theme="dark"] .kicker { background: rgba(2,6,23,0.45); border-color: rgba(255,255,255,0.18); }
+html[data-theme="dark"] .kicker { background: rgba(2,6,23,0.45); border-color: rgba(255,255,255,0.18); color: #fff; }
 html[data-theme="dark"] .theme-toggle { background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.18); }
 
 /* Responsive */

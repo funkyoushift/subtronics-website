@@ -3,7 +3,8 @@
 // - Respects user's OS preference on first visit
 
 (function () {
-  var STORAGE_KEY = 'subtronics_theme_v1';
+  // Single theme key used site-wide
+  var STORAGE_KEY = 'subtronics_theme_v2';
 
   function getPreferred() {
     try {
@@ -27,13 +28,20 @@
       var pressed = theme === 'dark';
       btn.setAttribute('aria-pressed', pressed ? 'true' : 'false');
 
-      // Optional icon swaps
+      // Support BOTH button variants used across the site:
+      // 1) <span class="sun">☀️</span><span class="moon">🌙</span>
+      // 2) <span class="icon">🌙</span><span class="label">Dark</span>
       var sun = btn.querySelector('.sun');
       var moon = btn.querySelector('.moon');
       if (sun && moon) {
-        sun.style.display = pressed ? 'inline' : 'none';
-        moon.style.display = pressed ? 'none' : 'inline';
+        sun.style.display = pressed ? 'none' : 'inline';
+        moon.style.display = pressed ? 'inline' : 'none';
       }
+
+      var icon = btn.querySelector('.icon');
+      var label = btn.querySelector('.label');
+      if (icon) icon.textContent = pressed ? '🌙' : '☀️';
+      if (label) label.textContent = pressed ? 'Dark' : 'Light';
     }
   }
 
