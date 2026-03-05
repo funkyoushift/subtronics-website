@@ -61,8 +61,8 @@
 .btn{display:inline-block;background:linear-gradient(90deg,#2e90ff,#7aa7ff);color:#fff;border:none;padding:.8rem 1rem;border-radius:10px;text-decoration:none;font-weight:700}
 .notice{padding:.8rem;border:1px dashed var(--border);border-radius:12px;color:var(--muted);background:#0b1018}
 footer{border-top:1px solid var(--border);color:var(--muted);background:var(--bg)}
-footer a{color:var(--text)}
-footer a:visited{color:var(--text)}
+footer a{color:var(--link)}
+footer a:visited{color:var(--link-visited, var(--link))}
 footer a:hover{color:var(--link)}
 @media(max-width:900px){.grid-2,.grid-3{grid-template-columns:1fr}}
 /* Home page layout */
