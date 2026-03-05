@@ -719,3 +719,21 @@ a:visited { color: var(--link); }
   width: auto;
   border-radius: 10px;
 }
+
+
+/* FAQ (details/summary) */
+.faq-item{
+  background: var(--card-bg, rgba(255,255,255,0.04));
+  border: 1px solid var(--card-border, rgba(255,255,255,0.10));
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin: 10px 0;
+}
+.faq-item summary{
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+}
+.faq-item summary::-webkit-details-marker{ display:none; }
+.faq-item[open]{ box-shadow: 0 8px 24px rgba(0,0,0,0.18); }
+.faq-item p{ margin: 10px 0 0; }
