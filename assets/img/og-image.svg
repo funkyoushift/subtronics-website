@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Subtronics LLC">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="80" y="88" width="1040" height="454" rx="36" fill="#ffffff" opacity="0.06"/>
+  <rect x="120" y="130" width="420" height="18" rx="9" fill="url(#acc)" opacity="0.95"/>
+  <text x="120" y="230" fill="#ffffff" font-size="64" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-weight="800">Subtronics LLC</text>
+  <text x="120" y="295" fill="#cbd5e1" font-size="28" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-weight="500">Computer repair • Diagnostics • Upgrades • Custom builds</text>
+  <text x="120" y="350" fill="#94a3b8" font-size="24" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial">Flushing, MI + Genesee County</text>
+  <text x="120" y="430" fill="#ffffff" font-size="28" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-weight="700">Call/Text 810-280-2222</text>
+  <text x="120" y="475" fill="#93c5fd" font-size="22" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial">subtronicsllc.com</text>
+</svg>

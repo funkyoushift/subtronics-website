@@ -578,3 +578,97 @@ html[data-theme="dark"] .theme-toggle { background: rgba(255,255,255,0.10); bord
 .paypal-wrap {
     transition: opacity 150ms ease;
 }
+
+
+/* ==== v22: Responsive hero + brand logos + theme-safe callouts ==== */
+
+/* Home hero (v3) */
+.hero.hero--v3 {
+  padding: 3.5rem 0;
+  text-align: left;
+}
+.hero--v3 {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: center;
+}
+.hero--v3 .hero__content { max-width: 58ch; }
+.hero--v3 .hero__media img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(2,6,23,0.12);
+}
+@media (max-width: 900px) {
+  .hero--v3 { grid-template-columns: 1fr; }
+  .hero--v3 .hero__media { order: -1; }
+  .hero--v3 .hero__media img { max-height: 320px; }
+  .hero.hero--v3 { padding: 2.25rem 0; }
+}
+
+/* Trusted brand logos strip */
+.trust-logos .logo-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.trust-logos .logo-strip li {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trust-logos .logo-strip img {
+  max-height: 80px;
+  max-width: 260px;
+  width: auto;
+  height: auto;
+  display: block;
+}
+@media (max-width: 520px) {
+  .trust-logos .logo-strip img { max-height: 54px; max-width: 200px; }
+}
+
+/* Page heads (TechCare/Support/etc) */
+.page-head {
+  position: relative;
+  overflow: hidden;
+}
+.page-head__media {
+  margin-top: 1.5rem;
+}
+.page-head__media img {
+  width: 100%;
+  height: auto;
+  max-height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+}
+
+/* Theme-safe callout (prevents white-on-white in light mode) */
+.page-head .callout {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+.page-head .callout a { color: inherit; }
+
+/* Improve light-mode muted contrast (keep readable) */
+:root:not([data-theme="dark"]) {
+  --muted: #475569;
+}
+
+/* Prevent browser default visited colors */
+a:visited { color: var(--link); }
