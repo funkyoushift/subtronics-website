@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subtronics TechCare | $25/mo Computer Support Membership</title>
+  <meta name="description" content="TechCare membership from Subtronics LLC: unlimited remote support, malware removal, tune-ups, diagnostics, priority scheduling, and 15% off labor." />
+  <link rel="canonical" href="https://subtronicsllc.com/techcare.html" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" href="/assets/img/logo.svg" type="image/svg+xml" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/index.html">
+      <img class="brand-logo" src="/assets/img/logo.svg" alt="Subtronics LLC" />
+      <strong>Subtronics LLC</strong>
+    </a>
+    <nav class="nav">
+<a href="/index.html">Home</a>
+<a href="/services.html">Services</a>
+<a href="/techcare.html">TechCare</a>
+<a href="/service-area.html">Service Area</a>
+<a href="/about.html">About</a>
+<a href="/contact.html">Contact</a>
+<a href="/support.html">Support</a>
+</nav>
+    <button id="themeToggle" class="theme-toggle" aria-label="Switch theme" aria-pressed="false">
+      <span class="sun">☀️</span><span class="moon">🌙</span>
+    </button>
+  </div>
+</header>
+
+<main class="container page">
+  <header class="page-head">
+    <div class="kicker">
+      <img src="/assets/img/techcare-shield.svg" alt="" width="36" height="36" style="vertical-align:middle; margin-right:8px;">
+      <strong>TechCare</strong>
+    </div>
+    <h1>Subtronics TechCare Protection Plan</h1>
+    <p class="lede">Unlimited remote help, maintenance, and priority service for one simple membership price.</p>
+
+    <div class="callout">
+      <div>
+        <strong>Join now:</strong><br/>
+        <!-- TODO: replace hrefs with your Stripe Checkout links OR your PayPal subscription link -->
+        <a class="btn btn-primary" href="#pricing">See pricing</a>
+      </div>
+      <div class="small">
+        Questions? Call/Text <a href="tel:+18102802222">810-280-2222</a> • Email <a href="mailto:Martin@subtronicsllc.com">Martin@subtronicsllc.com</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2>What is TechCare?</h2>
+    <p>TechCare is a membership program designed to keep your computer running fast and secure without surprise repair bills.
+    If something breaks or starts acting weird, we’ll help you remotely when possible, or get you scheduled quickly for in-shop service.</p>
+  </section>
+
+  <section class="section">
+    <h2>What’s included</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Unlimited remote support</h3>
+        <p>Printer issues, email setup, software problems, updates, slow computer — many issues can be fixed in minutes.</p>
+      </div>
+      <div class="card">
+        <h3>Virus &amp; malware removal</h3>
+        <p>We’ll remove malware and get your system stable again. No system is “100% secure,” but we’ll help you stay protected.</p>
+      </div>
+      <div class="card">
+        <h3>PC tune-ups &amp; maintenance</h3>
+        <p>Cleanup, performance checks, and basic maintenance to keep things running smoothly.</p>
+      </div>
+      <div class="card">
+        <h3>Hardware diagnostics</h3>
+        <p>If a component is failing, we’ll diagnose the cause and recommend the most cost-effective fix.</p>
+      </div>
+      <div class="card">
+        <h3>Priority scheduling</h3>
+        <p>Members get priority scheduling for in-shop service.</p>
+      </div>
+      <div class="card">
+        <h3>15% off labor</h3>
+        <p>Members receive 15% off labor on qualifying repairs and installs. Parts not included.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="pricing">
+    <h2>Pricing</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Monthly</h3>
+        <p class="price"><strong>$25</strong> / month</p>
+        <p class="small">Cancel anytime.</p>
+        <!-- PayPal subscription button (Monthly) -->
+        <div id="paypal-button-container-P-7MP68595B4372762ENGUMKTQ"></div>
+      </div>
+      <div class="card">
+        <h3>Annual</h3>
+        <p class="price"><strong>$250</strong> / year</p>
+        <p class="small">Save $50 vs monthly.</p>
+        <!-- PayPal subscription button (Annual) -->
+        <div id="paypal-button-container-P-78M519786W261015JNGUMNPI"></div>
+      </div>
+      <div class="card">
+        <h3>Optional add-on</h3>
+        <p class="price"><strong>Data Protection</strong></p>
+        <p class="small">$12/month per computer (encrypted cloud backup + monitoring).</p>
+        <a class="btn" href="/contact.html">Ask about backups</a>
+      </div>
+    </div>
+
+    <div class="small-note" style="margin-top:14px;">
+      By enrolling, you agree to the <a href="/techcare-terms.html">TechCare Membership Agreement</a>.
+    </div>
+  </section>
+
+  <!-- PayPal SDK (loads once per page) -->
+  <script src="https://www.paypal.com/sdk/js?client-id=Af9LWqHrP9v-9aIIxT7AQ6hD1K1bnFR7XMhwFCHalosNZ1KtbBZ41f750o9vl1ICc7yeWbQ1oa0t6Glq&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+  <script>
+    // Monthly plan button
+    paypal.Buttons({
+      style: {
+        shape: 'rect',
+        color: 'gold',
+        layout: 'vertical',
+        label: 'subscribe'
+      },
+      createSubscription: function (data, actions) {
+        return actions.subscription.create({
+          plan_id: 'P-7MP68595B4372762ENGUMKTQ'
+        });
+      },
+      onApprove: function (data) {
+        // Send the customer to your support page after successful signup
+        var subId = encodeURIComponent(data.subscriptionID || '');
+        window.location.href = '/support.html?subscription=' + subId;
+      }
+    }).render('#paypal-button-container-P-7MP68595B4372762ENGUMKTQ');
+
+    // Annual plan button
+    paypal.Buttons({
+      style: {
+        shape: 'rect',
+        color: 'gold',
+        layout: 'vertical',
+        label: 'subscribe'
+      },
+      createSubscription: function (data, actions) {
+        return actions.subscription.create({
+          plan_id: 'P-78M519786W261015JNGUMNPI'
+        });
+      },
+      onApprove: function (data) {
+        var subId = encodeURIComponent(data.subscriptionID || '');
+        window.location.href = '/support.html?subscription=' + subId;
+      }
+    }).render('#paypal-button-container-P-78M519786W261015JNGUMNPI');
+
+  </script>
+
+  <section class="section">
+    <h2>90-day workmanship guarantee</h2>
+    <p>All workmanship is covered by Subtronics LLC’s 90-day workmanship guarantee. Hardware parts and third‑party software are not covered by this guarantee.</p>
+  </section>
+
+  <section class="section">
+    <h2>FAQ</h2>
+    <div class="accordion">
+      <details>
+        <summary>Is remote support safe?</summary>
+        <p>Yes. Remote support requires your permission and can be ended at any time by closing the tool.</p>
+      </details>
+      <details>
+        <summary>Do you include hardware parts?</summary>
+        <p>No. Parts are not included. Members receive discounted labor on installs and repairs.</p>
+      </details>
+      <details>
+        <summary>Does TechCare include drive cloning?</summary>
+        <p>Drive cloning is available at a member discount. If you need an SSD upgrade or drive replacement, we’ll quote the best option for your system.</p>
+      </details>
+      <details>
+        <summary>Can I cancel?</summary>
+        <p>Yes. Monthly plans can be canceled anytime. Annual plans are billed yearly and typically non-refundable once service has been used.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Need help right now?</h2>
+    <p>Use our remote support page to connect with Subtronics.</p>
+    <a class="btn" href="/support.html">Go to Remote Support</a>
+  </section>
+</main>
+<footer>
+<div class="container">
+<div class="grid grid-3">
+<div class="card">
+<strong>Subtronics LLC</strong><br/>
+        Computer repair • Custom builds • Upgrades<br/>
+        Serving Genesee County, MI + nearby areas<br/>
+        Open 24/7 • Call/Text <a href="tel:+18102802222">810-280-2222</a><br/>
+        Email <a href="mailto:Martin@subtronicsllc.com">Martin@subtronicsllc.com</a><br/>
+<span class="small-note">No public storefront address (service-area business).</span>
+</div>
+<div class="card">
+<strong>Services</strong><br/>
+<a href="/computer-repair-flushing-mi.html">PC repairs</a><br/>
+<a href="/laptop-repair-flushing-mi.html">Laptop repairs</a><br/>
+<a href="/diagnostics-troubleshooting.html">Diagnostics</a><br/>
+<a href="/pc-upgrades.html">Upgrades</a><br/>
+<a href="/custom-pc-builds.html">Custom builds</a><br/>
+<a href="/in-home-business-it-support.html">In-home / business</a>
+</div>
+<div class="card">
+<strong>Links</strong><br/>
+<a href="/services.html">Services</a><br/>
+<a href="/service-area.html">Service Area</a><br/>
+<a href="/about.html">About</a><br/>
+<a href="/contact.html">Contact</a><br/>
+<a href="/store.html">Advanced Build Store</a>
+</div>
+</div>
+<p class="small-note" style="margin-top:1rem;">© 2026 Subtronics LLC • Flushing, Michigan</p>
+</div>
+</footer>
+<script src="/app.js"></script>
+</body>
+</html>
