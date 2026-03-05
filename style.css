@@ -321,3 +321,54 @@ footer a:hover {
         gap: 0.5rem;
     }
 }
+
+
+/* --- Shared site header + brand logo sizing (added for TechCare pages) --- */
+.site-header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: #fff;
+    padding: 0.75rem 0;
+}
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #fff;
+    text-decoration: none;
+}
+.brand-logo {
+    max-height: 56px;
+    width: auto;
+    display: block;
+}
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0.95;
+}
+.nav a:hover { opacity: 1; text-decoration: underline; }
+.theme-toggle {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.22);
+    color: #fff;
+    padding: 0.4rem 0.6rem;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.paypal-wrap {
+    transition: opacity 150ms ease;
+}
