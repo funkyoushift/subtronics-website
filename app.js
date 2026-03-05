@@ -22,6 +22,9 @@ const BUILD_FEE = 250; // $250 build fee
  * Initialize the app
  */
 async function init() {
+    // This script powers the advanced build store. Many pages include /app.js for convenience,
+    // so we safely no-op when the builder container isn't present.
+    if (!document.getElementById('builderApp')) return;
     try {
         buildsData = getEmbeddedData();
         renderBuilder();
@@ -427,7 +430,7 @@ function requestQuote() {
     details += `- Cooling: ${configuration.cooling}\n`;
     details += `- RGB: ${configuration.rgb}\n`;
     
-    alert(`Thank you for your interest!\n\n${details}\nPlease contact us at contact@subtronicsllc.com to complete your order.`);
+    alert(`Thank you for your interest!\n\n${details}\nPlease contact us at Martin@subtronicsllc.com to complete your order.`);
 }
 
 // Initialize when page loads
