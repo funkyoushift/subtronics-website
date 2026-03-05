@@ -433,33 +433,3 @@ footer a:hover{color:var(--link)}
 @media (max-width: 520px){
   .logo-strip img{ height: 24px; max-width: 120px; }
 }
-
-
-/* Real photos grid */
-.photo-grid{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:18px;
-  margin-top:16px;
-}
-@media (max-width: 820px){
-  .photo-grid{ grid-template-columns:1fr; }
-}
-.photo-card{
-  margin:0;
-  border-radius:18px;
-  overflow:hidden;
-  border:1px solid var(--border);
-  background:var(--panel);
-  box-shadow:0 10px 30px rgba(0,0,0,.18);
-}
-.photo-card img{
-  display:block;
-  width:100%;
-  height:auto;
-}
-.photo-card figcaption{
-  padding:12px 14px;
-  font-size:14px;
-  color:var(--muted);
-}
