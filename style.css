@@ -743,3 +743,24 @@ a:visited { color: var(--link); }
 .faq-item summary::-webkit-details-marker{ display:none; }
 .faq-item[open]{ box-shadow: 0 8px 24px rgba(0,0,0,0.18); }
 .faq-item p{ margin: 10px 0 0; }
+
+
+
+/* ---- Accessibility: larger tap targets (minimal visual change) ---- */
+a.card-link, a.tap-target, .footer a {
+  display: inline-block;
+  position: relative;
+  padding: 10px 8px;
+  margin: -10px -8px;
+}
+header nav a {
+  padding: 10px 10px; /* no negative margin in nav to avoid overlap */
+}
+@media (max-width: 640px) {
+  .footer a, header nav a { padding: 12px 12px; }
+  a.card-link, a.tap-target { padding: 12px 10px; margin: -12px -10px; }
+}
+/* ---- Brand logos: keep crisp but lightweight ---- */
+
+.logo-strip img { max-height: 64px; height: 64px; width: auto; }
+
