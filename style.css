@@ -38,6 +38,8 @@ body {
 }
 
 a { color: var(--primary); }
+/* Prevent browser default visited purple on dark backgrounds */
+a:visited { color: var(--primary); }
 a:hover { color: var(--primary-dark); }
 
 ::selection { background: rgba(37,99,235,0.25); }
