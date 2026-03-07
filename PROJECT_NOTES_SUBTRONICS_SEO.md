@@ -345,3 +345,9 @@ Recommended next cluster after this:
 - /help/gpu-not-detected
 - /help/laptop-wont-charge
 - /help/ssd-not-showing-up
+
+
+## Metadata / AI Readability Update
+- Patched incomplete metadata pages so titles, meta descriptions, canonicals, Open Graph tags, Twitter tags, robots directives, and JSON-LD schema are consistent.
+- Added /llms.txt to provide an AI-readable summary of the business, service areas, and important pages.
+- Confirmed the DIY hub is linked in the main navigation and surfaced from key pages.
