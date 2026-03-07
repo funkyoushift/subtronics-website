@@ -351,3 +351,23 @@ Recommended next cluster after this:
 - Patched incomplete metadata pages so titles, meta descriptions, canonicals, Open Graph tags, Twitter tags, robots directives, and JSON-LD schema are consistent.
 - Added /llms.txt to provide an AI-readable summary of the business, service areas, and important pages.
 - Confirmed the DIY hub is linked in the main navigation and surfaced from key pages.
+
+
+## Visual media upgrade
+- Added lightweight hybrid visual assets (photo + diagram style) in `/assets/images/`
+- Added short silent looping videos in `/assets/videos/`
+- Standardized visual navigation cards on the homepage, services page, help hub, and DIY hub
+- Inserted visible media blocks on text-heavy pages that lacked visual anchors
+- Kept assets compressed for fast loading and easier navigation without overwhelming the information
+
+### New image folders
+- `/assets/images/services/`
+- `/assets/images/diy/`
+- `/assets/images/diagrams/`
+
+### New video folder
+- `/assets/videos/`
+
+### Notes
+- Use these visuals as placeholders or permanent assets until you replace them with more real Subtronics photos and future short clips.
+- The highest-traffic DIY topic added earlier remains `how-to-speed-up-a-slow-computer.html`.
