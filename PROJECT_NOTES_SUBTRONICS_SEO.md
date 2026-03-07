@@ -393,3 +393,30 @@ Recommended next cluster after this:
 - Simplified major page headings and ledes so each page focuses on one clear idea first.
 - Reduced duplicate DIY promotion sections on the help pages.
 - Kept the stronger SEO structure in place while shifting the experience toward a cleaner, more human presentation.
+
+# v43 Genesee County Location Authority Pass
+
+Goal:
+Strengthen county-wide local SEO coverage so Subtronics LLC has clearer landing pages and internal links for searches across Genesee County, not just Flushing.
+
+What was updated:
+- Added missing computer repair location pages for Beecher and Flint Township.
+- Expanded county location linking on the homepage, service area page, locations hub, and core service pages.
+- Added backlink sections on location pages so each city page points to nearby cities and related local service pages.
+- Strengthened schema on hubs and local pages to better reflect county-wide service coverage.
+- Updated sitemap.xml to include the full location cluster.
+
+Priority city targets:
+- Flushing
+- Flint
+- Grand Blanc
+- Fenton
+- Davison
+- Burton
+- Swartz Creek
+- Clio
+- Goodrich
+- Linden
+
+Important:
+No page can guarantee a top-three map result by itself. Ranking still depends on Google Business Profile strength, reviews, proximity, and click-through behavior.
