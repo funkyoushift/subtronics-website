@@ -371,3 +371,25 @@ Recommended next cluster after this:
 ### Notes
 - Use these visuals as placeholders or permanent assets until you replace them with more real Subtronics photos and future short clips.
 - The highest-traffic DIY topic added earlier remains `how-to-speed-up-a-slow-computer.html`.
+
+
+## DIY video audit update
+- Audited the DIY embeds after mismatches were found between page descriptions and the actual videos.
+- Replaced the laptop battery embed with a real repair tutorial.
+- Replaced the slow-computer, overheating, random-restart, and laptop-fan embeds with videos that match the page topic more closely.
+- Rewrote the "Watch the tutorial" blurbs to describe the actual video on the page instead of naming channels loosely.
+
+
+## DIY tutorial truthfulness pass
+- Removed loose creator and channel claims from DIY pages when the wording did not reliably match the actual video on the page.
+- Reworded the GPU, thermal-paste, and overheating pages so they describe the actual topic honestly.
+- Replaced the random-restarts embed with a restart-focused tutorial.
+- Replaced the broken PSU embed with a direct YouTube link card.
+- Repurposed the old Windows 11 reinstall page into a clearer fresh Windows install guide while keeping the same filename.
+
+
+## Human readability cleanup
+- Removed the large blurry hero visual blocks that were distracting from the page titles and copy.
+- Simplified major page headings and ledes so each page focuses on one clear idea first.
+- Reduced duplicate DIY promotion sections on the help pages.
+- Kept the stronger SEO structure in place while shifting the experience toward a cleaner, more human presentation.
