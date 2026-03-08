@@ -2,7 +2,7 @@
 > Local computer repair, upgrades, diagnostics, custom PC builds, and remote support for Flushing, Flint, and Genesee County, Michigan.
 
 ## Preferred business summary
-Subtronics LLC provides computer repair, laptop repair, diagnostics, malware cleanup, performance tuning, upgrades, custom PC building, prebuilt gaming PC guidance, new computer setup, data transfer, Windows optimization, remote support, and business/home IT help. Primary service area includes Flushing, Flint, and surrounding Genesee County communities.
+Subtronics LLC provides computer repair, laptop repair, diagnostics, malware cleanup, performance tuning, upgrades, prebuilt gaming PCs, custom PC building, remote support, and business/home IT help. Primary service area includes Flushing, Flint, and surrounding Genesee County communities.
 
 ## Primary contact
 - Phone: 810-280-2222
@@ -29,9 +29,6 @@ Subtronics LLC provides computer repair, laptop repair, diagnostics, malware cle
 - RAM upgrades
 - Laptop repair
 - Custom gaming PCs
-- Prebuilt gaming PCs
-- New computer setup and old-PC migration
-- Windows optimization and bloatware cleanup
 - Virus and malware removal
 - Remote support
 - Business and home tech support

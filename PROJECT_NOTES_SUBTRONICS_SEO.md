@@ -2,7 +2,7 @@
 # Subtronics LLC Website Development Notes
 *(For future ChatGPT sessions and development tracking)*
 
-Last major update: **v44 Prebuilt Gaming PCs Expansion**
+Last major update: **v34 SEO Expansion Phase**
 
 Primary domain:  
 https://subtronicsllc.com
@@ -420,47 +420,3 @@ Priority city targets:
 
 Important:
 No page can guarantee a top-three map result by itself. Ranking still depends on Google Business Profile strength, reviews, proximity, and click-through behavior.
-
-
----
-
-# v44 Prebuilt Gaming PCs Expansion
-
-Added a dedicated transactional page:
-
-/services/prebuilt-gaming-pcs
-
-Purpose:
-- Target searches such as:
-  - prebuilt gaming pc near me
-  - gaming pc near me
-  - prebuilt gaming computers Genesee County
-- Support Google Business Profile product listings with a stronger landing page
-- Capture replacement-intent users who may be moving from repair/upgrade to buying a newer machine
-
-Core messaging on the page:
-- Ready-to-play prebuilt gaming PCs
-- Migration from old computers
-- Windows optimization
-- Bloatware removal
-- New computer setup
-- Future upgrade planning
-
-Internal linking added from:
-- homepage
-- services hub
-- custom PC builds page
-- new computer consulting
-- new computer setup
-- slow computer help page
-- FAQ pages about what computer to buy and repair vs upgrade vs replace
-
-Schema / AI discoverability updates:
-- Added prebuilt gaming PCs into serviceType where relevant
-- Added dedicated Service + OfferCatalog schema on the new prebuilt page
-- Updated llms.txt to mention prebuilt gaming PCs, data transfer, and Windows optimization
-- Added sitemap and redirect entries for the new page
-
-Recommended Google Business alignment:
-- Point the GBP “Prebuilt Gaming PCs” product landing page to:
-  https://subtronicsllc.com/services/prebuilt-gaming-pcs.html
