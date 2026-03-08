@@ -420,3 +420,16 @@ Priority city targets:
 
 Important:
 No page can guarantee a top-three map result by itself. Ranking still depends on Google Business Profile strength, reviews, proximity, and click-through behavior.
+
+
+# Prebuilt Gaming PC Page
+
+Added page:
+
+/prebuilt-gaming-pcs.html
+
+Purpose:
+- Support searches like “prebuilt gaming pc near me” and “gaming pc near me”
+- Bridge Google Business Profile product listings with on-site SEO
+- Highlight setup, debloat, file migration, and upgrade planning
+- Differentiate prebuilt support from full custom PC builds
