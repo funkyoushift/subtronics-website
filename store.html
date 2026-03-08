@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Advanced Build Store | Subtronics LLC</title>
-<meta content="Advanced build starting points for custom PCs. For repairs, upgrades, and troubleshooting in Flushing, MI and Genesee County, contact Subtronics LLC." name="description"/>
+<title>PC Build Configurator (Beta) | Subtronics LLC</title>
+<meta content="Configure a gaming PC build using PCPartPicker lists, budget tiers, and local setup options. Send your list to Subtronics LLC for a quote, parts sourcing, assembly, and full setup." name="description"/>
 <link href="/assets/img/logo.ico" rel="icon"/>
 <link href="/style.css" rel="stylesheet"/>
 <style>
@@ -360,7 +360,8 @@
   ]
 }
 </script> <script defer="" src="/theme.js"></script>
-<meta content="summary_large_image" name="twitter:card"/><meta content="https://subtronicsllc.com/assets/img/logo.png" property="og:image"/><meta content="https://subtronicsllc.com/assets/img/logo.png" name="twitter:image"/><meta content="Advanced Build Store | Subtronics LLC" property="og:title"/><meta content="Advanced build starting points for custom PCs. For repairs, upgrades, and troubleshooting in Flushing, MI and Genesee County, contact Subtronics LLC." property="og:description"/><meta content="https://subtronicsllc.com/store.html" property="og:url"/><meta content="website" property="og:type"/><meta content="Advanced Build Store | Subtronics LLC" name="twitter:title"/><meta content="Advanced build starting points for custom PCs. For repairs, upgrades, and troubleshooting in Flushing, MI and Genesee County, contact Subtronics LLC." name="twitter:description"/><meta content="index,follow,max-image-preview:large" name="robots"/><script type="application/ld+json">{
+<meta content="summary_large_image" name="twitter:card"/><meta content="https://subtronicsllc.com/assets/img/logo.png" property="og:image"/><meta content="https://subtronicsllc.com/assets/img/logo.png" name="twitter:image"/><meta content="Advanced Build Store | Subtronics LLC" property="og:title"/><meta content="Advanced build starting points for custom PCs. For repairs, upgrades, and troubleshooting in Flushing, MI and Genesee County, contact Subtronics LLC." property="og:description"/><meta content="https://subtronicsllc.com/store.html" property="og:url"/><meta content="website" property="og:type"/><meta content="Advanced Build Store | Subtronics LLC" name="twitter:title"/><meta content="Advanced build starting points for custom PCs. For repairs, upgrades, and troubleshooting in Flushing, MI and Genesee County, contact Subtronics LLC." name="twitter:description"/><meta content="noindex,follow" name="robots"/><script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -411,7 +412,8 @@
     }
   ],
   "subtronics_schema_v2": true
-}</script></head>
+}
+</script></head>
 <body>
 <header class="site-header">
 <div class="container header-inner">
@@ -435,105 +437,76 @@
 <a class="header-cta" href="tel:+18102802222">Call/Text 810-280-2222</a>
 </div>
 </header>
-<main class="container">
-<section class="card">
-<h1>Advanced Build Store</h1>
-<p class="hero-sub">
-    This page is for advanced build starting points. If you need help with repairs, upgrades, or troubleshooting,
-    start with <a href="/services/">Services</a> or <a href="/contact.html">Contact</a>.
+<main class="container"><div class="container"><section class="hero"><h1>PC Build Configurator (Beta)</h1><p>Use this page to plan a build using <strong>PCPartPicker</strong>, then send the list to Subtronics LLC for a quote, parts sourcing, assembly, cable management, and full setup. If you want something ready immediately, see <a href="/services/prebuilt-gaming-pcs.html">Prebuilt Gaming PCs</a>.</p><p><strong>Beta:</strong> This configurator is being improved. PCPartPicker pages may not render inside an embedded frame due to browser security headers. Use the “Open list” button for the most reliable experience.</p></section><section class="card"><h2>Quick-start build tiers</h2><p>Pick a tier to start, then tweak parts on PCPartPicker and send us your final list link.</p><div class="grid grid-3"><div class="card"><h3>Budget Build (1080p)</h3><p><strong>Starting at 750</strong><br/>A great starter gaming PC for esports and smooth 1080p play.</p><p><a class="btn" href="https://pcpartpicker.com/list/" rel="noopener" target="_blank">Open PCPartPicker list</a></p></div><div class="card"><h3>Mid-Range Build (1440p)</h3><p><strong>Starting at 1500</strong><br/>Balanced performance for modern AAA games and streaming.</p><p><a class="btn" href="https://pcpartpicker.com/list/" rel="noopener" target="_blank">Open PCPartPicker list</a></p></div><div class="card"><h3>High-End Build (4K / Creator)</h3><p><strong>Starting at 3000</strong><br/>High-refresh / 4K gaming and heavy workloads with premium cooling.</p><p><a class="btn" href="https://pcpartpicker.com/list/" rel="noopener" target="_blank">Open PCPartPicker list</a></p></div></div></section><section class="card"><h2>Send your PCPartPicker list for a quote</h2>
+<form class="form" id="pppForm">
+<label>PCPartPicker list URL</label>
+<input id="pppUrl" placeholder="https://pcpartpicker.com/list/XXXXXXX" required="" type="url"/>
+<div class="grid grid-2" style="margin-top:12px;">
+<div>
+<label>Budget (USD)</label>
+<input id="budget" placeholder="750 / 1500 / 3000" type="text"/>
+</div>
+<div>
+<label>City (Genesee County)</label>
+<input id="city" placeholder="Flushing / Flint / Grand Blanc / Davison / Fenton / Swartz Creek" type="text"/>
+</div>
+</div>
+<label style="margin-top:12px;">What are you using it for?</label>
+<textarea id="usecase" placeholder="Games, streaming, school, CAD, VR, etc. Include monitor resolution (1080p/1440p/4K) and target FPS if you know it." rows="4"></textarea>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;">
+<button class="btn" id="openListBtn" type="button">Open list</button>
+<button class="btn" id="emailBtn" type="button">Email for quote</button>
+<a class="btn" href="/contact.html">Contact options</a>
+</div>
+<p class="small-note" style="margin-top:10px;">
+    Prefer a ready-to-play system? See <a href="/services/prebuilt-gaming-pcs.html">Prebuilt Gaming PCs</a>.
+    Need help migrating from your old computer? See <a href="/services/new-computer-setup.html">New Computer Setup</a>.
   </p>
-</section>
-<!-- HERO -->
-<section class="store-hero">
-<div class="card store-hero-main">
-<h1>Shop Preconfigured Builds</h1>
-<p>
-        Start from proven Micro Center CPU + motherboard bundles, then customize RAM,
-        storage, GPU tier, cooling, and more. Every system is hand–built, tested, and
-        backed by local support in Flushing, MI.
-      </p>
-<div class="store-hero-steps">
-<div>1. Pick a base build that matches your budget and platform.</div>
-<div>2. Use “Customize” to size RAM, GPU, and storage for your games or apps.</div>
-<div>3. Click “Start Order” – we’ll confirm parts, final price, and build time.</div>
+</form>
+<div class="card" style="margin-top:16px;">
+<h3>Optional: embedded preview (may be blocked)</h3>
+<p class="small-note">Some sites prevent embedding with security headers (X-Frame-Options / frame-ancestors). If the preview is blank, use “Open list”.</p>
+<iframe id="pppFrame" loading="lazy" style="width:100%;height:520px;border:1px solid rgba(0,0,0,0.1);border-radius:12px;" title="PCPartPicker list preview"></iframe>
 </div>
-<div class="store-hero-kicker">
-<span id="last-sync"></span>
-</div>
-<div class="store-badges">
-<span class="store-badge">Brand-name parts only</span>
-<span class="store-badge">You see every part &amp; price</span>
-<span class="store-badge">Built &amp; tested locally</span>
-</div>
-</div>
-<aside class="card store-hero-side">
-<h2>Not sure where to start?</h2>
-<ul>
-<li>Choose <strong>AMD</strong> for great multi-core performance and gaming value.</li>
-<li>Choose <strong>Intel</strong> if you’re heavy into high-refresh gaming or mixed workloads.</li>
-<li>Use bundle price as a rough “platform tier” – GPU and storage can always scale up.</li>
-</ul>
-<p class="muted">
-        Tell me what you play or create, and I’ll point you to 1–2 builds that make sense,
-        then tune them for your budget.
-      </p>
-<a class="btn" href="/contact.html">Ask for a recommendation</a>
-</aside>
-</section>
-<!-- CHOOSE YOUR PATH -->
-<section class="store-paths">
-<article class="card">
-<h3>Browse all builds</h3>
-<p>Already comfortable with specs? Filter by platform and sort by base bundle price.</p>
-<a class="btn-small" href="#build-list">Jump to builds</a>
-</article>
-<article class="card">
-<h3>Need a gaming PC?</h3>
-<p>Tell me your favorite games and target resolution – I’ll send back a short list.</p>
-<a class="btn-small" href="/contact.html">Tell me your games</a>
-</article>
-<article class="card">
-<h3>Creator / workstation</h3>
-<p>Video, 3D, audio, or dev workloads – I’ll spec for cores, RAM, and storage first.</p>
-<a class="btn-small" href="/contact.html">Describe your workload</a>
-</article>
-</section>
-<!-- TOOLBAR -->
-<section class="card store-toolbar">
-<div>
-<label>View options</label>
-<div class="muted" style="font-size:0.8rem;">
-        Use filters or search to narrow down bundles. Pricing is for platform + base RAM
-        before GPU and storage upgrades.
-      </div>
-</div>
-<div class="store-controls">
-<div>
-<label for="filter-platform">Platform</label>
-<select aria-label="Filter by platform" id="filter-platform">
-<option value="all">All</option>
-<option value="AMD">AMD (AM5 / Threadripper)</option>
-<option value="Intel">Intel (LGA1700 / 1851)</option>
-</select>
-</div>
-<div>
-<label for="sort-by">Sort</label>
-<select aria-label="Sort builds" id="sort-by">
-<option value="name">Name</option>
-<option value="price">Base bundle price</option>
-</select>
-</div>
-<div>
-<label for="search-builds">Search</label>
-<input id="search-builds" placeholder="Search CPU, board, SKU, keyword..." type="search"/>
-</div>
-</div>
-</section>
-<!-- BUILDS -->
-<section id="build-list">
-<div class="grid grid-3 store-grid" id="builds"></div>
-</section>
-</main>
+<script>
+(function(){
+  const $ = (id) => document.getElementById(id);
+  const openList = () => {
+    const url = $('pppUrl').value.trim();
+    if(!url) return;
+    window.open(url, '_blank', 'noopener');
+    $('pppFrame').src = url;
+  };
+
+  const emailQuote = () => {
+    const url = $('pppUrl').value.trim();
+    if(!url) return;
+    const budget = $('budget').value.trim();
+    const city = $('city').value.trim();
+    const usecase = $('usecase').value.trim();
+
+    const subject = encodeURIComponent('PC Build Quote Request — PCPartPicker List');
+    const body = encodeURIComponent(
+      'Hi Subtronics LLC,\n\n' +
+      'Here is my PCPartPicker list:\n' + url + '\n\n' +
+      'Budget: ' + (budget || 'N/A') + '\n' +
+      'City: ' + (city || 'N/A') + '\n\n' +
+      'Use case / details:\n' + (usecase || 'N/A') + '\n\n' +
+      'Please quote parts + build labor and let me know ETA. Thanks!\n'
+    );
+    window.location.href = 'mailto:Martin@subtronicsllc.com?subject=' + subject + '&body=' + body;
+  };
+
+  $('openListBtn').addEventListener('click', openList);
+  $('emailBtn').addEventListener('click', emailQuote);
+
+  $('pppUrl').addEventListener('change', function(){
+    const url = this.value.trim();
+    if(url) $('pppFrame').src = url;
+  });
+})();
+</script>
+</section><section class="card"><h2>Want us to handle everything?</h2><p>We can source parts, assemble the system, update BIOS/drivers, tune performance, and migrate your data from an old PC. Call/text <a href="tel:+18102802222">810-280-2222</a> for fastest turnaround.</p></section></div></main>
 <!-- Sticky footer bar -->
 <div class="pricebar">
 <div class="muted">
@@ -593,7 +566,6 @@
 <a href="/contact.html">Contact</a><br/>
 <a href="/techcare-terms.html">TechCare Agreement</a><br/>
 <a href="/privacy-policy.html">Privacy Policy</a><br/>
-<a href="/store.html">Advanced Build Store</a>
 </div>
 </div>
 <p class="small-note" style="margin-top:1rem;">© 2026 Subtronics LLC • Flushing, Michigan</p>

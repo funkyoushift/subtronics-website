@@ -35,3 +35,12 @@ This update adds a new service page and performs a full internal-link / SEO sani
   - Remove nav/footer references
   - Add redirects from old build-store URLs to the new direction
   - Optionally keep a lightweight “Build configurator (beta)” page if you want it discoverable but not prominent
+## 2026-03-08 — Build Store soft-retired + configurator refresh
+- “Advanced Build Store” link removed from global footer/nav to reduce confusion (soft retire).
+- /store.html converted to “PC Build Configurator (Beta)” with:
+  - PCPartPicker list URL input
+  - Open-list button
+  - Email-for-quote button (mailto)
+  - Optional iframe preview (may be blocked by browser security headers)
+- Store page set to meta robots: noindex,follow (beta while improving).
+- Internal link scan: 0 broken links.
