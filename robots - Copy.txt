@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://subtronicsllc.com/sitemap.xml
-# AI/LLM guidance
-# https://subtronicsllc.com/llms.txt

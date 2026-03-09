@@ -420,3 +420,11 @@ Priority city targets:
 
 Important:
 No page can guarantee a top-three map result by itself. Ranking still depends on Google Business Profile strength, reviews, proximity, and click-through behavior.
+
+
+## v53 navigation + gaming PC consolidation fix
+- Made `/services/custom-pc-builds.html` the clear main human-facing page for both Tier 1 prebuilts and custom gaming PCs.
+- Put visible pricing on the combined gaming PC page and on the homepage/services hub.
+- Simplified top navigation to Home / Buy a Gaming PC / Repair Services / DIY Guides / Locations / TechCare / About / Contact.
+- Left dedicated prebuilt page in place for SEO/supporting detail, but pointed it back to the main combined buying page.
+- Goal: keep visible site navigation human-readable while leaving SEO depth in schema, supporting pages, and location pages.
