@@ -86,3 +86,9 @@ This update adds a new service page and performs a full internal-link / SEO sani
 - Updated `llms.txt`, `sitemap.xml`, and project docs
 - Added rule: every new service page or major service cluster must get matching location pages
 - Internal link scan after changes: 0 broken internal links
+## v50 visibility fix
+- Surfaced the live Gaming PCs page more prominently on the homepage
+- Added a top-level visible Gaming PCs section to services hubs
+- Added Gaming PCs links into footer service/support areas sitewide
+- Moved Gaming PCs by city higher on the locations hub
+- Updated the main Gaming PCs page title/H1/meta to read like a clear live service page
