@@ -92,3 +92,11 @@ This update adds a new service page and performs a full internal-link / SEO sani
 - Added Gaming PCs links into footer service/support areas sitewide
 - Moved Gaming PCs by city higher on the locations hub
 - Updated the main Gaming PCs page title/H1/meta to read like a clear live service page
+
+## v59 rules-first navigation + combined buying page confirmation (2026-03-09)
+- Read project notes first and used them as the source of truth before editing
+- Kept the visible site human-readable and aligned to Repair -> Upgrade -> Build
+- Kept `/services/custom-pc-builds.html` and `/services/custom-pc-builds/index.html` as the main combined human-facing buying page
+- Strengthened homepage and services hub language so users are pushed directly to the combined pricing page
+- Kept Tier 1 prebuilts, custom tiers, and the prebuilt-plus-optimization buying note together on the main gaming PC page
+- Updated bridge-page wording and buying-path labels for consistency
