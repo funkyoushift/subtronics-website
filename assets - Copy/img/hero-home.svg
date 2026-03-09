@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Computer repair illustration">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2563eb" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#22c55e" stop-opacity="0.10"/>
+    </linearGradient>
+    <linearGradient id="s" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f172a" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#0f172a" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" rx="48" fill="url(#g)"/>
+  <!-- monitor -->
+  <rect x="210" y="160" width="780" height="440" rx="32" fill="#0b1220" opacity="0.10"/>
+  <rect x="230" y="180" width="740" height="400" rx="28" fill="#ffffff" opacity="0.72"/>
+  <rect x="260" y="210" width="680" height="340" rx="22" fill="url(#s)"/>
+  <rect x="520" y="610" width="160" height="28" rx="14" fill="#0f172a" opacity="0.14"/>
+  <rect x="460" y="640" width="280" height="36" rx="18" fill="#0f172a" opacity="0.10"/>
+  <!-- wrench -->
+  <g opacity="0.18" fill="#0f172a">
+    <path d="M930 255c-28 0-52 15-65 37l40 40-24 24-40-40c-22 13-37 37-37 65 0 41 33 74 74 74 41 0 74-33 74-74 0-41-33-74-74-74z"/>
+    <path d="M655 335l34-34 220 220-34 34z"/>
+  </g>
+  <!-- sparkle -->
+  <g opacity="0.22" fill="#2563eb">
+    <circle cx="330" cy="240" r="10"/>
+    <circle cx="860" cy="560" r="12"/>
+    <circle cx="780" cy="240" r="8"/>
+  </g>
+</svg>

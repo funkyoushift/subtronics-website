@@ -1,0 +1,4 @@
+# pack-refs with: peeled fully-peeled sorted 
+93b426dc6e813ab8dc9f86a2f246967d7db58ed5 refs/remotes/origin/main
+eda3240c5eaddd56889a1d060ebb97f720642384 refs/remotes/origin/simple-seo-redesign
+94b774a6f23fee9063106609aa51b4576f3d2f70 refs/remotes/origin/update_worker_name_to_subtronics

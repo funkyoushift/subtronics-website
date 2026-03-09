@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Subtronics LLC">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22c55e"/>
+      <stop offset="1" stop-color="#0ea5e9"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="#0b0f14"/>
+  <path d="M74 170c10 16 31 28 58 28 35 0 58-18 58-42 0-22-17-34-43-39l-23-5c-13-3-19-8-19-15 0-9 10-16 25-16 14 0 26 6 34 17l22-14c-12-19-33-31-56-31-31 0-54 17-54 41 0 20 14 32 41 38l25 5c15 3 20 9 20 16 0 10-11 17-28 17-17 0-32-7-40-21z" fill="url(#g)"/>
+  <path d="M150 44l-28 56h24l-24 56 62-76h-26l26-36z" fill="#f8fafc" opacity="0.92"/>
+</svg>
