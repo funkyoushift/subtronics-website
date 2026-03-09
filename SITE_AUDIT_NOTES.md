@@ -44,3 +44,45 @@ This update adds a new service page and performs a full internal-link / SEO sani
   - Optional iframe preview (may be blocked by browser security headers)
 - Store page set to meta robots: noindex,follow (beta while improving).
 - Internal link scan: 0 broken links.
+## v48 follow-up audit (2026-03-08)
+- Replaced placeholder project docs with full Project Brain + Architecture Map
+- Added Internal Linking Map
+- Added gaming PC local-intent pages:
+  - /locations/gaming-pcs-flint-mi.html
+  - /locations/gaming-pcs-grand-blanc-mi.html
+  - /locations/gaming-pcs-fenton-mi.html
+- Added homepage gaming PC cluster section
+- Added services hub gaming PC local links
+- Added prebuilt/custom/configurator cross-links
+- Expanded configurator beta structure with RGB/Blackout direction, add-ons, and warranty planning
+- Added configurator alias redirects:
+  - /build-configurator -> /store.html
+  - /advanced-build-store.html -> /store.html
+- Updated sitemap.xml and llms.txt
+- Internal link scan result after changes: 0 broken internal links
+## v49 gaming PCs page overhaul (2026-03-09)
+- Rebuilt `/services/prebuilt-gaming-pcs.html` into a combined **Gaming PCs for Every Budget** page
+- Added both **prebuilt value systems** and **custom gaming PC tiers** to the same main sales page
+- Added price structure:
+  - prebuilt/value path: $800-$1,400
+  - starter custom: starting at $1,299
+  - performance: $2,199-$2,499
+  - enthusiast: $3,099-$3,499
+  - extreme: $5,500+
+- Added starter custom note for the Ryzen 5 7600X bundle and a 7600X3D add-on path
+- Updated custom builds pages to point back to the combined gaming PCs page
+- Added/updated priority gaming PC location pages:
+  - Flint
+  - Flushing
+  - Grand Blanc
+  - Fenton
+  - Davison
+  - Burton
+  - Clio
+  - Swartz Creek
+  - Goodrich
+  - Linden
+- Updated homepage, services hubs, configurator, DIY/help pages, and locations hub with stronger gaming PC internal links
+- Updated `llms.txt`, `sitemap.xml`, and project docs
+- Added rule: every new service page or major service cluster must get matching location pages
+- Internal link scan after changes: 0 broken internal links
