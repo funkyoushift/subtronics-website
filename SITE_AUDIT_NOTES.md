@@ -140,3 +140,5 @@ This update adds a new service page and performs a full internal-link / SEO sani
 - Promoted the newly uploaded tier images into optimized canonical web assets under /assets/img/photos/.
 - Replaced the gaming pricing panel images for Tier 1, Starter, Performance, Enthusiast, and Extreme with the new uploaded artwork.
 - Kept the existing card layout and canonical paths so the visual update does not break links or page structure.
+
+- v66: removed the oversized component brand collage from the Gaming PC Prices & Builds page, cleaned the brand logo assets for dark-theme display, and replaced the section with a cleaner trusted-brands layout.
