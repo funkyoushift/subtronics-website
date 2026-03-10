@@ -109,3 +109,11 @@ This update adds a new service page and performs a full internal-link / SEO sani
 - Updated global header navigation to point to the new primary buying route
 - Added redirects from older prebuilt/custom gaming PC routes into the new combined page
 - Updated sitemap.xml and llms.txt to reflect the new primary buying page
+
+
+## v61 canonical cleanup and duplicate-route pass
+- Audited duplicate folder/index and .html routes for the main human-facing pages.
+- Standardized internal links to the canonical folder routes for `/services/`, `/faq/`, `/locations/`, `/techcare/`, `/support/`, `/review/`, and `/our-work/`.
+- Converted duplicate `.html` versions of those hub pages into redirect stubs so there is one clear human-facing version.
+- Fixed leftover broken links that incorrectly pointed to `/services/gaming-pc-prices-builds/` instead of `/gaming-pc-prices-builds/`.
+- Added redirect coverage for the duplicate route variants in `_redirects` and updated canonicals/og:url on the canonical index pages.

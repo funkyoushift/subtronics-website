@@ -28,7 +28,7 @@
 /data-recovery-swartz-creek-mi.html   /locations/data-recovery-swartz-creek-mi.html   301
 /data-recovery.html   /services/data-recovery.html   301
 /diagnostics-troubleshooting.html   /services/diagnostics-troubleshooting.html   301
-/faq.html        /faq/        301
+/faq/        /faq/        301
 /gaming-pc-repair-burton-mi.html   /locations/gaming-pc-repair-burton-mi.html   301
 /gaming-pc-repair-davison-mi.html   /locations/gaming-pc-repair-davison-mi.html   301
 /gaming-pc-repair-flint-mi.html   /locations/gaming-pc-repair-flint-mi.html   301
@@ -44,7 +44,7 @@
 /laptop-repair-flushing-mi.html   /locations/laptop-repair-flushing-mi.html   301
 /laptop-repair-grand-blanc-mi.html   /locations/laptop-repair-grand-blanc-mi.html   301
 /laptop-running-hot.html   /help/laptop-running-hot.html   301
-/locations.html  /locations/  301
+/locations/  /locations/  301
 /overheating-computer.html   /help/overheating-computer.html   301
 /pc-random-restarts.html   /help/pc-random-restarts.html   301
 /pc-upgrades-burton-mi.html   /locations/pc-upgrades-burton-mi.html   301
@@ -63,7 +63,7 @@
 /remote-support-mount-morris-mi.html   /locations/remote-support-mount-morris-mi.html   301
 /remote-support-swartz-creek-mi.html   /locations/remote-support-swartz-creek-mi.html   301
 /remote-support.html   /services/remote-support.html   301
-/services.html   /services/   301
+/services/   /services/   301
 /slow-computer-fix.html   /help/slow-computer-fix.html   301
 /slow-computer-repair-flushing-mi.html   /locations/slow-computer-repair-flushing-mi.html   301
 /ssd-upgrade-burton-mi.html   /locations/ssd-upgrade-burton-mi.html   301
@@ -118,3 +118,11 @@
 /services/custom-pc-builds.html /gaming-pc-prices-builds/ 301
 /services/prebuilt-gaming-pcs /gaming-pc-prices-builds/ 301
 /services/prebuilt-gaming-pcs.html /gaming-pc-prices-builds/ 301
+/services.html /services/ 301
+/faq.html /faq/ 301
+/locations.html /locations/ 301
+/techcare.html /techcare/ 301
+/support.html /support/ 301
+/review.html /review/ 301
+/our-work.html /our-work/ 301
+/services/gaming-pc-prices-builds/ /gaming-pc-prices-builds/ 301
