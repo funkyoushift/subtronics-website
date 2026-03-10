@@ -127,3 +127,10 @@ This update adds a new service page and performs a full internal-link / SEO sani
 - Added explicit redirect coverage for duplicate root legacy routes in `_redirects`.
 - Regenerated `sitemap.xml` so it only lists canonical live pages instead of moved duplicate routes.
 - Goal of this pass: make Cloudflare serve one clear public version of each page and reduce route confusion after deploy/cache refresh.
+
+## v64 image-forward storefront pass (2026-03-09)
+- Read project rules first and used the uploaded files as the source of truth before editing.
+- Added representative storefront imagery to the homepage, gaming PC pricing page, services hub, DIY hub, and TechCare page.
+- Created optimized tier photo variants from existing site imagery so the gaming PC price tiers are easier to scan visually without adding heavy new dependencies.
+- Surfaced trusted brand logos more prominently on the storefront-facing pages.
+- Added lightweight visual-card, tier-card, photo-band, and logo-wall styles in `style.css` for reusable image-first page sections.
