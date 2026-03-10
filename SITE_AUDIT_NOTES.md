@@ -119,9 +119,11 @@ This update adds a new service page and performs a full internal-link / SEO sani
 - Added redirect coverage for the duplicate route variants in `_redirects` and updated canonicals/og:url on the canonical index pages.
 
 
-## v62 route policy cleanup and duplicate-path hardening (2026-03-09)
-- Confirmed that multiple `index.html` files are intentional for folder-based static routes; they are not the problem by themselves.
-- Hardened `_redirects` so the canonical public routes win even when a visitor or cached link requests `.html` or `/index.html` variants.
-- Added explicit redirects for `/gaming-pc-prices-builds.html`, `/gaming-pc-prices-builds/index.html`, `/help.html`, and other hub `/index.html` variants.
-- Removed self-redirect noise from `_redirects` so the route file is cleaner and easier to reason about during deployment.
-- Kept one canonical human-facing route for each main hub: `/gaming-pc-prices-builds/`, `/services/`, `/help/`, `/faq/`, `/locations/`, `/techcare/`, `/support/`, `/review/`, and `/our-work/`.
+## v63 navigation audit + duplicate root route cleanup (2026-03-09)
+- Read project rules first and treated the uploaded project notes as the source of truth before editing.
+- Audited internal links, duplicate routes, sitemap coverage, and canonical route usage.
+- Replaced legacy root-level duplicate content pages with redirect stubs to their canonical `/services/`, `/help/`, `/help/diy/`, or `/locations/` equivalents.
+- Standardized internal links away from `/index.html` and other non-canonical hub variants.
+- Added explicit redirect coverage for duplicate root legacy routes in `_redirects`.
+- Regenerated `sitemap.xml` so it only lists canonical live pages instead of moved duplicate routes.
+- Goal of this pass: make Cloudflare serve one clear public version of each page and reduce route confusion after deploy/cache refresh.
