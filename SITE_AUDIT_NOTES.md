@@ -154,3 +154,10 @@ This update adds a new service page and performs a full internal-link / SEO sani
 - Removed unused assets and leftovers that were no longer referenced by the live site, including the old component collage, unused videos, an unused CSS/JS pair, and the unused staging image folder.
 - Regenerated `sitemap.xml` from live indexable canonical pages only and kept `llms.txt` aligned with the current storefront/navigation structure.
 - Corrected the phone typo in the project notes so future sessions do not inherit the wrong number.
+
+## v68 location hub + header consistency cleanup
+- Made `/locations/` the single canonical location hub and converted `service-area.html` into a redirect stub to `/locations/`.
+- Removed self-redirect rules that were causing redirect loops on canonical hub routes.
+- Standardized lingering footer and body links from `Service Area` to `Locations` so users no longer hit mixed route language.
+- Corrected `locations/index.html` social metadata and breadcrumb labeling to reflect the actual page.
+- Kept the existing local SEO location pages in place under `/locations/` for Flint, Flushing, Grand Blanc, Fenton, Davison, Burton, Clio, Swartz Creek, and surrounding communities.
