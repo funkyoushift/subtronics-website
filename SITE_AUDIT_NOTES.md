@@ -134,3 +134,9 @@ This update adds a new service page and performs a full internal-link / SEO sani
 - Created optimized tier photo variants from existing site imagery so the gaming PC price tiers are easier to scan visually without adding heavy new dependencies.
 - Surfaced trusted brand logos more prominently on the storefront-facing pages.
 - Added lightweight visual-card, tier-card, photo-band, and logo-wall styles in `style.css` for reusable image-first page sections.
+
+
+## v65 tier panel image pass
+- Promoted the newly uploaded tier images into optimized canonical web assets under /assets/img/photos/.
+- Replaced the gaming pricing panel images for Tier 1, Starter, Performance, Enthusiast, and Extreme with the new uploaded artwork.
+- Kept the existing card layout and canonical paths so the visual update does not break links or page structure.
