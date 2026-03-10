@@ -90,8 +90,8 @@
 
 /computer-repair-beecher-mi.html   /locations/computer-repair-beecher-mi.html   301
 /computer-repair-flint-township-mi.html   /locations/computer-repair-flint-township-mi.html   301
-/prebuilt-gaming-pcs.html   /services/prebuilt-gaming-pcs.html   301
-/services/custom-gaming-pc-builds.html   /services/custom-pc-builds.html   301
+/prebuilt-gaming-pcs.html   /gaming-pc-prices-builds/   301
+/services/custom-gaming-pc-builds.html   /gaming-pc-prices-builds/   301
 /techcare   /techcare/   301
 /support   /support/   301
 /our-work   /our-work/   301
@@ -113,3 +113,8 @@
 /gaming-pcs-swartz-creek-mi.html   /locations/gaming-pcs-swartz-creek-mi.html   301
 /gaming-pcs-goodrich-mi.html   /locations/gaming-pcs-goodrich-mi.html   301
 /gaming-pcs-linden-mi.html   /locations/gaming-pcs-linden-mi.html   301
+/gaming-pc-prices-builds /gaming-pc-prices-builds/ 301
+/services/custom-pc-builds /gaming-pc-prices-builds/ 301
+/services/custom-pc-builds.html /gaming-pc-prices-builds/ 301
+/services/prebuilt-gaming-pcs /gaming-pc-prices-builds/ 301
+/services/prebuilt-gaming-pcs.html /gaming-pc-prices-builds/ 301

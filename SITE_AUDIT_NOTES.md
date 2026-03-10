@@ -100,3 +100,12 @@ This update adds a new service page and performs a full internal-link / SEO sani
 - Strengthened homepage and services hub language so users are pushed directly to the combined pricing page
 - Kept Tier 1 prebuilts, custom tiers, and the prebuilt-plus-optimization buying note together on the main gaming PC page
 - Updated bridge-page wording and buying-path labels for consistency
+
+## v60 storefront restructure + primary buying route (2026-03-09)
+- Read project rules first before editing and treated them as the source of truth
+- Created `/gaming-pc-prices-builds/` as the new primary human-facing buying page
+- Simplified the homepage into a storefront path: Buy a Gaming PC / Services / DIY / TechCare
+- Simplified `/services/`, `/help/`, and `techcare.html` so the visible pages are more human-readable
+- Updated global header navigation to point to the new primary buying route
+- Added redirects from older prebuilt/custom gaming PC routes into the new combined page
+- Updated sitemap.xml and llms.txt to reflect the new primary buying page
