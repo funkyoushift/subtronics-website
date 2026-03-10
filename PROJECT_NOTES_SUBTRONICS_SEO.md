@@ -11,7 +11,7 @@ Business tagline:
 **Repair • Upgrade • Build — Your Local Computer Experts**
 
 Business contact:
-- Phone: 810-280-22222
+- Phone: 810-280-2222
 - Email: Martin@subtronicsllc.com
 
 Owner: Martin Wenn
@@ -164,7 +164,7 @@ If troubleshooting these steps feels overwhelming, Subtronics LLC provides profe
 
 We’ll explain the issue clearly and help you decide whether your computer is best repaired, upgraded, or replaced.
 
-Call or text **810-280-22222**
+Call or text **810-280-2222**
 
 ---
 

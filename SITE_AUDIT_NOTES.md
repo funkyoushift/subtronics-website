@@ -142,3 +142,15 @@ This update adds a new service page and performs a full internal-link / SEO sani
 - Kept the existing card layout and canonical paths so the visual update does not break links or page structure.
 
 - v66: removed the oversized component brand collage from the Gaming PC Prices & Builds page, cleaned the brand logo assets for dark-theme display, and replaced the section with a cleaner trusted-brands layout.
+
+
+## v67 full cleanup + SEO sanity pass (2026-03-09)
+- Read project rules first and used the uploaded project notes as the source of truth before editing.
+- Audited all indexable pages for broken local links, orphan pages, canonical coverage, metadata coverage, schema presence, nav/footer presence, and route consistency.
+- Confirmed 0 broken local links and 0 orphan indexable pages after cleanup.
+- Fixed duplicate metadata/canonical conflicts on `computer-problems.html` and `ssd-upgrade-benefits.html`.
+- Standardized `/help/` as the canonical DIY/help hub and converted `guides.html` into a redirect stub to reduce duplicate-route confusion.
+- Removed unused `app.js` references from non-builder pages and removed the unused `app.js` file.
+- Removed unused assets and leftovers that were no longer referenced by the live site, including the old component collage, unused videos, an unused CSS/JS pair, and the unused staging image folder.
+- Regenerated `sitemap.xml` from live indexable canonical pages only and kept `llms.txt` aligned with the current storefront/navigation structure.
+- Corrected the phone typo in the project notes so future sessions do not inherit the wrong number.
