@@ -168,3 +168,17 @@ This update adds a new service page and performs a full internal-link / SEO sani
 - Updated redirect stubs and `_redirects` so the no-slash hub variants now 301 to the canonical folder routes instead of competing with them.
 - Regenerated `sitemap.xml` from indexable canonical pages only so malformed hub entries like `/faq//` and `/help//` are removed.
 - Left non-hub content URLs alone unless they were direct aliases or stubs, to stay within the route policy and existing site structure.
+
+
+## v82 authority pass + conflict cleanup (2026-04-02)
+- Read the uploaded project notes, route policy, README, and site audit notes again before editing.
+- Kept the existing route policy and site structure in place instead of adding new clusters or changing public URL patterns.
+- Added an authority block and stronger priority-city internal links on the homepage.
+- Added a stronger Genesee County authority section and priority local links on `/services/`.
+- Added a local buyer-support section and city-level gaming PC links on `/gaming-pc-prices-builds/`.
+- Strengthened the top repair location pages for Flint, Grand Blanc, and Fenton with clearer trust copy, diagnostic messaging, and nearby-city internal links.
+- Added a professional-diagnosis authority block to the help and DIY pages so the troubleshooting cluster ties back into local service intent more clearly.
+- Fixed duplicate/conflicting footer links that repeated `Locations` twice across the site.
+- Fixed conflicting metadata on the `/locations/computer-repair-*.html` pages where some pages still carried the old Flushing homepage title/description instead of city-specific metadata.
+- Removed a conflicting duplicate homepage JSON-LD block so the homepage has one clearer primary schema set instead of overlapping older homepage schema.
+- Note for future passes: the README file is deployment history, not the source of truth for the current SEO architecture; project notes + route policy + site audit notes should continue to win when they conflict.
