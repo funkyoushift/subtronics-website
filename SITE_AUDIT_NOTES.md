@@ -182,3 +182,11 @@ This update adds a new service page and performs a full internal-link / SEO sani
 - Fixed conflicting metadata on the `/locations/computer-repair-*.html` pages where some pages still carried the old Flushing homepage title/description instead of city-specific metadata.
 - Removed a conflicting duplicate homepage JSON-LD block so the homepage has one clearer primary schema set instead of overlapping older homepage schema.
 - Note for future passes: the README file is deployment history, not the source of truth for the current SEO architecture; project notes + route policy + site audit notes should continue to win when they conflict.
+
+
+## v83 real photo proof pass (2026-04-02)
+- Added real uploaded Subtronics work photos into `/assets/img/photos/` as optimized WebP assets.
+- Replaced generic-looking visual placeholders on the homepage, services hub, and gaming PC pricing page with actual Subtronics build and repair photos where they strengthen trust.
+- Expanded `/our-work/` so it now shows real Subtronics repair and build photos instead of mostly placeholder/supporting graphics.
+- Kept the route policy, canonical structure, and Repair -> Upgrade -> Build storefront path intact while adding stronger trust signals.
+- Avoided publicly surfacing the uploaded drive-label photo because it exposes unnecessary device-identifying details and does not help the storefront as much as the build/repair photos.
