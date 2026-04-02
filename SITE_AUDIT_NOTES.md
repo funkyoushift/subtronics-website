@@ -202,3 +202,10 @@ This update adds a new service page and performs a full internal-link / SEO sani
 - Kept the route policy and site structure intact while improving trust signals and human readability.
 - Updated homepage proof-band copy and imagery to point at the stronger real-work presentation.
 - Deliberately did not surface weaker workspace-heavy shots or the Halloween personal photo on the public site in this pass.
+
+
+## v85 our-work human copy cleanup (2026-04-02)
+- Rewrote `/our-work/` to remove developer-style explanation and site-note language.
+- Kept the real-photo trust angle, but changed the page copy to speak to customers in plain language.
+- Simplified the image section copy so it reads like a local service business, not internal SEO notes.
+- Replaced the meta/explanatory closing section with a direct customer-facing call to action.
