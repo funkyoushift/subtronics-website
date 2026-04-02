@@ -161,3 +161,10 @@ This update adds a new service page and performs a full internal-link / SEO sani
 - Standardized lingering footer and body links from `Service Area` to `Locations` so users no longer hit mixed route language.
 - Corrected `locations/index.html` social metadata and breadcrumb labeling to reflect the actual page.
 - Kept the existing local SEO location pages in place under `/locations/` for Flint, Flushing, Grand Blanc, Fenton, Davison, Burton, Clio, Swartz Creek, and surrounding communities.
+
+## v81 hub-route policy alignment + sitemap cleanup (2026-04-02)
+- Re-read the uploaded project notes, route policy, README, and site audit notes before editing.
+- Aligned the live hub canonicals, Open Graph URLs, and internal hub links with the folder-route policy for `/gaming-pc-prices-builds/`, `/services/`, `/help/`, `/faq/`, `/locations/`, `/techcare/`, `/support/`, `/review/`, and `/our-work/`.
+- Updated redirect stubs and `_redirects` so the no-slash hub variants now 301 to the canonical folder routes instead of competing with them.
+- Regenerated `sitemap.xml` from indexable canonical pages only so malformed hub entries like `/faq//` and `/help//` are removed.
+- Left non-hub content URLs alone unless they were direct aliases or stubs, to stay within the route policy and existing site structure.

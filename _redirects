@@ -1,3 +1,24 @@
+# Canonical hub route policy (folder routes are public canonicals)
+/gaming-pc-prices-builds /gaming-pc-prices-builds/ 301
+/services /services/ 301
+/help /help/ 301
+/faq /faq/ 301
+/locations /locations/ 301
+/techcare /techcare/ 301
+/support /support/ 301
+/review /review/ 301
+/our-work /our-work/ 301
+/faq.html /faq/ 301
+/services.html /services/ 301
+/locations.html /locations/ 301
+/guides.html /help/ 301
+/service-area.html /locations/ 301
+/techcare.html /techcare/ 301
+/support.html /support/ 301
+/review.html /review/ 301
+/our-work.html /our-work/ 301
+/custom-pc-builds.html /gaming-pc-prices-builds/ 301
+
 # Canonical route normalization generated from actual site files
 # File-backed pages: slash version -> non-slash canonical
 /about/ /about 301
