@@ -190,3 +190,15 @@ This update adds a new service page and performs a full internal-link / SEO sani
 - Expanded `/our-work/` so it now shows real Subtronics repair and build photos instead of mostly placeholder/supporting graphics.
 - Kept the route policy, canonical structure, and Repair -> Upgrade -> Build storefront path intact while adding stronger trust signals.
 - Avoided publicly surfacing the uploaded drive-label photo because it exposes unnecessary device-identifying details and does not help the storefront as much as the build/repair photos.
+
+## v84 real-work page rebuild + photo selection cleanup (2026-04-02)
+- Rebuilt `/our-work/` so it reads like grouped proof of real work instead of a repeated image grid.
+- Added four stronger real-photo assets:
+  - black custom build final inspection
+  - high-end RGB showcase build
+  - motherboard / build-prep shot
+  - finished multi-monitor setup with completed PC
+- Removed repeated-looking gallery entries so the page no longer feels like the same 2-3 systems shown over and over.
+- Kept the route policy and site structure intact while improving trust signals and human readability.
+- Updated homepage proof-band copy and imagery to point at the stronger real-work presentation.
+- Deliberately did not surface weaker workspace-heavy shots or the Halloween personal photo on the public site in this pass.
