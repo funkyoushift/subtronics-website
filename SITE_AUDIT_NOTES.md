@@ -217,7 +217,9 @@ This update adds a new service page and performs a full internal-link / SEO sani
 - Kept the existing route policy, schema, metadata, and page structure intact.
 - Added only natural internal links on `/our-work/` to `/services/`, `/gaming-pc-prices-builds/`, and `/locations/`.
 
-## v90 sitemap repair (2026-04-02)
-- Rebuilt `sitemap.xml` from live canonical indexable pages only after finding the sitemap file had been emptied.
-- Kept redirect stubs, noindex pages, and moved aliases out of the sitemap.
-- Left route policy and page structure unchanged.
+
+## v91 sitemap rebuild from canonical indexable pages (2026-04-02)
+- Rebuilt `sitemap.xml` from the actual site files instead of a placeholder wrapper.
+- Included only pages with an indexable robots directive and a canonical URL.
+- Excluded redirect stubs, noindex pages, and moved beta pages from the sitemap.
+- Kept canonical hub routes like `/services/`, `/faq/`, `/help/`, `/locations/`, `/our-work/`, and `/gaming-pc-prices-builds/` aligned with the route policy.
