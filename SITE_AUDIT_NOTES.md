@@ -216,3 +216,8 @@ This update adds a new service page and performs a full internal-link / SEO sani
 - Rewrote the visible copy on `/our-work/` to remove awkward marketing-style phrases and image descriptions that did not match the photos well.
 - Kept the existing route policy, schema, metadata, and page structure intact.
 - Added only natural internal links on `/our-work/` to `/services/`, `/gaming-pc-prices-builds/`, and `/locations/`.
+
+## v90 sitemap repair (2026-04-02)
+- Rebuilt `sitemap.xml` from live canonical indexable pages only after finding the sitemap file had been emptied.
+- Kept redirect stubs, noindex pages, and moved aliases out of the sitemap.
+- Left route policy and page structure unchanged.
