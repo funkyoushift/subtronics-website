@@ -210,10 +210,9 @@ This update adds a new service page and performs a full internal-link / SEO sani
 - Simplified the image section copy so it reads like a local service business, not internal SEO notes.
 - Replaced the meta/explanatory closing section with a direct customer-facing call to action.
 
-## v86 our-work human wording + link integrity pass (2026-04-02)
-- Rewrote `/our-work/` copy to remove site-note / marketing-style phrasing and make the page read more naturally for customers.
-- Simplified photo captions and section blurbs so the page sounds human and local instead of explanatory.
-- Updated `/our-work/` title and meta description for cleaner human-readable search snippets.
-- Added natural internal links from `/our-work/` to `/services/`, `/gaming-pc-prices-builds/`, and priority city pages.
-- Added return links to `/our-work/` from the services hub and Gaming PC Prices & Builds page.
-- Cleaned the homepage real-work preview captions so the connected proof section also reads like customer-facing copy.
+
+## v89 clean our-work human copy pass (2026-04-02)
+- Reverted the broader v86 text changes so this pass only updates `/our-work/`.
+- Rewrote the visible copy on `/our-work/` to remove awkward marketing-style phrases and image descriptions that did not match the photos well.
+- Kept the existing route policy, schema, metadata, and page structure intact.
+- Added only natural internal links on `/our-work/` to `/services/`, `/gaming-pc-prices-builds/`, and `/locations/`.
