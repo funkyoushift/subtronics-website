@@ -223,3 +223,23 @@ This update adds a new service page and performs a full internal-link / SEO sani
 - Included only pages with an indexable robots directive and a canonical URL.
 - Excluded redirect stubs, noindex pages, and moved beta pages from the sitemap.
 - Kept canonical hub routes like `/services/`, `/faq/`, `/help/`, `/locations/`, `/our-work/`, and `/gaming-pc-prices-builds/` aligned with the route policy.
+
+## v92.1 Search Console cleanup + location pruning (2026-04-06)
+- Re-read project notes and route policy before editing.
+- Removed many root-level and legacy moved-page HTML stubs and shifted that behavior into explicit `_redirects` rules.
+- Pruned weaker township pages and low-priority service-by-city pages that were contributing volume without enough unique value.
+- Kept the stronger city repair pages, gaming PC city pages, storefront hubs, help pages, FAQ pages, and core services.
+- Updated the locations hub to focus on the pages that should actually rank instead of advertising every thin variant.
+- Regenerated the sitemap from the remaining indexable canonical pages only.
+- Updated `llms.txt` and the markdown notes so they no longer describe the old bloated route set.
+
+
+## v92.2 pre-submit canonical + indexation polish (2026-04-06)
+- Tightened canonical tags and `og:url` across the live site after the v92.1 reduction pass.
+- Normalized internal links so the remaining live pages no longer point at redirecting legacy variants.
+- Normalized JSON-LD page URLs, breadcrumb URLs, and service URLs to the public canonical routes instead of mixed `.html` references.
+- Added explicit redirect coverage for bare hub variants like `/services`, `/help`, `/locations`, `/techcare`, `/support`, `/review`, `/our-work`, `/gaming-pc-prices-builds`, and `/help/diy`.
+- Rebuilt `sitemap.xml` from the current indexable canonical pages only.
+- Strengthened the remaining location pages with clearer repair-value language, warranty/diagnostic trust copy, stronger next-step internal links, and cleaner nearby-city links that only point to live pages.
+- Updated `llms.txt` so the AI-readable route guidance matches the trimmed architecture.
+- Result of this pass: 0 leftover internal links to redirecting pages in the live HTML set, 0 non-noindex pages with canonical mismatches, and a sitemap aligned to the current live route policy.

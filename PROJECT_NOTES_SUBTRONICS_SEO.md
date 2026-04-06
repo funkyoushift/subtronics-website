@@ -1,3 +1,16 @@
+# Current architecture note (v92.2 pre-submit cleanup)
+
+The current site is intentionally trimmed down. Prefer the live canonical routes in `sitemap.xml`, `ROUTE_POLICY.md`, and `llms.txt` over older historical notes below when they conflict.
+
+Current indexing strategy:
+- Keep canonical hub routes on trailing-slash folder URLs: `/gaming-pc-prices-builds/`, `/services/`, `/help/`, `/faq/`, `/locations/`, `/techcare/`, `/support/`, `/review/`, `/our-work/`, and `/help/diy/`.
+- Keep content pages on clean extensionless public URLs.
+- Keep only the stronger city pages and route removed local variants through redirects instead of leaving thin competing pages live.
+- Keep `/store`, `/thank_you`, `techcare-terms`, and `techcare-welcome` out of the sitemap while they remain utility or noindex pages.
+- Treat `sitemap.xml` as the current source of truth for indexable public pages.
+
+---
+
 
 # Subtronics LLC Website Development Notes
 *(For future ChatGPT sessions and development tracking)*
@@ -428,3 +441,18 @@ No page can guarantee a top-three map result by itself. Ranking still depends on
 - Simplified top navigation to Home / Buy a Gaming PC / Repair Services / DIY Guides / Locations / TechCare / About / Contact.
 - Left dedicated prebuilt page in place for SEO/supporting detail, but pointed it back to the main combined buying page.
 - Goal: keep visible site navigation human-readable while leaving SEO depth in schema, supporting pages, and location pages.
+
+# v92.1 Search Console cleanup + indexation tightening
+
+Goal:
+Reduce duplicate-route confusion and trim weaker location pages before the next sitemap submission.
+
+What changed:
+- Removed many legacy moved-page HTML stubs and replaced them with direct redirect rules in `_redirects`.
+- Kept the canonical hub policy intact: folder routes with trailing slashes for the main hubs.
+- Pruned weak township and low-priority service-by-city pages that were more likely to dilute crawl budget than help ranking.
+- Kept the stronger city repair pages, gaming PC city pages, core service pages, help pages, FAQ pages, and storefront pages.
+- Updated `locations/index.html`, `llms.txt`, and `sitemap.xml` to match the trimmed indexable set.
+
+Important rule going forward:
+Prefer fewer, stronger local pages over large batches of thin near-duplicate area pages. When in doubt, redirect weaker legacy pages into the closest strong page or the main locations hub instead of leaving them indexable.
