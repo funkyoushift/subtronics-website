@@ -1,29 +1,25 @@
-# Subtronics LLC Website README
+# Subtronics LLC Website
 
-This package is the current multi-page Subtronics LLC website for Cloudflare Pages.
+Static website for **Subtronics LLC**, focused on local computer repair, upgrades, diagnostics, gaming PC pricing, and support for Flushing, Flint, and surrounding Genesee County areas.
 
-## Source of truth
-When these notes conflict, use them in this order:
-1. `PROJECT_NOTES_SUBTRONICS_SEO.md`
-2. `ROUTE_POLICY.md`
-3. `SITE_AUDIT_NOTES.md`
-4. `README.md`
+## Current structure
+- `index.html` — homepage / storefront entry
+- `gaming-pc-prices-builds/` — main buying page for gaming PCs
+- `services/` — repair and upgrade service cluster
+- `help/` and `help/diy/` — educational and troubleshooting content
+- `locations/` — trimmed local intent cluster
+- `techcare/`, `support/`, `review/`, `our-work/` — trust and retention pages
 
-## Current architecture
-- Static HTML site
-- Canonical hub routes use trailing-slash folder URLs
-- Most content pages use clean no-extension public URLs
-- Legacy `.html` and moved-page URLs should redirect to the canonical public pages
+## Current source of truth files
+Before making edits, read:
+- `PROJECT_NOTES_SUBTRONICS_SEO.md`
+- `SITE_AUDIT_NOTES.md`
+- `ROUTE_POLICY.md`
+- `sitemap.xml`
+- `llms.txt`
 
-## Deployment reminders
-- Keep `_redirects`, `robots.txt`, `sitemap.xml`, and `llms.txt` aligned
-- Do not reintroduce duplicate public URLs for hub pages
-- Do not add large clusters of thin township or near-duplicate location pages
-- Remove or redirect stale legacy pages instead of leaving extra indexable copies behind
-
-## Search Console goal for the current cleanup pass
-The current cleanup is focused on:
-- reducing duplicate discovery
-- pruning weak location pages
-- preserving only stronger money pages and support pages
-- making redirects and sitemap signals line up cleanly before resubmission
+## Editing rules
+- Keep the site human-readable and storefront-first.
+- Prefer canonical public URLs over legacy `.html` variants.
+- Keep utility pages out of the sitemap unless they become true public landing pages.
+- After major changes, audit nav, footer, internal links, canonicals, schema, sitemap, robots, and llms discovery.

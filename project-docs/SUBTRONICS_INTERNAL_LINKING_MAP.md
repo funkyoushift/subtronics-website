@@ -1,40 +1,34 @@
-# Subtronics LLC Internal Linking Map
+# Subtronics Internal Linking Map
 
-## Gaming PC cluster
-- Homepage -> /services/prebuilt-gaming-pcs.html
-- Homepage -> /services/custom-pc-builds.html
-- Homepage -> /store.html
-- Homepage -> /locations/gaming-pcs-flint-mi.html
-- Homepage -> /locations/gaming-pcs-grand-blanc-mi.html
-- Homepage -> /locations/gaming-pcs-fenton-mi.html
-- Services hub -> /services/prebuilt-gaming-pcs.html
-- Services hub -> /services/custom-pc-builds.html
-- Services hub -> /store.html
-- Prebuilt page -> /services/custom-pc-builds.html
-- Prebuilt page -> /store.html
-- Prebuilt page -> /locations/gaming-pcs-flint-mi.html
-- Prebuilt page -> /locations/gaming-pcs-grand-blanc-mi.html
-- Prebuilt page -> /locations/gaming-pcs-fenton-mi.html
-- Custom builds -> /services/prebuilt-gaming-pcs.html
-- Custom builds -> /store.html
-- Store/configurator -> /services/prebuilt-gaming-pcs.html
-- Store/configurator -> /services/custom-pc-builds.html
+This is the **current** linking intent, not a historical archive.
 
-## Local gaming PC cluster
-- Locations hub -> gaming PC city pages
-- Flint gaming PCs -> prebuilt, custom builds, configurator, contact
-- Grand Blanc gaming PCs -> prebuilt, custom builds, configurator, contact
-- Fenton gaming PCs -> prebuilt, custom builds, configurator, contact
+## Homepage should point users toward
+- `/gaming-pc-prices-builds/`
+- `/services/`
+- `/help/`
+- `/techcare/`
+- strongest local pages
+- contact CTA
 
-## Global footer service support
-- Footer -> /services/prebuilt-gaming-pcs.html
-- Footer -> /services/custom-pc-builds.html
-- Footer -> /services/pc-upgrades.html
+## Gaming PC pricing page should cross-link to
+- relevant local gaming PC pages
+- upgrade services
+- contact / quote flow
+- store/configurator only as a secondary option
 
-- Homepage -> /locations/gaming-pcs-flushing-mi.html
-- Homepage -> /locations/gaming-pcs-davison-mi.html
-- Homepage -> /locations/gaming-pcs-burton-mi.html
-- Homepage -> /locations/gaming-pcs-clio-mi.html
-- Homepage -> /locations/gaming-pcs-swartz-creek-mi.html
-- Homepage -> /locations/gaming-pcs-goodrich-mi.html
-- Homepage -> /locations/gaming-pcs-linden-mi.html
+## Services hub should link to
+- all important repair / upgrade pages
+- gaming PC pricing page
+- strongest location pages where relevant
+- support / contact
+
+## Help and DIY hubs should link to
+- related services
+- support / contact
+- selected upgrade or gaming PC pages when contextually relevant
+
+## Trust pages should feed back into conversion paths
+- `our-work` → services / gaming PCs / contact
+- `review` → services / contact
+- `about` → services / gaming PCs / contact
+- `techcare` → support / services / contact
