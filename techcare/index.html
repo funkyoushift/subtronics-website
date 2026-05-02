@@ -159,7 +159,7 @@
       function redirectAfterApprove(subscriptionID) {
         var subId = encodeURIComponent(subscriptionID || '');
         // Friendly welcome page after successful signup
-        window.location.href = '/techcare-welcome.html?subscription=' + subId;
+        window.location.href = '/techcare-welcome?subscription=' + subId;
       }
 
       function renderButtons() {
