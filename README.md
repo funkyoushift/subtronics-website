@@ -23,3 +23,7 @@ Before making edits, read:
 - Prefer canonical public URLs over legacy `.html` variants.
 - Keep utility pages out of the sitemap unless they become true public landing pages.
 - After major changes, audit nav, footer, internal links, canonicals, schema, sitemap, robots, and llms discovery.
+
+
+## Current release note
+- v95 mobile-service emphasis: site-wide copy, CTA, footer, and schema updates to make in-home and business on-site service clear. No v1.x.x version source was found in this bundle.

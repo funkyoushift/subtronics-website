@@ -1,6 +1,6 @@
 # Subtronics LLC Site Audit Notes — Current Status
 
-Last audit pass: **v92.3 pre-submit polish**
+Last audit pass: **v95 mobile-service emphasis**
 
 This file is intentionally short. Long historical change logs were removed so future edits stay focused on the current live architecture instead of old experiments.
 
@@ -36,3 +36,17 @@ These are optional choices, not blockers:
 - Further trim weak city pages if any are not earning their keep.
 - Continue replacing large photos with tighter crops or additional smaller variants if future Lighthouse reports still flag them.
 - Soft-retire more legacy HTML files later once redirects alone fully cover the old routes you still care about.
+
+
+## v94 audit notes
+- New money pages are linked from homepage, services hub, footer, and related service pages.
+- Sitemap now includes `/services/computer-diagnostics` and `/services/pc-optimization`.
+- Old `/services/diagnostics-troubleshooting` public route now redirects to `/services/computer-diagnostics` to prevent competing diagnostic pages.
+- Header and footer navigation were normalized across HTML files.
+
+
+## v95 audit notes
+- Verified no standalone v1.x.x version source existed in the uploaded bundle; continued the existing v95 naming used by the active project notes.
+- Homepage, service pages, contact page, repair location pages, footer, and structured data now consistently mention in-home, on-site, and mobile computer service.
+- No sitemap additions were needed because no new canonical pages were added.
+- Navigation routes remained aligned with the v94 canonical hub structure.

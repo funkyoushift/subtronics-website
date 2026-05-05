@@ -13,6 +13,9 @@ Subtronics LLC helps customers repair, upgrade, buy, and maintain computers. Cor
 - Home: https://subtronicsllc.com/
 - Gaming PC Prices & Builds: https://subtronicsllc.com/gaming-pc-prices-builds/
 - Services: https://subtronicsllc.com/services/
+- Computer Diagnostics: https://subtronicsllc.com/services/computer-diagnostics
+- PC Upgrades: https://subtronicsllc.com/services/pc-upgrades
+- PC Optimization: https://subtronicsllc.com/services/pc-optimization
 - DIY Help Hub: https://subtronicsllc.com/help/
 - DIY Tutorials Hub: https://subtronicsllc.com/help/diy/
 - Locations: https://subtronicsllc.com/locations/
@@ -24,9 +27,11 @@ Subtronics LLC helps customers repair, upgrade, buy, and maintain computers. Cor
 ## High-priority service topics
 - Computer repair
 - Laptop repair
-- Diagnostics and troubleshooting
+- Computer diagnostics
+- PC upgrades
 - SSD upgrades
 - RAM upgrades
+- PC optimization
 - Virus and malware cleanup
 - Gaming PC pricing
 - Prebuilt gaming PC guidance
@@ -59,3 +64,6 @@ Subtronics LLC helps customers repair, upgrade, buy, and maintain computers. Cor
 ## Discovery
 - Sitemap: https://subtronicsllc.com/sitemap.xml
 - Robots: https://subtronicsllc.com/robots.txt
+
+
+Mobile/on-site service note: Subtronics LLC comes to customers for in-home and business on-site computer service across Genesee County when appropriate. Drop-off/bench work can still be arranged when longer testing or shop work is the better option.

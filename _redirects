@@ -96,7 +96,9 @@ https://www.subtronicsllc.com/* https://subtronicsllc.com/:splat 301
 /services/custom-pc-builds/ /gaming-pc-prices-builds/ 301
 /services/custom-workstation-pcs.html /services/custom-workstation-pcs 301
 /services/data-recovery.html /services/data-recovery 301
-/services/diagnostics-troubleshooting.html /services/diagnostics-troubleshooting 301
+/services/diagnostics-troubleshooting.html /services/computer-diagnostics 301
+/services/computer-diagnostics.html /services/computer-diagnostics 301
+/services/pc-optimization.html /services/pc-optimization 301
 /services/hard-drive-repair.html /services/hard-drive-repair 301
 /services/in-home-business-it-support.html /services/in-home-business-it-support 301
 /services/index.html /services/ 301
@@ -174,8 +176,8 @@ https://www.subtronicsllc.com/* https://subtronicsllc.com/:splat 301
 /data-recovery-mount-morris-mi.html /locations/computer-repair-mount-morris-mi 301
 /data-recovery-swartz-creek-mi /locations/computer-repair-swartz-creek-mi 301
 /data-recovery-swartz-creek-mi.html /locations/computer-repair-swartz-creek-mi 301
-/diagnostics-troubleshooting /services/diagnostics-troubleshooting 301
-/diagnostics-troubleshooting.html /services/diagnostics-troubleshooting 301
+/diagnostics-troubleshooting /services/computer-diagnostics 301
+/diagnostics-troubleshooting.html /services/computer-diagnostics 301
 /gaming-pc-repair-burton-mi /locations/computer-repair-burton-mi 301
 /gaming-pc-repair-burton-mi.html /locations/computer-repair-burton-mi 301
 /gaming-pc-repair-davison-mi /locations/computer-repair-davison-mi 301

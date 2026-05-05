@@ -1,6 +1,6 @@
 # Subtronics LLC Project Notes — Current Source of Truth
 
-Last cleanup pass: **v92.3 pre-submit polish**
+Last cleanup pass: **v95 mobile-service emphasis**
 
 Use this file, `ROUTE_POLICY.md`, `sitemap.xml`, and `llms.txt` as the current source of truth. Older historical build notes were intentionally removed so future edits do not follow stale structure.
 
@@ -93,3 +93,18 @@ Examples:
 - keep image delivery lightweight with responsive image sizes where needed
 - keep legacy pages either redirected or explicitly non-indexable
 - keep only strong city pages live in the sitemap
+
+
+### v94 money-page restructure
+- Shifted storefront emphasis toward higher-value work: gaming PCs, PC upgrades, computer diagnostics, and PC optimization.
+- Added canonical `/services/computer-diagnostics` and redirected old diagnostics-troubleshooting route to avoid duplicate diagnostic intent.
+- Added canonical `/services/pc-optimization` and linked it from homepage, services hub, footer, and related money pages.
+- Updated nav/footer consistency, sitemap, redirects, llms.txt, and homepage schema serviceType to reflect money-page priorities.
+
+
+### v95 mobile-service emphasis
+- Verified current source files still use the v## release-note convention; no v1.x.x release file or package version was present in the uploaded site bundle.
+- Strengthened the site-wide message that Subtronics LLC comes to the customer for in-home and business on-site service across Genesee County.
+- Updated homepage headline, description, hero CTA language, visible service badges, and FAQ/schema language to reduce confusion about visiting a storefront.
+- Added on-site/mobile service reminders to service pages, contact page, repair location pages, and the global footer.
+- Kept sitemap routes unchanged because this pass changed positioning and conversion language, not the public URL structure.
