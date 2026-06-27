@@ -1,6 +1,6 @@
 # Subtronics LLC Site Audit Notes — Current Status
 
-Last audit pass: **v95 mobile-service emphasis**
+Last audit pass: **v96 computer recycling service integration**
 
 This file is intentionally short. Long historical change logs were removed so future edits stay focused on the current live architecture instead of old experiments.
 
@@ -11,12 +11,15 @@ This file is intentionally short. Long historical change logs were removed so fu
 - Internal links were checked against redirect targets in this pass.
 - Robots and llms discovery files match the trimmed architecture.
 - Homepage, gaming PCs page, and trust-photo pages now use better image sizing hints and responsive image variants.
+- Computer recycling is a canonical services-cluster page, linked from the services hub and footer, and listed in sitemap and llms discovery.
 
 ## What was cleaned in this pass
 - Added responsive `srcset` / `sizes` handling for the heaviest visible images.
 - Added intrinsic image dimensions across local images to reduce layout instability and help Lighthouse.
 - Recompressed several large WebP/JPG assets to reduce transfer weight.
 - Cleaned project notes so only current rules remain.
+- Aligned the recycling page copy with the mobile/home-office service model.
+- Added FAQ schema to the recycling page and updated LLM guidance for the new service.
 
 ## What should remain true before and after launch
 - Do not submit thin or duplicate pages to Google just to inflate page count.
@@ -36,6 +39,7 @@ These are optional choices, not blockers:
 - Further trim weak city pages if any are not earning their keep.
 - Continue replacing large photos with tighter crops or additional smaller variants if future Lighthouse reports still flag them.
 - Soft-retire more legacy HTML files later once redirects alone fully cover the old routes you still care about.
+- Add more contextual internal links to recycling later from diagnostics, repair-vs-replace, and data-related content if the service starts getting traction.
 
 
 ## v94 audit notes
@@ -50,3 +54,13 @@ These are optional choices, not blockers:
 - Homepage, service pages, contact page, repair location pages, footer, and structured data now consistently mention in-home, on-site, and mobile computer service.
 - No sitemap additions were needed because no new canonical pages were added.
 - Navigation routes remained aligned with the v94 canonical hub structure.
+
+
+## v96 audit notes
+- `/services/computer-recycling` is live as a canonical content page without `.html` in public links.
+- Sitemap includes the new recycling URL.
+- Services hub links to the recycling page.
+- Recycling page footer links back to the canonical services cluster.
+- `llms.txt` includes the recycling page and service topic.
+- Recycling page schema now includes `Service`, `WebPage`, and `FAQPage` nodes.
+- Robots.txt needed no change because it already points to the sitemap and allows public crawling.
