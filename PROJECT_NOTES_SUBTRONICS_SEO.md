@@ -1,6 +1,6 @@
 # Subtronics LLC Project Notes — Current Source of Truth
 
-Last cleanup pass: **v95 mobile-service emphasis**
+Last cleanup pass: **v96 computer recycling service integration**
 
 Use this file, `ROUTE_POLICY.md`, `sitemap.xml`, and `llms.txt` as the current source of truth. Older historical build notes were intentionally removed so future edits do not follow stale structure.
 
@@ -9,7 +9,7 @@ Use this file, `ROUTE_POLICY.md`, `sitemap.xml`, and `llms.txt` as the current s
 - **Primary contact:** 810-280-2222
 - **Email:** Martin@subtronicsllc.com
 - **Primary market:** Flushing, Flint, and Genesee County, Michigan
-- **Positioning:** local computer repair, upgrades, diagnostics, gaming PC pricing, custom builds, and ongoing support
+- **Positioning:** local computer repair, upgrades, diagnostics, gaming PC pricing, custom builds, computer recycling, and ongoing support
 
 ## Storefront-first structure
 Visible site should feel like a local storefront, not an SEO dump.
@@ -40,6 +40,7 @@ Examples:
 - `/contact`
 - `/about/right-to-repair`
 - `/services/laptop-repair`
+- `/services/computer-recycling`
 - `/locations/computer-repair-flint-mi`
 
 ## Indexing rules
@@ -53,6 +54,8 @@ Examples:
 - computer repair
 - laptop repair
 - diagnostics and troubleshooting
+- computer recycling / repair-or-recycle decisions
+- data privacy options before recycling
 - virus / malware cleanup
 - hard drive and motherboard issues
 - in-home / business support
@@ -108,3 +111,11 @@ Examples:
 - Updated homepage headline, description, hero CTA language, visible service badges, and FAQ/schema language to reduce confusion about visiting a storefront.
 - Added on-site/mobile service reminders to service pages, contact page, repair location pages, and the global footer.
 - Kept sitemap routes unchanged because this pass changed positioning and conversion language, not the public URL structure.
+
+
+### v96 computer recycling service integration
+- Added canonical `/services/computer-recycling` for free recycling of eligible computer equipment.
+- Positioned recycling as part of the repair-or-recycle decision flow, not as a public storefront drop-off program.
+- Added optional data privacy language before recycling.
+- Added the recycling page to the services hub, footer, sitemap, and `llms.txt` discovery guidance.
+- Updated recycling page schema with `Service`, `WebPage`, and `FAQPage` entities.
